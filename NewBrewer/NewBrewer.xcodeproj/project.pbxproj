@@ -7,19 +7,25 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239803D129DB25D4001D1FF4 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D029DB25D4001D1FF4 /* Beer.swift */; };
+		239803D329DB2650001D1FF4 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D229DB2650001D1FF4 /* NetworkController.swift */; };
+		239803D729DB2695001D1FF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D629DB2695001D1FF4 /* Constants.swift */; };
+		239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D829DB27B0001D1FF4 /* NetworkError.swift */; };
 		23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */; };
 		23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */; };
-		23A95DF629D4913D00B6CEF0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF529D4913D00B6CEF0 /* ViewController.swift */; };
 		23A95DF929D4913D00B6CEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DF729D4913D00B6CEF0 /* Main.storyboard */; };
 		23A95DFB29D4913E00B6CEF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DFA29D4913E00B6CEF0 /* Assets.xcassets */; };
 		23A95DFE29D4913E00B6CEF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DFC29D4913E00B6CEF0 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		239803D029DB25D4001D1FF4 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		239803D229DB2650001D1FF4 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		239803D629DB2695001D1FF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		239803D829DB27B0001D1FF4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		23A95DEE29D4913D00B6CEF0 /* NewBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		23A95DF529D4913D00B6CEF0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		23A95DF829D4913D00B6CEF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		23A95DFA29D4913E00B6CEF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23A95DFD29D4913E00B6CEF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -37,6 +43,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		239803CE29DB23FF001D1FF4 /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */,
+				23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */,
+				23A95DFA29D4913E00B6CEF0 /* Assets.xcassets */,
+				23A95DFF29D4913E00B6CEF0 /* Info.plist */,
+			);
+			path = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		239803CF29DB25C1001D1FF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				239803D029DB25D4001D1FF4 /* Beer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		239803D429DB2654001D1FF4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				239803D229DB2650001D1FF4 /* NetworkController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		239803D529DB2684001D1FF4 /* Helper&Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				239803D629DB2695001D1FF4 /* Constants.swift */,
+				239803D829DB27B0001D1FF4 /* NetworkError.swift */,
+			);
+			path = "Helper&Extensions";
+			sourceTree = "<group>";
+		};
 		23A95DE529D4913D00B6CEF0 = {
 			isa = PBXGroup;
 			children = (
@@ -56,13 +98,12 @@
 		23A95DF029D4913D00B6CEF0 /* NewBrewer */ = {
 			isa = PBXGroup;
 			children = (
-				23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */,
-				23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */,
-				23A95DF529D4913D00B6CEF0 /* ViewController.swift */,
+				239803CF29DB25C1001D1FF4 /* Model */,
+				239803D429DB2654001D1FF4 /* Networking */,
+				239803D529DB2684001D1FF4 /* Helper&Extensions */,
+				239803CE29DB23FF001D1FF4 /* SupportingFiles */,
 				23A95DF729D4913D00B6CEF0 /* Main.storyboard */,
-				23A95DFA29D4913E00B6CEF0 /* Assets.xcassets */,
 				23A95DFC29D4913E00B6CEF0 /* LaunchScreen.storyboard */,
-				23A95DFF29D4913E00B6CEF0 /* Info.plist */,
 			);
 			path = NewBrewer;
 			sourceTree = "<group>";
@@ -138,8 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				23A95DF629D4913D00B6CEF0 /* ViewController.swift in Sources */,
+				239803D729DB2695001D1FF4 /* Constants.swift in Sources */,
+				239803D329DB2650001D1FF4 /* NetworkController.swift in Sources */,
 				23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */,
+				239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */,
+				239803D129DB25D4001D1FF4 /* Beer.swift in Sources */,
 				23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -288,7 +332,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewBrewer/Info.plist;
+				INFOPLIST_FILE = NewBrewer/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
@@ -315,7 +359,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = NewBrewer/Info.plist;
+				INFOPLIST_FILE = NewBrewer/SupportingFiles/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
