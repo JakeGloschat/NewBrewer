@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		239803D129DB25D4001D1FF4 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D029DB25D4001D1FF4 /* Beer.swift */; };
+		239803D329DB2650001D1FF4 /* NetworkController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D229DB2650001D1FF4 /* NetworkController.swift */; };
+		239803D729DB2695001D1FF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D629DB2695001D1FF4 /* Constants.swift */; };
+		239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D829DB27B0001D1FF4 /* NetworkError.swift */; };
 		23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */; };
 		23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */; };
 		23A95DF929D4913D00B6CEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DF729D4913D00B6CEF0 /* Main.storyboard */; };
@@ -15,6 +19,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		239803D029DB25D4001D1FF4 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
+		239803D229DB2650001D1FF4 /* NetworkController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkController.swift; sourceTree = "<group>"; };
+		239803D629DB2695001D1FF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		239803D829DB27B0001D1FF4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		23A95DEE29D4913D00B6CEF0 /* NewBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -46,6 +54,31 @@
 			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
+		239803CF29DB25C1001D1FF4 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				239803D029DB25D4001D1FF4 /* Beer.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		239803D429DB2654001D1FF4 /* Networking */ = {
+			isa = PBXGroup;
+			children = (
+				239803D229DB2650001D1FF4 /* NetworkController.swift */,
+			);
+			path = Networking;
+			sourceTree = "<group>";
+		};
+		239803D529DB2684001D1FF4 /* Helper&Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				239803D629DB2695001D1FF4 /* Constants.swift */,
+				239803D829DB27B0001D1FF4 /* NetworkError.swift */,
+			);
+			path = "Helper&Extensions";
+			sourceTree = "<group>";
+		};
 		23A95DE529D4913D00B6CEF0 = {
 			isa = PBXGroup;
 			children = (
@@ -65,6 +98,9 @@
 		23A95DF029D4913D00B6CEF0 /* NewBrewer */ = {
 			isa = PBXGroup;
 			children = (
+				239803CF29DB25C1001D1FF4 /* Model */,
+				239803D429DB2654001D1FF4 /* Networking */,
+				239803D529DB2684001D1FF4 /* Helper&Extensions */,
 				239803CE29DB23FF001D1FF4 /* SupportingFiles */,
 				23A95DF729D4913D00B6CEF0 /* Main.storyboard */,
 				23A95DFC29D4913E00B6CEF0 /* LaunchScreen.storyboard */,
@@ -143,7 +179,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				239803D729DB2695001D1FF4 /* Constants.swift in Sources */,
+				239803D329DB2650001D1FF4 /* NetworkController.swift in Sources */,
 				23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */,
+				239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */,
+				239803D129DB25D4001D1FF4 /* Beer.swift in Sources */,
 				23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
