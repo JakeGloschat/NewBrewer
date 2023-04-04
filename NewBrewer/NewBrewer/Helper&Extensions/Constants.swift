@@ -15,6 +15,11 @@ struct Constants {
         static let randomBeerPath = "/beers/random"
     }
     
-    
+    struct APIQueryKey {
+        static let abvGreaterQuery = "abv_gt"
+        static let ibuGreaterQuery = "ibu_gt"
+        static let beerNameQuery = "beer_name"
+        
+    }
     
 }
