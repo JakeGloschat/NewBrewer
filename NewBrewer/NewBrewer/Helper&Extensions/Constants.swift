@@ -15,4 +15,6 @@ struct Constants {
         static let randomBeerPath = "/beers/random"
     }
     
+    
+    
 }
