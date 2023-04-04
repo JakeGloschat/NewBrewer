@@ -5,9 +5,10 @@
 //  Created by Jake Gloschat on 4/3/23.
 //
 
-import Foundation
+import UIKit
 
-struct NetworkingController {
+struct BeerService {
+   
     private let service = APIService()
     
     func fetchRandomBeer(completion: @escaping (Result<Beer, NetworkError>) -> Void) {
@@ -69,6 +70,23 @@ struct NetworkingController {
                 } catch {
                     completion(.failure(.unableToDecode))
                 }
+            case .failure(let failure):
+                completion(.failure(.thrownError(failure)))
+            }
+        }
+    }
+    
+    func fetchImage(for item: String?, completion: @escaping (Result<UIImage, NetworkError>) -> Void) {
+        guard let item = item,
+              let finalURL = URL(string: item) else { completion(.failure(.InvalidURL)) ; return }
+        print("Image Fetch Final URL: \(finalURL)")
+        
+        let request = URLRequest(url: finalURL)
+        service.perform(request) { result in
+            switch result {
+            case .success(let data):
+                guard let image = UIImage(data: data) else { completion(.failure(.unableToDecode)) ; return }
+                completion(.success(image))
             case .failure(let failure):
                 completion(.failure(.thrownError(failure)))
             }
