@@ -275,20 +275,8 @@
                             <constraint firstItem="65j-6j-kTE" firstAttribute="leading" secondItem="Fbc-HC-5R8" secondAttribute="leading" id="zH7-6s-K6t"/>
                         </constraints>
                     </view>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="2VT-Zw-xC3" id="fgk-Ri-wer"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvq-D5-V8x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="2VT-Zw-xC3">
-                    <connections>
-                        <outlet property="delegate" destination="Jn2-Hl-vkn" id="u6b-UX-5gW"/>
-                        <outlet property="searchBar" destination="65j-6j-kTE" id="bq9-9K-LDl"/>
-                        <outlet property="searchContentsController" destination="Jn2-Hl-vkn" id="jBx-wx-8QG"/>
-                        <outlet property="searchResultsDataSource" destination="Jn2-Hl-vkn" id="3uR-TW-llA"/>
-                        <outlet property="searchResultsDelegate" destination="Jn2-Hl-vkn" id="PCN-XI-OUM"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="2662" y="1263"/>
         </scene>
@@ -478,20 +466,8 @@
                     <navigationItem key="navigationItem" id="smp-KI-M7x">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="Bum-db-J75"/>
                     </navigationItem>
-                    <connections>
-                        <outlet property="searchDisplayController" destination="oAU-eO-ggl" id="JzK-UZ-A9J"/>
-                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5B-E2-AU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-                <searchDisplayController id="oAU-eO-ggl">
-                    <connections>
-                        <outlet property="delegate" destination="jMC-Zr-et7" id="AWO-9z-rQC"/>
-                        <outlet property="searchBar" destination="N3m-nU-int" id="oS3-fT-IuD"/>
-                        <outlet property="searchContentsController" destination="jMC-Zr-et7" id="eFs-oM-rg2"/>
-                        <outlet property="searchResultsDataSource" destination="jMC-Zr-et7" id="8U5-pY-01M"/>
-                        <outlet property="searchResultsDelegate" destination="jMC-Zr-et7" id="X6k-4t-wja"/>
-                    </connections>
-                </searchDisplayController>
             </objects>
             <point key="canvasLocation" x="1310.6870229007634" y="281.69014084507046"/>
         </scene>

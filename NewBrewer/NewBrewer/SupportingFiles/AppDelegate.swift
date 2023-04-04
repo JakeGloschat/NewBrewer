@@ -14,6 +14,14 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        BeerAPIService().fetchBeerBySearch(searchBeer: "6.3") { result in
+            switch result {
+            case .success(let beer):
+                print(beer[0].name)
+            case .failure(_):
+                return
+            }
+        }
         return true
     }
 
