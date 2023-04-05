@@ -31,14 +31,14 @@ class SearchBeerViewController: UIViewController {
     
     
     // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+        if segue.identifier == "toIngredientsVC" {
+            guard let indexPath = beerListTableView.indexPathForSelectedRow,
+                  let destinationVC = segue.destination as? BeerIngredientsViewController else { return }
+            let beer = viewModel.beers[indexPath.row]
+            destinationVC.beer = beer
+        }
     }
-    
-
 }
 
 extension SearchBeerViewController: UISearchBarDelegate {
@@ -56,10 +56,14 @@ extension SearchBeerViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         // configure each cell
-        let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: indexPath)
+      guard let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: indexPath) as? BeerListTableViewCell else { return UITableViewCell() }
+        
+        let beer = viewModel.beers[indexPath.row]
+        cell.configureCell(with: beer)
         return cell
     }
     
+
     
 }
 extension SearchBeerViewController: SearchBeerViewModelDelegate {

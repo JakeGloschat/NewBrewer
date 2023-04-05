@@ -400,7 +400,7 @@
                                 <rect key="frame" x="4" y="167" width="385" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="beerCell" rowHeight="105" id="HP6-Gf-4TT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="beerCell" rowHeight="105" id="HP6-Gf-4TT" customClass="BeerListTableViewCell" customModule="NewBrewer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="385" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HP6-Gf-4TT" id="5Lh-aV-jeD">
@@ -448,7 +448,11 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
-                                            <segue destination="hK5-Bt-gkZ" kind="show" id="9Sm-Ow-VSQ"/>
+                                            <outlet property="beerAbvLabel" destination="EtL-wC-xiL" id="a10-w6-GI2"/>
+                                            <outlet property="beerDescriptionLabel" destination="87F-Zc-8V5" id="fcf-7S-sdV"/>
+                                            <outlet property="beerIbueLabel" destination="DYm-Yg-SHQ" id="ci0-BH-HTW"/>
+                                            <outlet property="beerNameLabel" destination="CCp-ff-CRh" id="opb-0r-eH1"/>
+                                            <segue destination="hK5-Bt-gkZ" kind="show" identifier="toIngredientsVC" id="9Sm-Ow-VSQ"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -478,10 +482,10 @@
             </objects>
             <point key="canvasLocation" x="1310.6870229007634" y="281.69014084507046"/>
         </scene>
-        <!--Beer Ingredients-->
+        <!--Beer Ingredients View Controller-->
         <scene sceneID="BTM-rG-hKs">
             <objects>
-                <viewController id="hK5-Bt-gkZ" customClass="BeerIngredients" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="hK5-Bt-gkZ" customClass="BeerIngredientsViewController" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uQs-k2-u93">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

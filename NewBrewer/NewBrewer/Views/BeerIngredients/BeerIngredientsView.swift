@@ -7,7 +7,7 @@
 
 import UIKit
 
-class BeerIngredients: UIViewController {
+class BeerIngredientsViewController: UIViewController {
     
     
     // MARK: - Lifecycle
@@ -23,7 +23,7 @@ class BeerIngredients: UIViewController {
     private let tableViewCellReuseIdentifier = "TableViewCell"
     private let collectionViewCellReuseIdentifier = "CollectionViewCell"
     var beer: Beer?
-    
+    var viewModel: SearchBeerViewModel!
     
     // MARK: - Functions
     func setUpTableView() {
@@ -43,7 +43,7 @@ class BeerIngredients: UIViewController {
 }
 
 // MARK: - TableView Extension
-extension BeerIngredients: UITableViewDelegate, UITableViewDataSource {
+extension BeerIngredientsViewController: UITableViewDelegate, UITableViewDataSource {
     
     public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return 3
@@ -71,7 +71,7 @@ extension BeerIngredients: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-extension BeerIngredients: UICollectionViewDelegate, UICollectionViewDataSource {
+extension BeerIngredientsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         guard let beer = beer else { return 0 }
