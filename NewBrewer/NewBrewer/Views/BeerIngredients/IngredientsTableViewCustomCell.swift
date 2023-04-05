@@ -13,7 +13,6 @@ class IngredientsTableViewCell: UITableViewCell {
     // MARK: - Properties
     
     private let collectionView: UICollectionView
-    private var dataSource: [Ingredients] = []
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         let flowLayout = UICollectionViewFlowLayout()
@@ -36,27 +35,10 @@ class IngredientsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(dataSource: [Ingredients]) {
-        self.dataSource = dataSource
-        collectionView.dataSource = self
-        collectionView.delegate = self
+    func configure(collectionViewDelegate: UICollectionViewDelegate, collectionViewDataSource: UICollectionViewDataSource) {
+        collectionView.dataSource = collectionViewDataSource
+        collectionView.delegate = collectionViewDelegate
         collectionView.register(IngredientsCollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")
         collectionView.reloadData()
-    }
-}
-
-
-// MARK: - Extensions
-
-extension IngredientsTableViewCell: UICollectionViewDelegate, UICollectionViewDataSource {
-    
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return dataSource.count
-    }
-    
-    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CollectionViewCell", for: indexPath) as! IngredientsCollectionViewCell
-        cell.textLabel.text = dataSource[indexPath.row]
-        return cell
     }
 }

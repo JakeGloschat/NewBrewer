@@ -13,6 +13,7 @@ class BeerIngredients: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
+        setUpTableView()
     }
     
     
@@ -20,7 +21,7 @@ class BeerIngredients: UIViewController {
     private let tableView = UITableView()
     private let tableViewCellReuseIdentifier = "TableViewCell"
     private let collectionViewCellReuseIdentifier = "CollectionViewCell"
-    private var dataSource: UITableViewDiffableDataSource<Int, Int>!
+   
     
     var beer: Beer?
     
@@ -29,6 +30,7 @@ class BeerIngredients: UIViewController {
     func setUpTableView() {
         view.addSubview(tableView)
         tableView.delegate = self
+        tableView.dataSource = self
         tableView.translatesAutoresizingMaskIntoConstraints = false
         tableView.register(IngredientsTableViewCell.self, forCellReuseIdentifier: tableViewCellReuseIdentifier)
         
@@ -39,33 +41,43 @@ class BeerIngredients: UIViewController {
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
     }
-    
-    private func configureDataSource() {
-        dataSource = UITableViewDiffableDataSource<Int, Int>(tableView: tableView) { (tableView, indexPath, _) -> UITableViewCell? in
-            let cell = tableView.dequeueReusableCell(withIdentifier: self.tableViewCellReuseIdentifier, for: indexPath) as! IngredientsTableViewCell
-            guard let beer = beer else { return }
-            switch indexPath.row {
-            case 0:
-                cell.configure(dataSource: self.beer?.ingredients.malt)
-            case 1:
-                cell.configure(dataSource: self.beer?.ingredients.hops)
-            case 2:
-                cell.configure(dataSource: [self.beer?.ingredients.yeast])
-            }
-            return cell
-        }
-        
-        var snapshot = NSDiffableDataSourceSnapshot<Int, Int>()
-        snapshot.appendSections([0])
-        snapshot.appendItems([0, 1, 2], toSection: 0)
-        dataSource.apply(snapshot, animatingDifferences: false)
-    }
 }
 
 // MARK: - TableView Extension
-extension UIViewController: UITableViewDelegate {
+extension BeerIngredients: UITableViewDelegate, UITableViewDataSource {
+    
+    public func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellReuseIdentifier, for: indexPath) as! IngredientsTableViewCell
+        cell.configure(collectionViewDelegate: self, collectionViewDataSource: self)
+        return cell
+    }
+    
     public func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
+    }
+}
+
+extension BeerIngredients: UICollectionViewDelegate, UICollectionViewDataSource {
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return 25
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellReuseIdentifier, for: indexPath) as! IngredientsCollectionViewCell
+        return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
+        return UIEdgeInsets(top: 0, left: 16, bottom: 0, right: 16)
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 40
     }
 }
 
