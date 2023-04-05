@@ -16,12 +16,12 @@ class SearchBeerViewModel { // This is a concrete type
     
     // MARK: - Properties
     private weak var delegate: SearchBeerViewModelDelegate?
-    private var service: BeerService
+    private var service: BeerServicable
     var beers: [Beer] = []
     
-    init(delegate: SearchBeerViewModelDelegate, service: BeerService = BeerService()) {
+    init(delegate: SearchBeerViewModelDelegate, beerService: BeerServicable = BeerService()) {
         self.delegate = delegate
-        self.service = service
+        self.service = beerService
     }
     // MARK: - Functions
     
