@@ -20,6 +20,8 @@
 		23FCBA1229DCBF1000043C74 /* BeerIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA1129DCBF1000043C74 /* BeerIngredientsView.swift */; };
 		23FCBA1429DCC4E200043C74 /* IngredientsTableViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA1329DCC4E200043C74 /* IngredientsTableViewCustomCell.swift */; };
 		23FCBA1629DCD30000043C74 /* IngredientsCollectionViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA1529DCD30000043C74 /* IngredientsCollectionViewCustomCell.swift */; };
+		23FCBA1829DE095C00043C74 /* SearchBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA1729DE095C00043C74 /* SearchBeerViewController.swift */; };
+		23FCBA1A29DE0BD100043C74 /* SearchBeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA1929DE0BD100043C74 /* SearchBeerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +40,8 @@
 		23FCBA1129DCBF1000043C74 /* BeerIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerIngredientsView.swift; sourceTree = "<group>"; };
 		23FCBA1329DCC4E200043C74 /* IngredientsTableViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCustomCell.swift; sourceTree = "<group>"; };
 		23FCBA1529DCD30000043C74 /* IngredientsCollectionViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsCollectionViewCustomCell.swift; sourceTree = "<group>"; };
+		23FCBA1729DE095C00043C74 /* SearchBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerViewController.swift; sourceTree = "<group>"; };
+		23FCBA1929DE0BD100043C74 /* SearchBeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -122,6 +126,8 @@
 			isa = PBXGroup;
 			children = (
 				23FCBA1029DCBEC900043C74 /* BeerIngredients */,
+				23FCBA1729DE095C00043C74 /* SearchBeerViewController.swift */,
+				23FCBA1929DE0BD100043C74 /* SearchBeerViewModel.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -213,7 +219,9 @@
 				23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */,
 				23FCBA1429DCC4E200043C74 /* IngredientsTableViewCustomCell.swift in Sources */,
 				239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */,
+				23FCBA1829DE095C00043C74 /* SearchBeerViewController.swift in Sources */,
 				23FCBA1629DCD30000043C74 /* IngredientsCollectionViewCustomCell.swift in Sources */,
+				23FCBA1A29DE0BD100043C74 /* SearchBeerViewModel.swift in Sources */,
 				23FCBA0E29DC795D00043C74 /* API Service.swift in Sources */,
 				239803D129DB25D4001D1FF4 /* Beer.swift in Sources */,
 				23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */,

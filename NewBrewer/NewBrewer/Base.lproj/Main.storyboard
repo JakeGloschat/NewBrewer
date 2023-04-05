@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="hK5-Bt-gkZ">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LOV-AW-rYH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -384,7 +384,7 @@
         <!--Search Recipes-->
         <scene sceneID="V3s-K3-Mrs">
             <objects>
-                <viewController title="Search Recipes" id="jMC-Zr-et7" sceneMemberID="viewController">
+                <viewController title="Search Recipes" id="jMC-Zr-et7" customClass="SearchBeerViewController" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ka5-Sw-U1V">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,7 +400,7 @@
                                 <rect key="frame" x="4" y="167" width="385" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="105" id="HP6-Gf-4TT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="beerCell" rowHeight="105" id="HP6-Gf-4TT">
                                         <rect key="frame" x="0.0" y="50" width="385" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HP6-Gf-4TT" id="5Lh-aV-jeD">
@@ -447,6 +447,9 @@
                                                 <constraint firstAttribute="bottom" secondItem="87F-Zc-8V5" secondAttribute="bottom" constant="4" id="mJP-Qy-Bsg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <segue destination="hK5-Bt-gkZ" kind="show" id="9Sm-Ow-VSQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -466,6 +469,10 @@
                     <navigationItem key="navigationItem" id="smp-KI-M7x">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="Bum-db-J75"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="beerListTableView" destination="szg-C0-tCb" id="Fa7-FI-miC"/>
+                        <outlet property="beerSearchBar" destination="N3m-nU-int" id="RF3-G5-Ucf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5B-E2-AU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -481,10 +488,11 @@
                         <viewLayoutGuide key="safeArea" id="cU0-1C-S44"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Uwo-iv-RaV"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="L1t-Va-VIT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2857" y="273"/>
+            <point key="canvasLocation" x="2370" y="282"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5iu-QL-0W1">

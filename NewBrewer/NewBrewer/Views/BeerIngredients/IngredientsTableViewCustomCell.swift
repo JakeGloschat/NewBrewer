@@ -13,6 +13,7 @@ class IngredientsTableViewCell: UITableViewCell {
     // MARK: - Properties
     
     private let collectionView: UICollectionView
+    var row: Int = 0
     
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         let flowLayout = UICollectionViewFlowLayout()
@@ -35,7 +36,8 @@ class IngredientsTableViewCell: UITableViewCell {
         fatalError("init(coder:) has not been implemented")
     }
     
-    func configure(collectionViewDelegate: UICollectionViewDelegate, collectionViewDataSource: UICollectionViewDataSource) {
+    func configure(data: [Any], collectionViewDelegate: UICollectionViewDelegate, collectionViewDataSource: UICollectionViewDataSource) {
+        collectionView.tag = row
         collectionView.dataSource = collectionViewDataSource
         collectionView.delegate = collectionViewDelegate
         collectionView.register(IngredientsCollectionViewCell.self, forCellWithReuseIdentifier: "CollectionViewCell")

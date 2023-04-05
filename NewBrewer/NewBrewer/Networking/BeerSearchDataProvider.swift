@@ -7,7 +7,7 @@
 
 import UIKit
 
-struct BeerService {
+struct BeerService { //This is a concrete type
    
     private let service = APIService()
     
