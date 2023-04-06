@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="1311" y="-396"/>
         </scene>
-        <!--View Controller-->
+        <!--Random Beer View Controller-->
         <scene sceneID="mbK-hP-PTE">
             <objects>
-                <viewController id="kDp-br-HKh" sceneMemberID="viewController">
+                <viewController id="kDp-br-HKh" customClass="RandomBeerViewController" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nsv-7m-lYt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,6 +191,18 @@
                                 <rect key="frame" x="142.33333333333334" y="717.66666666666663" width="108.66666666666666" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Randomize"/>
+                                <connections>
+                                    <action selector="getRandomBeerButtonTapped:" destination="kDp-br-HKh" eventType="touchUpInside" id="2pU-b6-aRK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZL-aD-gkb">
+                                <rect key="frame" x="219" y="525" width="154" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="To ingredients -&gt;"/>
+                                <connections>
+                                    <action selector="toIngredientsButtomTapped:" destination="kDp-br-HKh" eventType="touchUpInside" id="VcD-8F-D4A"/>
+                                    <segue destination="hK5-Bt-gkZ" kind="show" id="hod-iM-gro"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aBe-RW-vev"/>
@@ -201,9 +213,12 @@
                             <constraint firstItem="gBh-Fo-TpV" firstAttribute="leading" secondItem="aBe-RW-vev" secondAttribute="leading" constant="8" id="6LI-8o-LUh"/>
                             <constraint firstItem="aBe-RW-vev" firstAttribute="bottom" secondItem="hLi-yE-MzQ" secondAttribute="bottom" constant="17" id="Gn1-VC-tIZ"/>
                             <constraint firstItem="Iuc-gD-vEg" firstAttribute="leading" secondItem="aBe-RW-vev" secondAttribute="leading" constant="20" id="JQe-ST-Tmb"/>
+                            <constraint firstItem="vZL-aD-gkb" firstAttribute="leading" secondItem="aBe-RW-vev" secondAttribute="leading" constant="219" id="VlS-Fd-ZTn"/>
                             <constraint firstItem="aBe-RW-vev" firstAttribute="trailing" secondItem="gBh-Fo-TpV" secondAttribute="trailing" constant="8" id="aOG-lC-9kE"/>
                             <constraint firstItem="aBe-RW-vev" firstAttribute="trailing" secondItem="Iuc-gD-vEg" secondAttribute="trailing" constant="20" id="dHb-o6-65N"/>
+                            <constraint firstItem="vZL-aD-gkb" firstAttribute="top" secondItem="gBh-Fo-TpV" secondAttribute="bottom" constant="39.666666666666629" id="f0d-LN-ts0"/>
                             <constraint firstItem="Iuc-gD-vEg" firstAttribute="top" secondItem="aBe-RW-vev" secondAttribute="top" constant="20" id="lLF-Ab-XkA"/>
+                            <constraint firstItem="aBe-RW-vev" firstAttribute="trailing" secondItem="vZL-aD-gkb" secondAttribute="trailing" constant="20" id="sG4-tZ-wUa"/>
                             <constraint firstItem="gBh-Fo-TpV" firstAttribute="top" secondItem="nsv-7m-lYt" secondAttribute="top" constant="326" id="yXz-yR-qnw"/>
                             <constraint firstItem="hLi-yE-MzQ" firstAttribute="centerX" secondItem="aBe-RW-vev" secondAttribute="centerX" id="z6v-Xa-Ta6"/>
                             <constraint firstItem="0oq-2Q-lhX" firstAttribute="top" secondItem="Iuc-gD-vEg" secondAttribute="bottom" constant="20" id="zYU-Ks-6JQ"/>
@@ -212,6 +227,16 @@
                     <navigationItem key="navigationItem" id="1yA-qG-3CE">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="PH4-AQ-mzg"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="beerAbvLabel" destination="GSo-v9-GWR" id="gdN-IV-4PA"/>
+                        <outlet property="beerDescriptionLabel" destination="GF0-Tv-OnB" id="8G2-Iu-O9f"/>
+                        <outlet property="beerIbuLabel" destination="Qgq-Av-PP4" id="xXB-YJ-n8c"/>
+                        <outlet property="beerImageView" destination="Iuc-gD-vEg" id="fuk-OR-Km2"/>
+                        <outlet property="beerNameLabel" destination="0oq-2Q-lhX" id="4es-X2-2Ih"/>
+                        <outlet property="beerTaglineLabel" destination="mRn-sH-noz" id="Jrd-to-ayN"/>
+                        <outlet property="getRandomBeerButton" destination="hLi-yE-MzQ" id="kKR-WR-fVf"/>
+                        <outlet property="toIngredientsButton" destination="vZL-aD-gkb" id="2r4-FN-Wqn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1w-IF-VIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -593,6 +618,9 @@
             <point key="canvasLocation" x="383.96946564885496" y="1715.4929577464789"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hod-iM-gro"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>

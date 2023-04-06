@@ -23,6 +23,9 @@
 		23FCBA1829DE095C00043C74 /* SearchBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA1729DE095C00043C74 /* SearchBeerViewController.swift */; };
 		23FCBA1A29DE0BD100043C74 /* SearchBeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA1929DE0BD100043C74 /* SearchBeerViewModel.swift */; };
 		23FCBA1E29DE2AAD00043C74 /* BeerListTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA1D29DE2AAD00043C74 /* BeerListTableViewCell.swift */; };
+		23FCBA2129DF193E00043C74 /* RandomBeerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA2029DF193E00043C74 /* RandomBeerViewController.swift */; };
+		23FCBA2329DF1EAA00043C74 /* RandomBeerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA2229DF1EAA00043C74 /* RandomBeerViewModel.swift */; };
+		23FCBA2529DF252800043C74 /* ServiceRequestingImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA2429DF252800043C74 /* ServiceRequestingImageView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -44,6 +47,9 @@
 		23FCBA1729DE095C00043C74 /* SearchBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerViewController.swift; sourceTree = "<group>"; };
 		23FCBA1929DE0BD100043C74 /* SearchBeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBeerViewModel.swift; sourceTree = "<group>"; };
 		23FCBA1D29DE2AAD00043C74 /* BeerListTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListTableViewCell.swift; sourceTree = "<group>"; };
+		23FCBA2029DF193E00043C74 /* RandomBeerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewController.swift; sourceTree = "<group>"; };
+		23FCBA2229DF1EAA00043C74 /* RandomBeerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RandomBeerViewModel.swift; sourceTree = "<group>"; };
+		23FCBA2429DF252800043C74 /* ServiceRequestingImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ServiceRequestingImageView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,6 +87,7 @@
 			children = (
 				239803D229DB2650001D1FF4 /* BeerSearchDataProvider.swift */,
 				23FCBA0D29DC795D00043C74 /* API Service.swift */,
+				23FCBA2429DF252800043C74 /* ServiceRequestingImageView.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -127,6 +134,7 @@
 		23FCBA0F29DCBE4A00043C74 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				23FCBA1F29DF191300043C74 /* RandomBeer */,
 				23FCBA1029DCBEC900043C74 /* BeerIngredients */,
 				23FCBA1B29DE294B00043C74 /* SearchBeer */,
 			);
@@ -159,6 +167,15 @@
 				23FCBA1D29DE2AAD00043C74 /* BeerListTableViewCell.swift */,
 			);
 			path = "Custom Cell";
+			sourceTree = "<group>";
+		};
+		23FCBA1F29DF191300043C74 /* RandomBeer */ = {
+			isa = PBXGroup;
+			children = (
+				23FCBA2029DF193E00043C74 /* RandomBeerViewController.swift */,
+				23FCBA2229DF1EAA00043C74 /* RandomBeerViewModel.swift */,
+			);
+			path = RandomBeer;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,8 +250,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				239803D729DB2695001D1FF4 /* Constants.swift in Sources */,
+				23FCBA2129DF193E00043C74 /* RandomBeerViewController.swift in Sources */,
+				23FCBA2529DF252800043C74 /* ServiceRequestingImageView.swift in Sources */,
 				23FCBA1229DCBF1000043C74 /* BeerIngredientsView.swift in Sources */,
 				239803D329DB2650001D1FF4 /* BeerSearchDataProvider.swift in Sources */,
+				23FCBA2329DF1EAA00043C74 /* RandomBeerViewModel.swift in Sources */,
 				23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */,
 				23FCBA1429DCC4E200043C74 /* IngredientsTableViewCustomCell.swift in Sources */,
 				239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */,
