@@ -50,7 +50,11 @@ class RandomBeerViewController: UIViewController {
     
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        
+        if segue.identifier == "toBeerDetailVC" {
+            guard let destinationVC = segue.destination as? BeerIngredientsViewController else { return }
+            let beer = viewModel.beer
+            destinationVC.beer = beer
+        }
     }
     
     

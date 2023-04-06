@@ -200,8 +200,8 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="To ingredients -&gt;"/>
                                 <connections>
-                                    <action selector="toIngredientsButtomTapped:" destination="kDp-br-HKh" eventType="touchUpInside" id="VcD-8F-D4A"/>
-                                    <segue destination="hK5-Bt-gkZ" kind="show" id="hod-iM-gro"/>
+                                    <action selector="toIngredientsButtonTapped:" destination="kDp-br-HKh" eventType="touchUpInside" id="2pG-Fq-kii"/>
+                                    <segue destination="hK5-Bt-gkZ" kind="show" identifier="toBeerDetailVC" id="hod-iM-gro"/>
                                 </connections>
                             </button>
                         </subviews>
