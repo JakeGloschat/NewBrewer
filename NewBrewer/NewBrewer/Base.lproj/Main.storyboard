@@ -92,10 +92,10 @@
             </objects>
             <point key="canvasLocation" x="385.49618320610688" y="-396.47887323943667"/>
         </scene>
-        <!--View Controller-->
+        <!--Create Account View Controller-->
         <scene sceneID="GGv-F9-891">
             <objects>
-                <viewController id="eRu-Lx-80i" sceneMemberID="viewController">
+                <viewController id="eRu-Lx-80i" customClass="CreateAccountViewController" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="CMl-BD-sTP">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -124,6 +124,9 @@
                                 <rect key="frame" x="125.33333333333333" y="426.66666666666669" width="142.33333333333337" height="34.333333333333314"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Create Account"/>
+                                <connections>
+                                    <action selector="createAccountButtonTapped:" destination="eRu-Lx-80i" eventType="touchUpInside" id="ioZ-LE-eG8"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="0vm-Y4-S5Y"/>
@@ -136,6 +139,11 @@
                             <constraint firstItem="Ve8-l1-uSj" firstAttribute="top" secondItem="Gs6-IO-hes" secondAttribute="bottom" constant="53" id="nNY-o9-jQd"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="userConfirmPasswordTextField" destination="FW4-TD-hnB" id="f7O-K9-pes"/>
+                        <outlet property="userEmailTextField" destination="b5K-AK-kIQ" id="aOd-me-gSm"/>
+                        <outlet property="userPasswordTextField" destination="43g-nR-Qj8" id="KVV-Ss-Vnd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="jqO-uA-Xr8" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,7 +16,10 @@
 		23A95DF929D4913D00B6CEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DF729D4913D00B6CEF0 /* Main.storyboard */; };
 		23A95DFB29D4913E00B6CEF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DFA29D4913E00B6CEF0 /* Assets.xcassets */; };
 		23A95DFE29D4913E00B6CEF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DFC29D4913E00B6CEF0 /* LaunchScreen.storyboard */; };
-		23BD864F29E464AE00A14649 /* SignInOut.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD864E29E464AE00A14649 /* SignInOut.swift */; };
+		23BD864F29E464AE00A14649 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD864E29E464AE00A14649 /* SignInViewModel.swift */; };
+		23BD865129E469AE00A14649 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865029E469AE00A14649 /* SignInViewController.swift */; };
+		23BD865429E469F000A14649 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865329E469F000A14649 /* CreateAccountViewController.swift */; };
+		23BD865629E469FD00A14649 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865529E469FD00A14649 /* CreateAccountViewModel.swift */; };
 		23C84B3229DF5D6B00887146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23C84B3129DF5D6B00887146 /* GoogleService-Info.plist */; };
 		23C84B3629DF5F7A00887146 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 23C84B3529DF5F7A00887146 /* FirebaseAuth */; };
 		23FCBA0E29DC795D00043C74 /* API Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA0D29DC795D00043C74 /* API Service.swift */; };
@@ -43,7 +46,10 @@
 		23A95DFA29D4913E00B6CEF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23A95DFD29D4913E00B6CEF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23A95DFF29D4913E00B6CEF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		23BD864E29E464AE00A14649 /* SignInOut.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInOut.swift; sourceTree = "<group>"; };
+		23BD864E29E464AE00A14649 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
+		23BD865029E469AE00A14649 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		23BD865329E469F000A14649 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
+		23BD865529E469FD00A14649 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
 		23C84B3129DF5D6B00887146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23FCBA0D29DC795D00043C74 /* API Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Service.swift"; sourceTree = "<group>"; };
 		23FCBA1129DCBF1000043C74 /* BeerIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerIngredientsView.swift; sourceTree = "<group>"; };
@@ -141,14 +147,25 @@
 		23BA627229DF5517001D1382 /* SignIn */ = {
 			isa = PBXGroup;
 			children = (
-				23BD864E29E464AE00A14649 /* SignInOut.swift */,
+				23BD865029E469AE00A14649 /* SignInViewController.swift */,
+				23BD864E29E464AE00A14649 /* SignInViewModel.swift */,
 			);
 			path = SignIn;
+			sourceTree = "<group>";
+		};
+		23BD865229E469DB00A14649 /* CreateAccount */ = {
+			isa = PBXGroup;
+			children = (
+				23BD865329E469F000A14649 /* CreateAccountViewController.swift */,
+				23BD865529E469FD00A14649 /* CreateAccountViewModel.swift */,
+			);
+			path = CreateAccount;
 			sourceTree = "<group>";
 		};
 		23FCBA0F29DCBE4A00043C74 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				23BD865229E469DB00A14649 /* CreateAccount */,
 				23BA627229DF5517001D1382 /* SignIn */,
 				23FCBA1F29DF191300043C74 /* RandomBeer */,
 				23FCBA1029DCBEC900043C74 /* BeerIngredients */,
@@ -276,16 +293,19 @@
 				23FCBA2129DF193E00043C74 /* RandomBeerViewController.swift in Sources */,
 				23FCBA2529DF252800043C74 /* ServiceRequestingImageView.swift in Sources */,
 				23FCBA1229DCBF1000043C74 /* BeerIngredientsView.swift in Sources */,
-				23BD864F29E464AE00A14649 /* SignInOut.swift in Sources */,
+				23BD864F29E464AE00A14649 /* SignInViewModel.swift in Sources */,
 				239803D329DB2650001D1FF4 /* BeerSearchDataProvider.swift in Sources */,
 				23FCBA2329DF1EAA00043C74 /* RandomBeerViewModel.swift in Sources */,
 				23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */,
 				23FCBA1429DCC4E200043C74 /* IngredientsTableViewCustomCell.swift in Sources */,
 				239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */,
 				23FCBA1829DE095C00043C74 /* SearchBeerViewController.swift in Sources */,
+				23BD865429E469F000A14649 /* CreateAccountViewController.swift in Sources */,
 				23FCBA1629DCD30000043C74 /* IngredientsCollectionViewCustomCell.swift in Sources */,
 				23FCBA1E29DE2AAD00043C74 /* BeerListTableViewCell.swift in Sources */,
 				23FCBA1A29DE0BD100043C74 /* SearchBeerViewModel.swift in Sources */,
+				23BD865129E469AE00A14649 /* SignInViewController.swift in Sources */,
+				23BD865629E469FD00A14649 /* CreateAccountViewModel.swift in Sources */,
 				23FCBA0E29DC795D00043C74 /* API Service.swift in Sources */,
 				239803D129DB25D4001D1FF4 /* Beer.swift in Sources */,
 				23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */,
