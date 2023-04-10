@@ -20,6 +20,7 @@
 		23BD865129E469AE00A14649 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865029E469AE00A14649 /* SignInViewController.swift */; };
 		23BD865429E469F000A14649 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865329E469F000A14649 /* CreateAccountViewController.swift */; };
 		23BD865629E469FD00A14649 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865529E469FD00A14649 /* CreateAccountViewModel.swift */; };
+		23BD865929E472A700A14649 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 23BD865829E472A700A14649 /* FirebaseFirestore */; };
 		23C84B3229DF5D6B00887146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23C84B3129DF5D6B00887146 /* GoogleService-Info.plist */; };
 		23C84B3629DF5F7A00887146 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 23C84B3529DF5F7A00887146 /* FirebaseAuth */; };
 		23FCBA0E29DC795D00043C74 /* API Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA0D29DC795D00043C74 /* API Service.swift */; };
@@ -69,6 +70,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				23C84B3629DF5F7A00887146 /* FirebaseAuth in Frameworks */,
+				23BD865929E472A700A14649 /* FirebaseFirestore in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +120,7 @@
 			children = (
 				23A95DF029D4913D00B6CEF0 /* NewBrewer */,
 				23A95DEF29D4913D00B6CEF0 /* Products */,
+				23BD865729E472A700A14649 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -160,6 +163,13 @@
 				23BD865529E469FD00A14649 /* CreateAccountViewModel.swift */,
 			);
 			path = CreateAccount;
+			sourceTree = "<group>";
+		};
+		23BD865729E472A700A14649 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		23FCBA0F29DCBE4A00043C74 /* Views */ = {
@@ -229,6 +239,7 @@
 			name = NewBrewer;
 			packageProductDependencies = (
 				23C84B3529DF5F7A00887146 /* FirebaseAuth */,
+				23BD865829E472A700A14649 /* FirebaseFirestore */,
 			);
 			productName = NewBrewer;
 			productReference = 23A95DEE29D4913D00B6CEF0 /* NewBrewer.app */;
@@ -537,6 +548,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		23BD865829E472A700A14649 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23C84B3429DF5F7A00887146 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		23C84B3529DF5F7A00887146 /* FirebaseAuth */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 23C84B3429DF5F7A00887146 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
