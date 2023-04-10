@@ -47,18 +47,6 @@
                                     <action selector="signInButtonTapped:" destination="0o0-UO-DNz" eventType="touchUpInside" id="L5R-Ry-m7D"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="- or -" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zFG-ci-Mah">
-                                <rect key="frame" x="178.66666666666666" y="432.66666666666669" width="36" height="18"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Continue without sign in and limited capabilities" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UMh-6R-eDj">
-                                <rect key="frame" x="33.333333333333343" y="466.66666666666669" width="326.66666666666663" height="18"/>
-                                <fontDescription key="fontDescription" type="italicSystem" pointSize="15"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xaD-gP-ZHo">
                                 <rect key="frame" x="81.666666666666686" y="399" width="230" height="32"/>
                                 <buttonConfiguration key="configuration" style="plain" title="New user? Create an account!">
@@ -72,7 +60,6 @@
                         <viewLayoutGuide key="safeArea" id="Zvf-cb-aSM"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="UMh-6R-eDj" firstAttribute="centerX" secondItem="Zvf-cb-aSM" secondAttribute="centerX" id="2Z6-2V-Wvd"/>
                             <constraint firstItem="uap-k4-G4S" firstAttribute="centerX" secondItem="Zvf-cb-aSM" secondAttribute="centerX" id="CES-EU-Xsp"/>
                             <constraint firstItem="xaD-gP-ZHo" firstAttribute="centerX" secondItem="Zvf-cb-aSM" secondAttribute="centerX" id="Eep-uj-ljJ"/>
                             <constraint firstItem="nAY-Ce-RZa" firstAttribute="centerX" secondItem="Zvf-cb-aSM" secondAttribute="centerX" id="M9C-D6-Q02"/>
@@ -80,14 +67,11 @@
                             <constraint firstItem="eOL-Mg-oT5" firstAttribute="centerX" secondItem="Zvf-cb-aSM" secondAttribute="centerX" id="MiB-2T-H2R"/>
                             <constraint firstItem="Zvf-cb-aSM" firstAttribute="trailing" secondItem="uap-k4-G4S" secondAttribute="trailing" constant="16" id="XS6-k0-GbW"/>
                             <constraint firstItem="eOL-Mg-oT5" firstAttribute="leading" secondItem="Zvf-cb-aSM" secondAttribute="leading" constant="32" id="XXd-gc-hAa"/>
-                            <constraint firstItem="zFG-ci-Mah" firstAttribute="centerX" secondItem="Zvf-cb-aSM" secondAttribute="centerX" id="ce9-9a-gLg"/>
                             <constraint firstItem="uap-k4-G4S" firstAttribute="leading" secondItem="Zvf-cb-aSM" secondAttribute="leading" constant="16" id="eut-zP-c6c"/>
                             <constraint firstItem="eOL-Mg-oT5" firstAttribute="top" secondItem="uap-k4-G4S" secondAttribute="bottom" constant="75" id="ijj-PR-nMn"/>
                             <constraint firstItem="xaD-gP-ZHo" firstAttribute="top" secondItem="nAY-Ce-RZa" secondAttribute="bottom" constant="21.666666666666686" id="jb6-lc-Pg1"/>
-                            <constraint firstItem="UMh-6R-eDj" firstAttribute="top" secondItem="zFG-ci-Mah" secondAttribute="bottom" constant="16" id="yZm-bh-kxf"/>
                             <constraint firstItem="uap-k4-G4S" firstAttribute="top" secondItem="Zvf-cb-aSM" secondAttribute="top" constant="8" id="z5D-yI-W4x"/>
                             <constraint firstItem="Zvf-cb-aSM" firstAttribute="trailing" secondItem="eOL-Mg-oT5" secondAttribute="trailing" constant="32" id="zTt-ic-pb4"/>
-                            <constraint firstItem="Zvf-cb-aSM" firstAttribute="bottom" secondItem="UMh-6R-eDj" secondAttribute="bottom" constant="333.33333333333337" id="zqe-Tv-jEw"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="7gV-Mx-TUa"/>
@@ -369,10 +353,10 @@
             </objects>
             <point key="canvasLocation" x="4127" y="1263"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Favorite Recipes Table View Controller-->
         <scene sceneID="FkO-2w-aYd">
             <objects>
-                <tableViewController id="yaj-Mr-kxg" sceneMemberID="viewController">
+                <tableViewController id="yaj-Mr-kxg" customClass="FavoriteRecipesTableViewController" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="h5Y-IE-xmh">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -487,7 +471,7 @@
                                                         </label>
                                                     </subviews>
                                                 </stackView>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Description)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87F-Zc-8V5">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Description)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="9" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87F-Zc-8V5">
                                                     <rect key="frame" x="4" y="28.333333333333336" width="377" height="72.666666666666657"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
@@ -674,8 +658,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hod-iM-gro"/>
-        <segue reference="lHv-3q-8U6"/>
+        <segue reference="9Sm-Ow-VSQ"/>
+        <segue reference="SSm-Il-Gn1"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>

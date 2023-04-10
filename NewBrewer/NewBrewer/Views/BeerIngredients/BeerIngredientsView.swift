@@ -13,7 +13,7 @@ class BeerIngredientsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
-        
+        configureAddFavoriteButton()
     }
     
     // MARK: - Properties
@@ -37,6 +37,14 @@ class BeerIngredientsViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
+    }
+    
+    private func configureAddFavoriteButton() {
+        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
+            barButtonSystemItem: .add,
+            target: self,
+            action: nil
+        )
     }
 }
 
@@ -105,7 +113,7 @@ extension BeerIngredientsViewController: UICollectionViewDelegate, UICollectionV
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 120, height: 120)
+        return CGSize(width: 140, height: 140)
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
