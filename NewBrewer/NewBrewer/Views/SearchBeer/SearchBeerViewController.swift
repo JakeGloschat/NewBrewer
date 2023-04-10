@@ -22,7 +22,6 @@ class SearchBeerViewController: UIViewController {
         beerSearchBar.delegate = self
         beerListTableView.dataSource = self
         viewModel = SearchBeerViewModel(delegate: self)
-        // Do any additional setup after loading the view.
     }
     
     // MARK: - Navigation

@@ -11,7 +11,6 @@ class IngredientsCollectionViewCell: UICollectionViewCell {
     
     var ingredients: Ingredients?
     
-    
     let nameLabel = UILabel()
     let amountLabel = UILabel()
     let addTimeLabel = UILabel()

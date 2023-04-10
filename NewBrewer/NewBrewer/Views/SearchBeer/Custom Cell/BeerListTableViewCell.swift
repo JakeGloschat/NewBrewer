@@ -10,7 +10,6 @@ import UIKit
 class BeerListTableViewCell: UITableViewCell {
 
 // MARK: - Outlets
-    
     @IBOutlet weak var beerNameLabel: UILabel!
     @IBOutlet weak var beerAbvLabel: UILabel!
     @IBOutlet weak var beerIbueLabel: UILabel!

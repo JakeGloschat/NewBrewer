@@ -9,14 +9,12 @@ import UIKit
 
 class BeerIngredientsViewController: UIViewController {
     
-    
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
         
     }
-    
     
     // MARK: - Properties
     private let tableView = UITableView()

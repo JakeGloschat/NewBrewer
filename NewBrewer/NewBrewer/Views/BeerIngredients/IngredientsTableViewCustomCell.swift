@@ -9,7 +9,6 @@ import UIKit
 
 class IngredientsTableViewCell: UITableViewCell {
     
-    
     // MARK: - Properties
     
     private let collectionView: UICollectionView
