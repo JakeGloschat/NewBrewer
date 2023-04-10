@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="jl5-ya-QO0">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="LOV-AW-rYH">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
@@ -141,10 +141,10 @@
             </objects>
             <point key="canvasLocation" x="1311" y="-396"/>
         </scene>
-        <!--View Controller-->
+        <!--Random Beer View Controller-->
         <scene sceneID="mbK-hP-PTE">
             <objects>
-                <viewController id="kDp-br-HKh" sceneMemberID="viewController">
+                <viewController id="kDp-br-HKh" customClass="RandomBeerViewController" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nsv-7m-lYt">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -191,6 +191,18 @@
                                 <rect key="frame" x="142.33333333333334" y="717.66666666666663" width="108.66666666666666" height="34.333333333333371"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="tinted" title="Randomize"/>
+                                <connections>
+                                    <action selector="getRandomBeerButtonTapped:" destination="kDp-br-HKh" eventType="touchUpInside" id="2pU-b6-aRK"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vZL-aD-gkb">
+                                <rect key="frame" x="219" y="525" width="154" height="34.333333333333371"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="To ingredients -&gt;"/>
+                                <connections>
+                                    <action selector="toIngredientsButtonTapped:" destination="kDp-br-HKh" eventType="touchUpInside" id="2pG-Fq-kii"/>
+                                    <segue destination="hK5-Bt-gkZ" kind="show" identifier="toBeerDetailVC" id="hod-iM-gro"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aBe-RW-vev"/>
@@ -201,9 +213,12 @@
                             <constraint firstItem="gBh-Fo-TpV" firstAttribute="leading" secondItem="aBe-RW-vev" secondAttribute="leading" constant="8" id="6LI-8o-LUh"/>
                             <constraint firstItem="aBe-RW-vev" firstAttribute="bottom" secondItem="hLi-yE-MzQ" secondAttribute="bottom" constant="17" id="Gn1-VC-tIZ"/>
                             <constraint firstItem="Iuc-gD-vEg" firstAttribute="leading" secondItem="aBe-RW-vev" secondAttribute="leading" constant="20" id="JQe-ST-Tmb"/>
+                            <constraint firstItem="vZL-aD-gkb" firstAttribute="leading" secondItem="aBe-RW-vev" secondAttribute="leading" constant="219" id="VlS-Fd-ZTn"/>
                             <constraint firstItem="aBe-RW-vev" firstAttribute="trailing" secondItem="gBh-Fo-TpV" secondAttribute="trailing" constant="8" id="aOG-lC-9kE"/>
                             <constraint firstItem="aBe-RW-vev" firstAttribute="trailing" secondItem="Iuc-gD-vEg" secondAttribute="trailing" constant="20" id="dHb-o6-65N"/>
+                            <constraint firstItem="vZL-aD-gkb" firstAttribute="top" secondItem="gBh-Fo-TpV" secondAttribute="bottom" constant="39.666666666666629" id="f0d-LN-ts0"/>
                             <constraint firstItem="Iuc-gD-vEg" firstAttribute="top" secondItem="aBe-RW-vev" secondAttribute="top" constant="20" id="lLF-Ab-XkA"/>
+                            <constraint firstItem="aBe-RW-vev" firstAttribute="trailing" secondItem="vZL-aD-gkb" secondAttribute="trailing" constant="20" id="sG4-tZ-wUa"/>
                             <constraint firstItem="gBh-Fo-TpV" firstAttribute="top" secondItem="nsv-7m-lYt" secondAttribute="top" constant="326" id="yXz-yR-qnw"/>
                             <constraint firstItem="hLi-yE-MzQ" firstAttribute="centerX" secondItem="aBe-RW-vev" secondAttribute="centerX" id="z6v-Xa-Ta6"/>
                             <constraint firstItem="0oq-2Q-lhX" firstAttribute="top" secondItem="Iuc-gD-vEg" secondAttribute="bottom" constant="20" id="zYU-Ks-6JQ"/>
@@ -212,6 +227,16 @@
                     <navigationItem key="navigationItem" id="1yA-qG-3CE">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="PH4-AQ-mzg"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="beerAbvLabel" destination="GSo-v9-GWR" id="gdN-IV-4PA"/>
+                        <outlet property="beerDescriptionLabel" destination="GF0-Tv-OnB" id="8G2-Iu-O9f"/>
+                        <outlet property="beerIbuLabel" destination="Qgq-Av-PP4" id="xXB-YJ-n8c"/>
+                        <outlet property="beerImageView" destination="Iuc-gD-vEg" id="fuk-OR-Km2"/>
+                        <outlet property="beerNameLabel" destination="0oq-2Q-lhX" id="4es-X2-2Ih"/>
+                        <outlet property="beerTaglineLabel" destination="mRn-sH-noz" id="Jrd-to-ayN"/>
+                        <outlet property="getRandomBeerButton" destination="hLi-yE-MzQ" id="kKR-WR-fVf"/>
+                        <outlet property="toIngredientsButton" destination="vZL-aD-gkb" id="2r4-FN-Wqn"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="A1w-IF-VIW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -384,7 +409,7 @@
         <!--Search Recipes-->
         <scene sceneID="V3s-K3-Mrs">
             <objects>
-                <viewController title="Search Recipes" id="jMC-Zr-et7" sceneMemberID="viewController">
+                <viewController title="Search Recipes" id="jMC-Zr-et7" customClass="SearchBeerViewController" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Ka5-Sw-U1V">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -400,7 +425,7 @@
                                 <rect key="frame" x="4" y="167" width="385" height="598"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="105" id="HP6-Gf-4TT">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="beerCell" rowHeight="105" id="HP6-Gf-4TT" customClass="BeerListTableViewCell" customModule="NewBrewer" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="385" height="105"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="HP6-Gf-4TT" id="5Lh-aV-jeD">
@@ -447,6 +472,13 @@
                                                 <constraint firstAttribute="bottom" secondItem="87F-Zc-8V5" secondAttribute="bottom" constant="4" id="mJP-Qy-Bsg"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="beerAbvLabel" destination="EtL-wC-xiL" id="a10-w6-GI2"/>
+                                            <outlet property="beerDescriptionLabel" destination="87F-Zc-8V5" id="fcf-7S-sdV"/>
+                                            <outlet property="beerIbueLabel" destination="DYm-Yg-SHQ" id="ci0-BH-HTW"/>
+                                            <outlet property="beerNameLabel" destination="CCp-ff-CRh" id="opb-0r-eH1"/>
+                                            <segue destination="hK5-Bt-gkZ" kind="show" identifier="toIngredientsVC" id="9Sm-Ow-VSQ"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -466,10 +498,30 @@
                     <navigationItem key="navigationItem" id="smp-KI-M7x">
                         <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="Bum-db-J75"/>
                     </navigationItem>
+                    <connections>
+                        <outlet property="beerListTableView" destination="szg-C0-tCb" id="Fa7-FI-miC"/>
+                        <outlet property="beerSearchBar" destination="N3m-nU-int" id="RF3-G5-Ucf"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5B-E2-AU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1310.6870229007634" y="281.69014084507046"/>
+        </scene>
+        <!--Beer Ingredients View Controller-->
+        <scene sceneID="BTM-rG-hKs">
+            <objects>
+                <viewController id="hK5-Bt-gkZ" customClass="BeerIngredientsViewController" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="uQs-k2-u93">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="cU0-1C-S44"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Uwo-iv-RaV"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L1t-Va-VIT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2370" y="282"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5iu-QL-0W1">
@@ -566,6 +618,9 @@
             <point key="canvasLocation" x="383.96946564885496" y="1715.4929577464789"/>
         </scene>
     </scenes>
+    <inferredMetricsTieBreakers>
+        <segue reference="hod-iM-gro"/>
+    </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
         <image name="info.circle" catalog="system" width="128" height="123"/>

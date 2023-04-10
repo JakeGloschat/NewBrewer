@@ -7,7 +7,13 @@
 
 import UIKit
 
-struct BeerService {
+protocol BeerServicable {
+    func fetchRandomBeer(completion: @escaping (Result<Beer, NetworkError>) -> Void)
+    func fetchBeerBySearch(searchBeer: String, completion: @escaping (Result<[Beer], NetworkError>) -> Void)
+    func fetchImage(for item: String?, completion: @escaping (Result<UIImage, NetworkError>) -> Void)
+}
+
+struct BeerService: BeerServicable { //This is a concrete type
    
     private let service = APIService()
     
