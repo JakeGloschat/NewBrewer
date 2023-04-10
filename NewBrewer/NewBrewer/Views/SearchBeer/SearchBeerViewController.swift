@@ -25,11 +25,6 @@ class SearchBeerViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    
-    
-    
-    
-    
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toIngredientsVC" {
@@ -62,8 +57,6 @@ extension SearchBeerViewController: UITableViewDataSource {
         cell.configureCell(with: beer)
         return cell
     }
-    
-
     
 }
 extension SearchBeerViewController: SearchBeerViewModelDelegate {

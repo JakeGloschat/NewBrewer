@@ -17,9 +17,6 @@ class IngredientsCollectionViewCell: UICollectionViewCell {
     let addTimeLabel = UILabel()
     let attributeLabel = UILabel()
     
-    
-
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         contentView.backgroundColor = .systemBlue

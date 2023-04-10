@@ -16,7 +16,6 @@ class ServiceRequestingImageView: UIImageView {
         fatalError("init(coder:) has not been implemented")
     }
     
-    
     func fetchImage(using beer: Beer) {
         service.fetchImage(for: beer.image) { result in
             switch result {

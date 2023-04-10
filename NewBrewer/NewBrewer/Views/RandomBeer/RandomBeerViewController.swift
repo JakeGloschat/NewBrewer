@@ -45,7 +45,6 @@ class RandomBeerViewController: UIViewController {
         }
     }
     
-    
     // MARK: - Navigation
     
     

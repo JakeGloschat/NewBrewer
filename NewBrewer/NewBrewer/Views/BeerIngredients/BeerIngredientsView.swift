@@ -118,4 +118,3 @@ extension BeerIngredientsViewController: UICollectionViewDelegate, UICollectionV
         return 40
     }
 }
-

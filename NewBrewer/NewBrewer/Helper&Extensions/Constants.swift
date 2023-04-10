@@ -21,5 +21,4 @@ struct Constants {
         static let beerNameQuery = "beer_name"
         
     }
-    
 }
