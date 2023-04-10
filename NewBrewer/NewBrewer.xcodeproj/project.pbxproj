@@ -21,6 +21,7 @@
 		23BD865429E469F000A14649 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865329E469F000A14649 /* CreateAccountViewController.swift */; };
 		23BD865629E469FD00A14649 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865529E469FD00A14649 /* CreateAccountViewModel.swift */; };
 		23BD865929E472A700A14649 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 23BD865829E472A700A14649 /* FirebaseFirestore */; };
+		23BD865E29E499B400A14649 /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865D29E499B400A14649 /* GlossaryViewController.swift */; };
 		23C84B3229DF5D6B00887146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23C84B3129DF5D6B00887146 /* GoogleService-Info.plist */; };
 		23C84B3629DF5F7A00887146 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 23C84B3529DF5F7A00887146 /* FirebaseAuth */; };
 		23FCBA0E29DC795D00043C74 /* API Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA0D29DC795D00043C74 /* API Service.swift */; };
@@ -51,6 +52,7 @@
 		23BD865029E469AE00A14649 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		23BD865329E469F000A14649 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		23BD865529E469FD00A14649 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
+		23BD865D29E499B400A14649 /* GlossaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
 		23C84B3129DF5D6B00887146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		23FCBA0D29DC795D00043C74 /* API Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Service.swift"; sourceTree = "<group>"; };
 		23FCBA1129DCBF1000043C74 /* BeerIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerIngredientsView.swift; sourceTree = "<group>"; };
@@ -172,9 +174,18 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		23BD865C29E4996200A14649 /* GlossaryView */ = {
+			isa = PBXGroup;
+			children = (
+				23BD865D29E499B400A14649 /* GlossaryViewController.swift */,
+			);
+			path = GlossaryView;
+			sourceTree = "<group>";
+		};
 		23FCBA0F29DCBE4A00043C74 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				23BD865C29E4996200A14649 /* GlossaryView */,
 				23BD865229E469DB00A14649 /* CreateAccount */,
 				23BA627229DF5517001D1382 /* SignIn */,
 				23FCBA1F29DF191300043C74 /* RandomBeer */,
@@ -309,6 +320,7 @@
 				23FCBA2329DF1EAA00043C74 /* RandomBeerViewModel.swift in Sources */,
 				23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */,
 				23FCBA1429DCC4E200043C74 /* IngredientsTableViewCustomCell.swift in Sources */,
+				23BD865E29E499B400A14649 /* GlossaryViewController.swift in Sources */,
 				239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */,
 				23FCBA1829DE095C00043C74 /* SearchBeerViewController.swift in Sources */,
 				23BD865429E469F000A14649 /* CreateAccountViewController.swift in Sources */,

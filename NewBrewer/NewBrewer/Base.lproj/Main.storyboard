@@ -218,7 +218,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="To ingredients -&gt;"/>
                                 <connections>
                                     <action selector="toIngredientsButtonTapped:" destination="kDp-br-HKh" eventType="touchUpInside" id="2pG-Fq-kii"/>
-                                    <segue destination="hK5-Bt-gkZ" kind="show" identifier="toBeerDetailVC" id="hod-iM-gro"/>
+                                    <segue destination="hK5-Bt-gkZ" kind="show" identifier="toBeerIngredientsVC" id="hod-iM-gro"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -242,7 +242,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1yA-qG-3CE">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="PH4-AQ-mzg"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="PH4-AQ-mzg">
+                            <connections>
+                                <segue destination="Jn2-Hl-vkn" kind="show" id="Tmc-ev-dno"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="beerAbvLabel" destination="GSo-v9-GWR" id="gdN-IV-4PA"/>
@@ -259,16 +263,16 @@
             </objects>
             <point key="canvasLocation" x="1310.6870229007634" y="1012.6760563380283"/>
         </scene>
-        <!--View Controller-->
+        <!--Glossary View Controller-->
         <scene sceneID="br0-cc-lmA">
             <objects>
-                <viewController id="Jn2-Hl-vkn" sceneMemberID="viewController">
+                <viewController id="Jn2-Hl-vkn" customClass="GlossaryViewController" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="iwl-xP-k7R">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <searchBar contentMode="redraw" placeholder="Search term...." translatesAutoresizingMaskIntoConstraints="NO" id="65j-6j-kTE">
-                                <rect key="frame" x="0.0" y="78" width="393" height="44"/>
+                                <rect key="frame" x="0.0" y="122" width="393" height="44"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="44" id="5Ru-Bj-gYh"/>
                                 </constraints>
@@ -278,7 +282,7 @@
                                 </connections>
                             </searchBar>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="JFl-ZJ-Ozv">
-                                <rect key="frame" x="4" y="126" width="385" height="688"/>
+                                <rect key="frame" x="4" y="170" width="385" height="595"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="70" id="Qbi-dZ-86a">
@@ -317,10 +321,17 @@
                             <constraint firstItem="65j-6j-kTE" firstAttribute="leading" secondItem="Fbc-HC-5R8" secondAttribute="leading" id="zH7-6s-K6t"/>
                         </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="DTk-Xb-F6i">
+                        <barButtonItem key="rightBarButtonItem" title="Sign Out" id="WtP-2i-zbv">
+                            <connections>
+                                <action selector="singOutButtonTapped:" destination="Jn2-Hl-vkn" id="sB2-0o-Ter"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zvq-D5-V8x" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2662" y="1263"/>
+            <point key="canvasLocation" x="3418" y="1263"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="OSS-2h-iuu">
@@ -356,7 +367,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="K7A-xv-Pgq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3395" y="1263"/>
+            <point key="canvasLocation" x="4127" y="1263"/>
         </scene>
         <!--Table View Controller-->
         <scene sceneID="FkO-2w-aYd">
@@ -415,7 +426,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" id="jNr-cD-AyC">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="B3G-VZ-hHd"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="B3G-VZ-hHd">
+                            <connections>
+                                <segue destination="Jn2-Hl-vkn" kind="show" id="lHv-3q-8U6"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </tableViewController>
@@ -513,7 +528,11 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="smp-KI-M7x">
-                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="Bum-db-J75"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="info.circle" catalog="system" id="Bum-db-J75">
+                            <connections>
+                                <segue destination="Jn2-Hl-vkn" kind="show" id="SSm-Il-Gn1"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="beerListTableView" destination="szg-C0-tCb" id="Fa7-FI-miC"/>
@@ -634,9 +653,29 @@
             </objects>
             <point key="canvasLocation" x="383.96946564885496" y="1715.4929577464789"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="G1y-Ik-6R4">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="yhI-HN-wS8" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationItem key="navigationItem" id="fLc-AD-d1F"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="SS3-dD-YUA">
+                        <rect key="frame" x="0.0" y="59" width="393" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="Jn2-Hl-vkn" kind="relationship" relationship="rootViewController" id="KQW-gJ-hhn"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D40-Qp-RzF" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2662" y="1263"/>
+        </scene>
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="hod-iM-gro"/>
+        <segue reference="lHv-3q-8U6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart.fill" catalog="system" width="128" height="107"/>
