@@ -9,7 +9,12 @@ import Foundation
 import FirebaseFirestore
 import FirebaseStorage
 
-struct FirebaseService {
+protocol FirebaseSyncable {
+    func saveBeer(beer: BeerToSave, with uuid: String, completion: @escaping (Result<Bool, NetworkError>) -> Void)
+    func delete(beer: BeerToSave)
+}
+
+struct FirebaseService: FirebaseSyncable {
     
     // MARK: - Properties
     let ref = Firestore.firestore()
@@ -17,7 +22,7 @@ struct FirebaseService {
     // Storage is only used for images
     
     // MARK: - Functions
-    func saveBeer(beer: BeerToSave, with uuid: String, completion: @escaping (Result<Bool, NetworkError>) -> Void ) {
+    func saveBeer(beer: BeerToSave, with uuid: String, completion: @escaping (Result<Bool, NetworkError>) -> Void) {
         
         ref.collection("beers").document(beer.uuid).setData(beer.dictionaryRepresentation) { error in
             if let error = error {
