@@ -100,12 +100,3 @@ struct Hops: Codable {
     let attribute: String
 }
 
-
-
-
-
-
-
-// save name and id and description of beer to firebase
-// that will populate their favorites list view
-// perform a single fetch for the item when they click on said favorite.

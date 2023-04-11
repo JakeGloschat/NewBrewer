@@ -13,6 +13,7 @@ struct Constants {
         static let beersBaseURL = "https://api.punkapi.com/v2"
         static let allBeersPath = "/beers"
         static let randomBeerPath = "/beers/random"
+        static let singleBeerPath = "https://api.punkapi.com/v2/beers/"
     }
     
     struct APIQueryKey {
