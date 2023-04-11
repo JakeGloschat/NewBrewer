@@ -11,6 +11,7 @@
 		239803D329DB2650001D1FF4 /* BeerSearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D229DB2650001D1FF4 /* BeerSearchDataProvider.swift */; };
 		239803D729DB2695001D1FF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D629DB2695001D1FF4 /* Constants.swift */; };
 		239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D829DB27B0001D1FF4 /* NetworkError.swift */; };
+		23A1495129E5C43300532E00 /* BeerToSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1495029E5C43300532E00 /* BeerToSave.swift */; };
 		23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */; };
 		23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */; };
 		23A95DF929D4913D00B6CEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DF729D4913D00B6CEF0 /* Main.storyboard */; };
@@ -43,6 +44,7 @@
 		239803D229DB2650001D1FF4 /* BeerSearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSearchDataProvider.swift; sourceTree = "<group>"; };
 		239803D629DB2695001D1FF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		239803D829DB27B0001D1FF4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		23A1495029E5C43300532E00 /* BeerToSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerToSave.swift; sourceTree = "<group>"; };
 		23A95DEE29D4913D00B6CEF0 /* NewBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -98,6 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				239803D029DB25D4001D1FF4 /* Beer.swift */,
+				23A1495029E5C43300532E00 /* BeerToSave.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -336,6 +339,7 @@
 				239803D729DB2695001D1FF4 /* Constants.swift in Sources */,
 				23FCBA2129DF193E00043C74 /* RandomBeerViewController.swift in Sources */,
 				23FCBA2529DF252800043C74 /* ServiceRequestingImageView.swift in Sources */,
+				23A1495129E5C43300532E00 /* BeerToSave.swift in Sources */,
 				23FCBA1229DCBF1000043C74 /* BeerIngredientsView.swift in Sources */,
 				23BD864F29E464AE00A14649 /* SignInViewModel.swift in Sources */,
 				239803D329DB2650001D1FF4 /* BeerSearchDataProvider.swift in Sources */,
