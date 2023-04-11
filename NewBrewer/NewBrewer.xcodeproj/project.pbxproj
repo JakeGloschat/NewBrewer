@@ -13,6 +13,7 @@
 		239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D829DB27B0001D1FF4 /* NetworkError.swift */; };
 		23A1495129E5C43300532E00 /* BeerToSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1495029E5C43300532E00 /* BeerToSave.swift */; };
 		23A1495329E5C8A200532E00 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 23A1495229E5C8A200532E00 /* FirebaseStorage */; };
+		23A1495529E5F66E00532E00 /* FavoriteRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1495429E5F66E00532E00 /* FavoriteRecipesViewModel.swift */; };
 		23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */; };
 		23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */; };
 		23A95DF929D4913D00B6CEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DF729D4913D00B6CEF0 /* Main.storyboard */; };
@@ -46,6 +47,7 @@
 		239803D629DB2695001D1FF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		239803D829DB27B0001D1FF4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		23A1495029E5C43300532E00 /* BeerToSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerToSave.swift; sourceTree = "<group>"; };
+		23A1495429E5F66E00532E00 /* FavoriteRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesViewModel.swift; sourceTree = "<group>"; };
 		23A95DEE29D4913D00B6CEF0 /* NewBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -112,8 +114,8 @@
 			children = (
 				239803D229DB2650001D1FF4 /* BeerSearchDataProvider.swift */,
 				23FCBA2429DF252800043C74 /* ServiceRequestingImageView.swift */,
-				23FCBA0D29DC795D00043C74 /* API Service.swift */,
 				23BD866329E4A37800A14649 /* FirebaseService.swift */,
+				23FCBA0D29DC795D00043C74 /* API Service.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -205,6 +207,7 @@
 			isa = PBXGroup;
 			children = (
 				23BD866129E4A12900A14649 /* FavoriteRecipesTableViewController.swift */,
+				23A1495429E5F66E00532E00 /* FavoriteRecipesViewModel.swift */,
 			);
 			path = FavoriteRecipes;
 			sourceTree = "<group>";
@@ -214,11 +217,11 @@
 			children = (
 				23BD866029E4A0EC00A14649 /* FavoriteRecipes */,
 				23BD865C29E4996200A14649 /* GlossaryView */,
-				23BD865229E469DB00A14649 /* CreateAccount */,
-				23BA627229DF5517001D1382 /* SignIn */,
 				23FCBA1F29DF191300043C74 /* RandomBeer */,
 				23FCBA1029DCBEC900043C74 /* BeerIngredients */,
 				23FCBA1B29DE294B00043C74 /* SearchBeer */,
+				23BD865229E469DB00A14649 /* CreateAccount */,
+				23BA627229DF5517001D1382 /* SignIn */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -339,6 +342,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A1495529E5F66E00532E00 /* FavoriteRecipesViewModel.swift in Sources */,
 				239803D729DB2695001D1FF4 /* Constants.swift in Sources */,
 				23FCBA2129DF193E00043C74 /* RandomBeerViewController.swift in Sources */,
 				23FCBA2529DF252800043C74 /* ServiceRequestingImageView.swift in Sources */,
