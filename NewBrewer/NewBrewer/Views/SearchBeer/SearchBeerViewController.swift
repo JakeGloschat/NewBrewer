@@ -13,7 +13,7 @@ class SearchBeerViewController: UIViewController {
     
     @IBOutlet weak var beerSearchBar: UISearchBar!
     @IBOutlet weak var beerListTableView: UITableView!
-    @IBOutlet weak var favoriteBeerButton: UIButton!
+    
     
     
     // MARK: - Properties
@@ -35,11 +35,6 @@ class SearchBeerViewController: UIViewController {
             destinationVC.beer = beer
         }
     }
-    
-    // MARK: - Actions
-    @IBAction func favoriteBeerButtonTapped(_ sender: Any) {
-    }
-    
 }
 
 extension SearchBeerViewController: UISearchBarDelegate {
@@ -60,12 +55,18 @@ extension SearchBeerViewController: UITableViewDataSource {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: indexPath) as? BeerListTableViewCell else { return UITableViewCell() }
         
         let beer = viewModel.beers[indexPath.row]
-        cell.configureCell(with: beer)
+        cell.configureCell(with: beer, viewModel: viewModel)
         return cell
     }
 }
 
 extension SearchBeerViewController: SearchBeerViewModelDelegate {
+    func beerSavedSuccessfully() {
+        DispatchQueue.main.async {
+            self.beerListTableView.reloadData()
+        }
+    }
+    
     func beersLoadedSuccessfully() {
         DispatchQueue.main.async {
             self.beerListTableView.reloadData()

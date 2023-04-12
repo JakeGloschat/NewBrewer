@@ -482,7 +482,7 @@
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
                                                     <connections>
-                                                        <action selector="favoriteBeerButtonTapped:" destination="jMC-Zr-et7" eventType="touchUpInside" id="TH8-Rn-WM7"/>
+                                                        <action selector="favoriteBeerButtonTapped:" destination="HP6-Gf-4TT" eventType="touchUpInside" id="IsV-AA-Aib"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -505,6 +505,7 @@
                                         <connections>
                                             <outlet property="beerAbvLabel" destination="EtL-wC-xiL" id="a10-w6-GI2"/>
                                             <outlet property="beerDescriptionLabel" destination="87F-Zc-8V5" id="fcf-7S-sdV"/>
+                                            <outlet property="beerFavoriteButton" destination="fjc-mx-sYz" id="DmT-Gg-yjp"/>
                                             <outlet property="beerIbueLabel" destination="DYm-Yg-SHQ" id="ci0-BH-HTW"/>
                                             <outlet property="beerNameLabel" destination="CCp-ff-CRh" id="opb-0r-eH1"/>
                                             <segue destination="hK5-Bt-gkZ" kind="show" identifier="toIngredientsVC" id="9Sm-Ow-VSQ"/>
@@ -535,7 +536,6 @@
                     <connections>
                         <outlet property="beerListTableView" destination="szg-C0-tCb" id="Fa7-FI-miC"/>
                         <outlet property="beerSearchBar" destination="N3m-nU-int" id="RF3-G5-Ucf"/>
-                        <outlet property="favoriteBeerButton" destination="fjc-mx-sYz" id="9ID-KI-dwq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="r5B-E2-AU2" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
