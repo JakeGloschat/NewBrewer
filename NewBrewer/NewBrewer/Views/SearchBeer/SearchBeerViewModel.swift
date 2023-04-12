@@ -9,6 +9,7 @@ import Foundation
 
 protocol SearchBeerViewModelDelegate: AnyObject {
     func beersLoadedSuccessfully()
+    func beerSavedSuccessfully()
 }
 
 class SearchBeerViewModel { // This is a concrete type
@@ -17,11 +18,13 @@ class SearchBeerViewModel { // This is a concrete type
     // MARK: - Properties
     private weak var delegate: SearchBeerViewModelDelegate?
     private var service: BeerServicable
+    private var firebaseService: FirebaseServicable
     var beers: [Beer] = []
     
-    init(delegate: SearchBeerViewModelDelegate, beerService: BeerServicable = BeerService()) {
+    init(delegate: SearchBeerViewModelDelegate, beerService: BeerServicable = BeerService(), firebaseService: FirebaseServicable = FirebaseService()) {
         self.delegate = delegate
         self.service = beerService
+        self.firebaseService = firebaseService
     }
     // MARK: - Functions
     
@@ -33,6 +36,17 @@ class SearchBeerViewModel { // This is a concrete type
                 self.delegate?.beersLoadedSuccessfully()
             case .failure(let failure):
                 print(failure.errorDescription ?? "Where's the beer at?")
+            }
+        }
+    }
+    
+    func saveFavoriteBeer(beerToSave: BeerToSave) {
+        firebaseService.saveBeer(beer: beerToSave, with: beerToSave.uuid) { result in
+            switch result {
+            case .success(_):
+                self.delegate?.beerSavedSuccessfully()
+            case .failure(_):
+                print("Something went wrong...?")
             }
         }
     }

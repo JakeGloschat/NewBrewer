@@ -9,6 +9,7 @@ import Foundation
 import FirebaseFirestore
 import FirebaseStorage
 
+//Make it's own file
 enum FirebaseError: Error {
     case firebaseError(Error)
     case failedToUnrwapData
@@ -55,8 +56,8 @@ struct FirebaseService: FirebaseServicable {
             guard let docSnapshotArray = snapshot?.documents else { completion(.failure(.noDataFound)) ; return }
             
             let dictionaryArray = docSnapshotArray.compactMap { $0.data() }
-            let beer = dictionaryArray.compactMap { BeerToSave(fromDictionary: $0)}
-            completion(.success(beer))
+            let beers = dictionaryArray.compactMap { BeerToSave(fromDictionary: $0)}
+            completion(.success(beers))
         }
     }
 }
