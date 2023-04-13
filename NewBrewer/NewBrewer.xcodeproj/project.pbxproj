@@ -11,11 +11,15 @@
 		239803D329DB2650001D1FF4 /* BeerSearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D229DB2650001D1FF4 /* BeerSearchDataProvider.swift */; };
 		239803D729DB2695001D1FF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D629DB2695001D1FF4 /* Constants.swift */; };
 		239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D829DB27B0001D1FF4 /* NetworkError.swift */; };
+		23A1495129E5C43300532E00 /* BeerToSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1495029E5C43300532E00 /* BeerToSave.swift */; };
+		23A1495329E5C8A200532E00 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 23A1495229E5C8A200532E00 /* FirebaseStorage */; };
+		23A1495529E5F66E00532E00 /* FavoriteRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1495429E5F66E00532E00 /* FavoriteRecipesViewModel.swift */; };
 		23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */; };
 		23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */; };
 		23A95DF929D4913D00B6CEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DF729D4913D00B6CEF0 /* Main.storyboard */; };
 		23A95DFB29D4913E00B6CEF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DFA29D4913E00B6CEF0 /* Assets.xcassets */; };
 		23A95DFE29D4913E00B6CEF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DFC29D4913E00B6CEF0 /* LaunchScreen.storyboard */; };
+		23B2D38C29E850E000C6E355 /* FIrebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2D38B29E850E000C6E355 /* FIrebaseError.swift */; };
 		23BD864F29E464AE00A14649 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD864E29E464AE00A14649 /* SignInViewModel.swift */; };
 		23BD865129E469AE00A14649 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865029E469AE00A14649 /* SignInViewController.swift */; };
 		23BD865429E469F000A14649 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865329E469F000A14649 /* CreateAccountViewController.swift */; };
@@ -43,6 +47,8 @@
 		239803D229DB2650001D1FF4 /* BeerSearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSearchDataProvider.swift; sourceTree = "<group>"; };
 		239803D629DB2695001D1FF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		239803D829DB27B0001D1FF4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
+		23A1495029E5C43300532E00 /* BeerToSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerToSave.swift; sourceTree = "<group>"; };
+		23A1495429E5F66E00532E00 /* FavoriteRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesViewModel.swift; sourceTree = "<group>"; };
 		23A95DEE29D4913D00B6CEF0 /* NewBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -50,6 +56,7 @@
 		23A95DFA29D4913E00B6CEF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23A95DFD29D4913E00B6CEF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23A95DFF29D4913E00B6CEF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23B2D38B29E850E000C6E355 /* FIrebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrebaseError.swift; sourceTree = "<group>"; };
 		23BD864E29E464AE00A14649 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		23BD865029E469AE00A14649 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		23BD865329E469F000A14649 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -77,6 +84,7 @@
 			files = (
 				23C84B3629DF5F7A00887146 /* FirebaseAuth in Frameworks */,
 				23BD865929E472A700A14649 /* FirebaseFirestore in Frameworks */,
+				23A1495329E5C8A200532E00 /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -98,6 +106,7 @@
 			isa = PBXGroup;
 			children = (
 				239803D029DB25D4001D1FF4 /* Beer.swift */,
+				23A1495029E5C43300532E00 /* BeerToSave.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -107,8 +116,8 @@
 			children = (
 				239803D229DB2650001D1FF4 /* BeerSearchDataProvider.swift */,
 				23FCBA2429DF252800043C74 /* ServiceRequestingImageView.swift */,
-				23FCBA0D29DC795D00043C74 /* API Service.swift */,
 				23BD866329E4A37800A14649 /* FirebaseService.swift */,
+				23FCBA0D29DC795D00043C74 /* API Service.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -118,6 +127,7 @@
 			children = (
 				239803D629DB2695001D1FF4 /* Constants.swift */,
 				239803D829DB27B0001D1FF4 /* NetworkError.swift */,
+				23B2D38B29E850E000C6E355 /* FIrebaseError.swift */,
 			);
 			path = "Helper&Extensions";
 			sourceTree = "<group>";
@@ -200,6 +210,7 @@
 			isa = PBXGroup;
 			children = (
 				23BD866129E4A12900A14649 /* FavoriteRecipesTableViewController.swift */,
+				23A1495429E5F66E00532E00 /* FavoriteRecipesViewModel.swift */,
 			);
 			path = FavoriteRecipes;
 			sourceTree = "<group>";
@@ -209,11 +220,11 @@
 			children = (
 				23BD866029E4A0EC00A14649 /* FavoriteRecipes */,
 				23BD865C29E4996200A14649 /* GlossaryView */,
-				23BD865229E469DB00A14649 /* CreateAccount */,
-				23BA627229DF5517001D1382 /* SignIn */,
 				23FCBA1F29DF191300043C74 /* RandomBeer */,
 				23FCBA1029DCBEC900043C74 /* BeerIngredients */,
 				23FCBA1B29DE294B00043C74 /* SearchBeer */,
+				23BD865229E469DB00A14649 /* CreateAccount */,
+				23BA627229DF5517001D1382 /* SignIn */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -273,6 +284,7 @@
 			packageProductDependencies = (
 				23C84B3529DF5F7A00887146 /* FirebaseAuth */,
 				23BD865829E472A700A14649 /* FirebaseFirestore */,
+				23A1495229E5C8A200532E00 /* FirebaseStorage */,
 			);
 			productName = NewBrewer;
 			productReference = 23A95DEE29D4913D00B6CEF0 /* NewBrewer.app */;
@@ -333,9 +345,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				23A1495529E5F66E00532E00 /* FavoriteRecipesViewModel.swift in Sources */,
 				239803D729DB2695001D1FF4 /* Constants.swift in Sources */,
 				23FCBA2129DF193E00043C74 /* RandomBeerViewController.swift in Sources */,
 				23FCBA2529DF252800043C74 /* ServiceRequestingImageView.swift in Sources */,
+				23A1495129E5C43300532E00 /* BeerToSave.swift in Sources */,
 				23FCBA1229DCBF1000043C74 /* BeerIngredientsView.swift in Sources */,
 				23BD864F29E464AE00A14649 /* SignInViewModel.swift in Sources */,
 				239803D329DB2650001D1FF4 /* BeerSearchDataProvider.swift in Sources */,
@@ -344,6 +358,7 @@
 				23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */,
 				23FCBA1429DCC4E200043C74 /* IngredientsTableViewCustomCell.swift in Sources */,
 				23BD866429E4A37800A14649 /* FirebaseService.swift in Sources */,
+				23B2D38C29E850E000C6E355 /* FIrebaseError.swift in Sources */,
 				23BD865E29E499B400A14649 /* GlossaryViewController.swift in Sources */,
 				239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */,
 				23FCBA1829DE095C00043C74 /* SearchBeerViewController.swift in Sources */,
@@ -584,6 +599,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		23A1495229E5C8A200532E00 /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23C84B3429DF5F7A00887146 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
 		23BD865829E472A700A14649 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 23C84B3429DF5F7A00887146 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;

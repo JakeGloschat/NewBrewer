@@ -64,7 +64,7 @@ struct BeerService: BeerServicable { //This is a concrete type
         }
         
         guard let finalURL = urlComponents?.url else { completion(.failure(.InvalidURL)) ; return }
-        print("Fetch Characters Final URL: \(finalURL)")
+        print("Fetch Beers Final URL: \(finalURL)")
         
         let request = URLRequest(url: finalURL)
         service.perform(request) { result in
@@ -93,6 +93,31 @@ struct BeerService: BeerServicable { //This is a concrete type
             case .success(let data):
                 guard let image = UIImage(data: data) else { completion(.failure(.unableToDecode)) ; return }
                 completion(.success(image))
+            case .failure(let failure):
+                completion(.failure(.thrownError(failure)))
+            }
+        }
+    }
+    
+    func fetchSingleBeer(for beer: Beer, completion: @escaping (Result<Beer, NetworkError>) -> Void) {
+        guard let baseURL = URL(string: Constants.BeerList.singleBeerPath) else { completion(.failure(.InvalidURL)) ; return }
+        
+        var urlComponents = URLComponents(url:baseURL, resolvingAgainstBaseURL: true)
+        urlComponents?.path.append("\(beer.beerId)")
+        
+        guard let finalURL = urlComponents?.url else { completion(.failure(.InvalidURL)) ; return }
+        print("Fetch Beer Final URL: \(finalURL)")
+        
+        let request = URLRequest(url: finalURL)
+        service.perform(request) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    let beer = try JSONDecoder().decode(Beer.self, from: data)
+                    completion(.success(beer))
+                } catch {
+                    completion(.failure(.unableToDecode))
+                }
             case .failure(let failure):
                 completion(.failure(.thrownError(failure)))
             }

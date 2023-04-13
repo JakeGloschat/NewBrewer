@@ -13,7 +13,6 @@ class BeerIngredientsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
-        configureAddFavoriteButton()
     }
     
     // MARK: - Properties
@@ -21,8 +20,7 @@ class BeerIngredientsViewController: UIViewController {
     private let tableViewCellReuseIdentifier = "TableViewCell"
     private let collectionViewCellReuseIdentifier = "CollectionViewCell"
     var beer: Beer?
-    var viewModel: SearchBeerViewModel!
-    
+
     // MARK: - Functions
     func setUpTableView() {
         view.addSubview(tableView)
@@ -37,14 +35,6 @@ class BeerIngredientsViewController: UIViewController {
             tableView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             tableView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor)
         ])
-    }
-    
-    private func configureAddFavoriteButton() {
-        self.navigationItem.rightBarButtonItem = UIBarButtonItem(
-            barButtonSystemItem: .add,
-            target: self,
-            action: nil
-        )
     }
 }
 

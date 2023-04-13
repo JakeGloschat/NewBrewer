@@ -9,6 +9,7 @@ import Foundation
 
 struct Beer: Codable {
     private enum CodingKeys: String, CodingKey {
+        case beerId = "id"
         case name
         case tagline
         case description
@@ -23,6 +24,7 @@ struct Beer: Codable {
         case brewersTips = "brewers_tips"
     }
     
+    let beerId: Int
     let name: String
     let tagline: String
     let description: String
@@ -35,6 +37,7 @@ struct Beer: Codable {
     let ingredients: Ingredients
     let foodPairing: [String]
     let brewersTips: String
+
 }
 
 struct Volume: Codable {
@@ -96,3 +99,4 @@ struct Hops: Codable {
     let add: String
     let attribute: String
 }
+
