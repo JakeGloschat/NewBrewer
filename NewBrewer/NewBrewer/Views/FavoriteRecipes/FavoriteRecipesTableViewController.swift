@@ -7,28 +7,30 @@
 
 import UIKit
 
-class FavoriteRecipesTableViewController: UITableViewController {
 
+class FavoriteRecipesTableViewController: UITableViewController {
+    
     // MARK: - Properties
     var viewModel: FavoriteRecipesViewModel!
+    var beer: BeerToSave?
     
-    override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        
-    }
-    
+//    override func viewWillAppear(_ animated: Bool) {
+//        super.viewWillAppear(animated)
+//        
+//    }
+//    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = FavoriteRecipesViewModel(delegate: self)
         viewModel.loadFavorites()
     }
-
+    
     // MARK: - Table view data source
-
+    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.favoritedBeers.count
     }
-
+    
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteBeersCell", for: indexPath) as? FavoriteRecipesTableViewCell else { return UITableViewCell() }
         
@@ -37,13 +39,13 @@ class FavoriteRecipesTableViewController: UITableViewController {
         cell.configureCell(with: beer, isFavorited: isFavorite != nil, delegate: self)
         return cell
     }
-   
-
- 
+    
+    
+    
     // MARK: - Navigation
-
+    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-     
+        
     }
 }
 
@@ -62,8 +64,8 @@ extension FavoriteRecipesTableViewController: FavoriteRecipesViewModelDelegate {
 }
 
 extension FavoriteRecipesTableViewController: FavoriteRecipesTableViewCellDelegate {
-    func didTapFavorite(for beer: Beer) {
-        let beerToRemove = BeerToSave(name: beer.name, description: beer.description, beerId: beer.beerId, abv: beer.abv, ibu: beer.ibu)
+    func didTapFavorite(for beer: BeerToSave) {
+        let beerToRemove = beer
         viewModel.removeSavedBeer(beer: beerToRemove)
     }
 }

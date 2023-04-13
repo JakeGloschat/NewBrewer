@@ -8,7 +8,7 @@
 import UIKit
 
 protocol FavoriteRecipesTableViewCellDelegate: AnyObject {
-    func didTapFavorite(for beer: Beer)
+    func didTapFavorite(for beer: BeerToSave)
 }
 
 class FavoriteRecipesTableViewCell: UITableViewCell {
@@ -23,7 +23,6 @@ class FavoriteRecipesTableViewCell: UITableViewCell {
     
     // MARK: - Properties
     weak var delegate: FavoriteRecipesTableViewCellDelegate?
-    var beer: Beer?
     var savedBeer: BeerToSave?
     
     // MARK: - Helper Functions
@@ -36,13 +35,13 @@ class FavoriteRecipesTableViewCell: UITableViewCell {
         beerIbuLabel.text = "IBU: \(beer.ibu ?? 0.0)"
         beerDescriptionLabel.text = beer.description
         if isFavorited {
-            favoriteBeerButton.setImage(UIImage(systemName: "heart"), for: .normal)
+            favoriteBeerButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
         }
     }
     
     // MARK: - Action
     @IBAction func favoriteBeerButtonTapped(_ sender: Any) {
-        
+        guard let beer = self.savedBeer else { return }
+        delegate?.didTapFavorite(for: beer)
     }
-    
 }

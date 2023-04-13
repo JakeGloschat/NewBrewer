@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		2346567A29E85B1300C14280 /* FavoriteRecipesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2346567929E85B1300C14280 /* FavoriteRecipesTableViewCell.swift */; };
+		2346567C29E8921C00C14280 /* BeerIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2346567B29E8921C00C14280 /* BeerIngredientsViewModel.swift */; };
 		239803D129DB25D4001D1FF4 /* Beer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D029DB25D4001D1FF4 /* Beer.swift */; };
 		239803D329DB2650001D1FF4 /* BeerSearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D229DB2650001D1FF4 /* BeerSearchDataProvider.swift */; };
 		239803D729DB2695001D1FF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D629DB2695001D1FF4 /* Constants.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		2346567929E85B1300C14280 /* FavoriteRecipesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesTableViewCell.swift; sourceTree = "<group>"; };
+		2346567B29E8921C00C14280 /* BeerIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerIngredientsViewModel.swift; sourceTree = "<group>"; };
 		239803D029DB25D4001D1FF4 /* Beer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Beer.swift; sourceTree = "<group>"; };
 		239803D229DB2650001D1FF4 /* BeerSearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSearchDataProvider.swift; sourceTree = "<group>"; };
 		239803D629DB2695001D1FF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 			isa = PBXGroup;
 			children = (
 				23FCBA1129DCBF1000043C74 /* BeerIngredientsView.swift */,
+				2346567B29E8921C00C14280 /* BeerIngredientsViewModel.swift */,
 				23BD865F29E49C5800A14649 /* CustomCells */,
 			);
 			path = BeerIngredients;
@@ -375,6 +378,7 @@
 				239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */,
 				23FCBA1829DE095C00043C74 /* SearchBeerViewController.swift in Sources */,
 				23BD865429E469F000A14649 /* CreateAccountViewController.swift in Sources */,
+				2346567C29E8921C00C14280 /* BeerIngredientsViewModel.swift in Sources */,
 				23FCBA1629DCD30000043C74 /* IngredientsCollectionViewCustomCell.swift in Sources */,
 				23FCBA1E29DE2AAD00043C74 /* BeerListTableViewCell.swift in Sources */,
 				23FCBA1A29DE0BD100043C74 /* SearchBeerViewModel.swift in Sources */,

@@ -43,12 +43,13 @@ class FavoriteRecipesViewModel {
         service.delete(beer: beer) { result in
             switch result {
             case .success(_):
+                guard let indexOfBeer = self.favoritedBeers.firstIndex(of: beer) else { return }
+                
+                self.favoritedBeers.remove(at: indexOfBeer)
                 self.delegate?.beerRemovedSuccessfully()
             case .failure(_):
                 print("Beer wasn't removed successfully.")
             }
         }
     }
-    
-    
 }
