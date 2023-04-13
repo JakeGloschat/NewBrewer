@@ -20,8 +20,7 @@ class BeerIngredientsViewController: UIViewController {
     private let tableViewCellReuseIdentifier = "TableViewCell"
     private let collectionViewCellReuseIdentifier = "CollectionViewCell"
     var beer: Beer?
-//    var viewModel: BeerIngredienstViewModel!
-    
+
     // MARK: - Functions
     func setUpTableView() {
         view.addSubview(tableView)

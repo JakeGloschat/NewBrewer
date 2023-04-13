@@ -51,4 +51,4 @@ class BeerListTableViewCell: UITableViewCell {
         delegate?.didTapFavorite(for: beer)
     }
 }
-// do a cell viewModel with a checkFavorite that makes a call to see if an id is there.
+

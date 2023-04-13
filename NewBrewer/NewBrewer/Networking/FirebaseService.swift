@@ -9,13 +9,6 @@ import Foundation
 import FirebaseFirestore
 import FirebaseStorage
 
-//Make it's own file
-enum FirebaseError: Error {
-    case firebaseError(Error)
-    case failedToUnrwapData
-    case noDataFound
-}
-
 protocol FirebaseServicable {
     func saveBeer(beer: BeerToSave, completion: @escaping (Result<Bool, FirebaseError>) -> Void)
     func delete(beer: BeerToSave, completion: @escaping (Result<Bool, FirebaseError>) -> Void)
@@ -26,9 +19,7 @@ struct FirebaseService: FirebaseServicable {
     
     // MARK: - Properties
     let ref = Firestore.firestore()
-   // let storage = Storage.storage().reference()
-    // Storage is only used for images
-    
+
     // MARK: - Functions
     func saveBeer(beer: BeerToSave, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
         

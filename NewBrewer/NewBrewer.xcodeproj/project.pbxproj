@@ -11,16 +11,15 @@
 		239803D329DB2650001D1FF4 /* BeerSearchDataProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D229DB2650001D1FF4 /* BeerSearchDataProvider.swift */; };
 		239803D729DB2695001D1FF4 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D629DB2695001D1FF4 /* Constants.swift */; };
 		239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 239803D829DB27B0001D1FF4 /* NetworkError.swift */; };
-		23990CB229E74A0000760622 /* BeerListTableViewCellModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23990CB129E74A0000760622 /* BeerListTableViewCellModel.swift */; };
 		23A1495129E5C43300532E00 /* BeerToSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1495029E5C43300532E00 /* BeerToSave.swift */; };
 		23A1495329E5C8A200532E00 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 23A1495229E5C8A200532E00 /* FirebaseStorage */; };
 		23A1495529E5F66E00532E00 /* FavoriteRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1495429E5F66E00532E00 /* FavoriteRecipesViewModel.swift */; };
-		23A1495729E60ED800532E00 /* BeerIngredientsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1495629E60ED800532E00 /* BeerIngredientsViewModel.swift */; };
 		23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */; };
 		23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */; };
 		23A95DF929D4913D00B6CEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DF729D4913D00B6CEF0 /* Main.storyboard */; };
 		23A95DFB29D4913E00B6CEF0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DFA29D4913E00B6CEF0 /* Assets.xcassets */; };
 		23A95DFE29D4913E00B6CEF0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DFC29D4913E00B6CEF0 /* LaunchScreen.storyboard */; };
+		23B2D38C29E850E000C6E355 /* FIrebaseError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23B2D38B29E850E000C6E355 /* FIrebaseError.swift */; };
 		23BD864F29E464AE00A14649 /* SignInViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD864E29E464AE00A14649 /* SignInViewModel.swift */; };
 		23BD865129E469AE00A14649 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865029E469AE00A14649 /* SignInViewController.swift */; };
 		23BD865429E469F000A14649 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865329E469F000A14649 /* CreateAccountViewController.swift */; };
@@ -48,10 +47,8 @@
 		239803D229DB2650001D1FF4 /* BeerSearchDataProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerSearchDataProvider.swift; sourceTree = "<group>"; };
 		239803D629DB2695001D1FF4 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		239803D829DB27B0001D1FF4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
-		23990CB129E74A0000760622 /* BeerListTableViewCellModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerListTableViewCellModel.swift; sourceTree = "<group>"; };
 		23A1495029E5C43300532E00 /* BeerToSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerToSave.swift; sourceTree = "<group>"; };
 		23A1495429E5F66E00532E00 /* FavoriteRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesViewModel.swift; sourceTree = "<group>"; };
-		23A1495629E60ED800532E00 /* BeerIngredientsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerIngredientsViewModel.swift; sourceTree = "<group>"; };
 		23A95DEE29D4913D00B6CEF0 /* NewBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +56,7 @@
 		23A95DFA29D4913E00B6CEF0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		23A95DFD29D4913E00B6CEF0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		23A95DFF29D4913E00B6CEF0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		23B2D38B29E850E000C6E355 /* FIrebaseError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FIrebaseError.swift; sourceTree = "<group>"; };
 		23BD864E29E464AE00A14649 /* SignInViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewModel.swift; sourceTree = "<group>"; };
 		23BD865029E469AE00A14649 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		23BD865329E469F000A14649 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
@@ -129,6 +127,7 @@
 			children = (
 				239803D629DB2695001D1FF4 /* Constants.swift */,
 				239803D829DB27B0001D1FF4 /* NetworkError.swift */,
+				23B2D38B29E850E000C6E355 /* FIrebaseError.swift */,
 			);
 			path = "Helper&Extensions";
 			sourceTree = "<group>";
@@ -234,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				23FCBA1129DCBF1000043C74 /* BeerIngredientsView.swift */,
-				23A1495629E60ED800532E00 /* BeerIngredientsViewModel.swift */,
 				23BD865F29E49C5800A14649 /* CustomCells */,
 			);
 			path = BeerIngredients;
@@ -254,7 +252,6 @@
 			isa = PBXGroup;
 			children = (
 				23FCBA1D29DE2AAD00043C74 /* BeerListTableViewCell.swift */,
-				23990CB129E74A0000760622 /* BeerListTableViewCellModel.swift */,
 			);
 			path = "Custom Cell";
 			sourceTree = "<group>";
@@ -361,11 +358,11 @@
 				23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */,
 				23FCBA1429DCC4E200043C74 /* IngredientsTableViewCustomCell.swift in Sources */,
 				23BD866429E4A37800A14649 /* FirebaseService.swift in Sources */,
+				23B2D38C29E850E000C6E355 /* FIrebaseError.swift in Sources */,
 				23BD865E29E499B400A14649 /* GlossaryViewController.swift in Sources */,
 				239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */,
 				23FCBA1829DE095C00043C74 /* SearchBeerViewController.swift in Sources */,
 				23BD865429E469F000A14649 /* CreateAccountViewController.swift in Sources */,
-				23A1495729E60ED800532E00 /* BeerIngredientsViewModel.swift in Sources */,
 				23FCBA1629DCD30000043C74 /* IngredientsCollectionViewCustomCell.swift in Sources */,
 				23FCBA1E29DE2AAD00043C74 /* BeerListTableViewCell.swift in Sources */,
 				23FCBA1A29DE0BD100043C74 /* SearchBeerViewModel.swift in Sources */,
@@ -374,7 +371,6 @@
 				23FCBA0E29DC795D00043C74 /* API Service.swift in Sources */,
 				239803D129DB25D4001D1FF4 /* Beer.swift in Sources */,
 				23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */,
-				23990CB229E74A0000760622 /* BeerListTableViewCellModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

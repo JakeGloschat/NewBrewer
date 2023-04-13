@@ -43,16 +43,13 @@ class SearchBeerViewModel { // This is a concrete type
     }
     
     func saveFavoriteBeer(beerToSave: BeerToSave) {
-//        guard favoritedBeers.contains(beerToSave) else {
         if let indexOfBeer = favoritedBeers.firstIndex(of: beerToSave) {
             
             self.favoritedBeers.remove(at: indexOfBeer)
             deleteSavedBeer(beer: beerToSave)
             return
         }
-//            return
-//        }
-        
+
         firebaseService.saveBeer(beer: beerToSave) { result in
             switch result {
             case .success(_):
