@@ -23,7 +23,6 @@ class FavoriteRecipesViewModel {
     init(firebaseService: FirebaseServicable = FirebaseService(), delegate: FavoriteRecipesViewModelDelegate) {
         self.service = firebaseService
         self.delegate = delegate
-        loadFavorites()
     }
     
     // MARK: - Functions
@@ -33,6 +32,7 @@ class FavoriteRecipesViewModel {
             switch result {
             case .success(let beers):
                 self.favoritedBeers = beers
+                self.delegate?.beersLoadedSuccessfully()
             case .failure(_):
                 break
             }
@@ -49,4 +49,6 @@ class FavoriteRecipesViewModel {
             }
         }
     }
+    
+    
 }

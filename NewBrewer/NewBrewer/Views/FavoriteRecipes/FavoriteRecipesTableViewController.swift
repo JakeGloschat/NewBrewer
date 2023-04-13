@@ -12,9 +12,15 @@ class FavoriteRecipesTableViewController: UITableViewController {
     // MARK: - Properties
     var viewModel: FavoriteRecipesViewModel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = FavoriteRecipesViewModel(delegate: self)
+        viewModel.loadFavorites()
     }
 
     // MARK: - Table view data source
@@ -26,7 +32,7 @@ class FavoriteRecipesTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "favoriteBeersCell", for: indexPath) as? FavoriteRecipesTableViewCell else { return UITableViewCell() }
         
-        let beer = viewModel.beers[indexPath.row]
+        let beer = viewModel.favoritedBeers[indexPath.row]
         let isFavorite = viewModel.favoritedBeers.first(where: { $0.beerId == beer.beerId })
         cell.configureCell(with: beer, isFavorited: isFavorite != nil, delegate: self)
         return cell
@@ -57,7 +63,7 @@ extension FavoriteRecipesTableViewController: FavoriteRecipesViewModelDelegate {
 
 extension FavoriteRecipesTableViewController: FavoriteRecipesTableViewCellDelegate {
     func didTapFavorite(for beer: Beer) {
-        let beerToRemove = BeerToSave(name: beer.name, description: beer.description, beerId: beer.beerId)
+        let beerToRemove = BeerToSave(name: beer.name, description: beer.description, beerId: beer.beerId, abv: beer.abv, ibu: beer.ibu)
         viewModel.removeSavedBeer(beer: beerToRemove)
     }
 }

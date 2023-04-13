@@ -24,11 +24,12 @@ class FavoriteRecipesTableViewCell: UITableViewCell {
     // MARK: - Properties
     weak var delegate: FavoriteRecipesTableViewCellDelegate?
     var beer: Beer?
+    var savedBeer: BeerToSave?
     
     // MARK: - Helper Functions
 
-    func configureCell(with beer: Beer, isFavorited: Bool, delegate: FavoriteRecipesTableViewCellDelegate) {
-        self.beer = beer
+    func configureCell(with beer: BeerToSave, isFavorited: Bool, delegate: FavoriteRecipesTableViewCellDelegate) {
+        self.savedBeer = beer
         self.delegate = delegate
         beerNameLabl.text = beer.name
         beerAbvLabel.text = "ABV: \(beer.abv)"
@@ -41,6 +42,7 @@ class FavoriteRecipesTableViewCell: UITableViewCell {
     
     // MARK: - Action
     @IBAction func favoriteBeerButtonTapped(_ sender: Any) {
+        
     }
     
 }

@@ -11,6 +11,7 @@ protocol BeerServicable {
     func fetchRandomBeer(completion: @escaping (Result<Beer, NetworkError>) -> Void)
     func fetchBeerBySearch(searchBeer: String, completion: @escaping (Result<[Beer], NetworkError>) -> Void)
     func fetchImage(for item: String?, completion: @escaping (Result<UIImage, NetworkError>) -> Void)
+    func fetchSingleBeer(for beer: Beer, completion: @escaping (Result<Beer, NetworkError>) -> Void)
 }
 
 struct BeerService: BeerServicable { //This is a concrete type

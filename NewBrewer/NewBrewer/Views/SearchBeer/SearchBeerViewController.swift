@@ -77,7 +77,7 @@ extension SearchBeerViewController: SearchBeerViewModelDelegate {
 
 extension SearchBeerViewController: BeerListTableViewCellDelegate {
     func didTapFavorite(for beer: Beer) {
-        let beerToSave = BeerToSave(name: beer.name, description: beer.description, beerId: beer.beerId)
+        let beerToSave = BeerToSave(name: beer.name, description: beer.description, beerId: beer.beerId, abv: beer.abv, ibu: beer.ibu)
         viewModel.saveFavoriteBeer(beerToSave: beerToSave)
     }
 }
