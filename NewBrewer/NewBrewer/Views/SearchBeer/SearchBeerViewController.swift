@@ -55,7 +55,8 @@ extension SearchBeerViewController: UITableViewDataSource {
       guard let cell = tableView.dequeueReusableCell(withIdentifier: "beerCell", for: indexPath) as? BeerListTableViewCell else { return UITableViewCell() }
         
         let beer = viewModel.beers[indexPath.row]
-        cell.configureCell(with: beer, viewModel: viewModel)
+        let isFavorite = viewModel.favoritedBeers.first(where: { $0.beerId == beer.beerId })
+        cell.configureCell(with: beer, isFavorited: isFavorite != nil, delegate: self)
         return cell
     }
 }
@@ -71,5 +72,12 @@ extension SearchBeerViewController: SearchBeerViewModelDelegate {
         DispatchQueue.main.async {
             self.beerListTableView.reloadData()
         }
+    }
+}
+
+extension SearchBeerViewController: BeerListTableViewCellDelegate {
+    func didTapFavorite(for beer: Beer) {
+        let beerToSave = BeerToSave(name: beer.name, description: beer.description, beerId: beer.beerId)
+        viewModel.saveFavoriteBeer(beerToSave: beerToSave)
     }
 }

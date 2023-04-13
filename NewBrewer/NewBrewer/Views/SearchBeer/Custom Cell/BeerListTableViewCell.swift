@@ -7,6 +7,10 @@
 
 import UIKit
 
+protocol BeerListTableViewCellDelegate: AnyObject {
+    func didTapFavorite(for beer: Beer)
+}
+
 class BeerListTableViewCell: UITableViewCell {
     
     // MARK: - Outlets
@@ -17,22 +21,34 @@ class BeerListTableViewCell: UITableViewCell {
     @IBOutlet weak var beerFavoriteButton: UIButton!
     
     // MARK: - Properties
-    var viewModel: SearchBeerViewModel?
+    weak var delegate: BeerListTableViewCellDelegate?
     var beer: Beer?
     // MARK: - Helper Function
-    func configureCell(with beer: Beer, viewModel: SearchBeerViewModel) {
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        beerFavoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        beerNameLabel.text = nil
+        beerAbvLabel.text = nil
+        beerIbueLabel.text = nil
+        beerDescriptionLabel.text = nil
+    }
+    
+    func configureCell(with beer: Beer, isFavorited: Bool, delegate: BeerListTableViewCellDelegate) {
         self.beer = beer
-        self.viewModel = viewModel
+        self.delegate = delegate
         beerNameLabel.text = beer.name
         beerAbvLabel.text = "ABV: \(beer.abv)"
         beerIbueLabel.text = "IBU: \(beer.ibu ?? 0.0)"
         beerDescriptionLabel.text = beer.description
+        if isFavorited {
+            beerFavoriteButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        }
     }
     
     // MARK: - Actions
     @IBAction func favoriteBeerButtonTapped(_ sender: Any) {
         guard let beer = self.beer else { return }
-        self.viewModel!.saveFavoriteBeer(beerToSave: BeerToSave(name: beer.name, description: beer.description, beerId: beer.beerId))
+        delegate?.didTapFavorite(for: beer)
     }
 }
 // do a cell viewModel with a checkFavorite that makes a call to see if an id is there.
