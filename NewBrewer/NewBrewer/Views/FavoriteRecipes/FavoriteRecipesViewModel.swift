@@ -37,7 +37,7 @@ class FavoriteRecipesViewModel {
         }
     }
     
-    func deleteSavedBeer(beer: BeerToSave) {
+    func removeSavedBeer(beer: BeerToSave) {
         service.delete(beer: beer) { result in
             switch result {
             case .success(_):
