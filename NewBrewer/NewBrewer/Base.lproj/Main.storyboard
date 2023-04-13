@@ -427,7 +427,7 @@
                                     <outlet property="beerIbuLabel" destination="ggI-Rx-SpF" id="mjT-q6-rG1"/>
                                     <outlet property="beerNameLabl" destination="hJZ-uv-67Y" id="1Ln-Ig-Pw0"/>
                                     <outlet property="favoriteBeerButton" destination="M8Q-Pv-srQ" id="fnM-2F-78d"/>
-                                    <segue destination="hK5-Bt-gkZ" kind="show" id="i9I-s2-62E"/>
+                                    <segue destination="hK5-Bt-gkZ" kind="show" identifier="toIngredientsDetail" id="i9I-s2-62E"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>

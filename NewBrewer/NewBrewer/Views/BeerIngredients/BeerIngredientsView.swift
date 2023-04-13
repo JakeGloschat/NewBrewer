@@ -114,3 +114,9 @@ extension BeerIngredientsViewController: UICollectionViewDelegate, UICollectionV
         return 40
     }
 }
+
+extension BeerIngredientsViewController: BeerIngredientsViewModelDelegate {
+    func beerLoadedSuccessfully() {
+        
+    }
+}

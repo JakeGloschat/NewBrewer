@@ -10,6 +10,7 @@ import Foundation
 protocol FavoriteRecipesViewModelDelegate: AnyObject {
     func beersLoadedSuccessfully()
     func beerRemovedSuccessfully()
+    func beerLoadedSuccessfully()
 }
 
 class FavoriteRecipesViewModel {
@@ -17,12 +18,16 @@ class FavoriteRecipesViewModel {
     // MARK: - Properties
     var favoritedBeers: [BeerToSave] = []
     var beers: [Beer] = []
+    var beer: Beer?
     private var service: FirebaseServicable
+    private var beerService: BeerServicable
     private weak var delegate: FavoriteRecipesViewModelDelegate?
+    
     // dependency injection
-    init(firebaseService: FirebaseServicable = FirebaseService(), delegate: FavoriteRecipesViewModelDelegate) {
+    init(firebaseService: FirebaseServicable = FirebaseService(), beerService: BeerServicable = BeerService(), delegate: FavoriteRecipesViewModelDelegate) {
         self.service = firebaseService
         self.delegate = delegate
+        self.beerService = beerService
     }
     
     // MARK: - Functions
@@ -49,6 +54,18 @@ class FavoriteRecipesViewModel {
                 self.delegate?.beerRemovedSuccessfully()
             case .failure(_):
                 print("Beer wasn't removed successfully.")
+            }
+        }
+    }
+    
+    func fetchBeer(with beer: Beer) {
+        beerService.fetchSingleBeer(for: beer) { result in
+            switch result {
+            case .success(let beer):
+                self.beer = beer
+                self.delegate?.beerLoadedSuccessfully()
+            case .failure(let failure):
+                print(failure.errorDescription ?? "Beer not found")
             }
         }
     }

@@ -17,6 +17,7 @@ class BeerIngredientsViewModel {
     private weak var delegate: BeerIngredientsViewModelDelegate?
     private var service: BeerServicable
     var beer: Beer?
+    var savedBeer: BeerToSave?
     
     init(delegate: BeerIngredientsViewModelDelegate, service: BeerServicable = BeerService()) {
         self.delegate = delegate
