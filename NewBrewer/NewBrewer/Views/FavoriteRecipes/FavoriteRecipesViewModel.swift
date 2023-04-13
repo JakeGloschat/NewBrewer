@@ -16,12 +16,14 @@ class FavoriteRecipesViewModel {
     
     // MARK: - Properties
     var favoritedBeers: [BeerToSave] = []
+    var beers: [Beer] = []
     private var service: FirebaseServicable
     private weak var delegate: FavoriteRecipesViewModelDelegate?
     // dependency injection
     init(firebaseService: FirebaseServicable = FirebaseService(), delegate: FavoriteRecipesViewModelDelegate) {
         self.service = firebaseService
         self.delegate = delegate
+        loadFavorites()
     }
     
     // MARK: - Functions

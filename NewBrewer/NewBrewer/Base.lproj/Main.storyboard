@@ -362,46 +362,72 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="85" id="GaP-be-UpP">
-                                <rect key="frame" x="0.0" y="50" width="393" height="85"/>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" restorationIdentifier="favoriteBeersCell" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="171" id="GaP-be-UpP" customClass="FavoriteRecipesTableViewCell" customModule="NewBrewer" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="50" width="393" height="171"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="GaP-be-UpP" id="R7a-TT-qMd">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="85"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="171"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="21" translatesAutoresizingMaskIntoConstraints="NO" id="Vje-C1-vwg">
-                                            <rect key="frame" x="24" y="15" width="290.33333333333331" height="55"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hJZ-uv-67Y">
+                                            <rect key="frame" x="28.000000000000004" y="19" width="54.333333333333343" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="75" translatesAutoresizingMaskIntoConstraints="NO" id="leS-D1-jRT">
+                                            <rect key="frame" x="28" y="71.333333333333329" width="337" height="20.333333333333329"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Udd-J0-qIm">
-                                                    <rect key="frame" x="0.0" y="0.0" width="290.33333333333331" height="20.333333333333332"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(ABV)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FLo-pT-MJu">
+                                                    <rect key="frame" x="0.0" y="0.0" width="131" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="749" text="(description)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="8" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="P51-tI-lpD">
-                                                    <rect key="frame" x="0.0" y="41.333333333333336" width="290.33333333333331" height="13.666666666666664"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(IBU)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ggI-Rx-SpF">
+                                                    <rect key="frame" x="206" y="0.0" width="131" height="20.333333333333332"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
                                         </stackView>
-                                        <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="252" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="wAj-HV-tNK">
-                                            <rect key="frame" x="318.33333333333331" y="19" width="50.666666666666686" height="47"/>
+                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8Q-Pv-srQ">
+                                            <rect key="frame" x="313.33333333333331" y="19.000000000000004" width="51.666666666666686" height="34.333333333333343"/>
                                             <state key="normal" title="Button"/>
                                             <buttonConfiguration key="configuration" style="plain" image="heart.fill" catalog="system"/>
+                                            <connections>
+                                                <action selector="favoriteBeerButtonTapped:" destination="GaP-be-UpP" eventType="touchUpInside" id="N5o-JP-xYa"/>
+                                            </connections>
                                         </button>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(description)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="16" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JZF-bg-UW0">
+                                            <rect key="frame" x="28" y="123.66666666666667" width="337" height="20.333333333333329"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <nil key="textColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
                                     </subviews>
                                     <constraints>
-                                        <constraint firstItem="wAj-HV-tNK" firstAttribute="leading" secondItem="Vje-C1-vwg" secondAttribute="trailing" constant="4" id="DPX-a9-trh"/>
-                                        <constraint firstItem="wAj-HV-tNK" firstAttribute="top" secondItem="R7a-TT-qMd" secondAttribute="topMargin" constant="8" id="EHi-g8-02P"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="wAj-HV-tNK" secondAttribute="trailing" constant="4" id="OK5-fQ-lnB"/>
-                                        <constraint firstItem="Vje-C1-vwg" firstAttribute="top" secondItem="R7a-TT-qMd" secondAttribute="topMargin" constant="4" id="PpX-Oq-Egf"/>
-                                        <constraint firstItem="Vje-C1-vwg" firstAttribute="leading" secondItem="R7a-TT-qMd" secondAttribute="leadingMargin" constant="4" id="gTt-yu-DkT"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="Vje-C1-vwg" secondAttribute="bottom" constant="4" id="p7M-z4-sf1"/>
-                                        <constraint firstAttribute="bottomMargin" secondItem="wAj-HV-tNK" secondAttribute="bottom" constant="8" id="pbc-rs-9af"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="JZF-bg-UW0" secondAttribute="trailing" constant="8" id="4UP-zW-rLH"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="leS-D1-jRT" secondAttribute="trailing" constant="8" id="7pd-PQ-nKW"/>
+                                        <constraint firstItem="M8Q-Pv-srQ" firstAttribute="leading" secondItem="hJZ-uv-67Y" secondAttribute="trailing" constant="231" id="DHj-UB-4kW"/>
+                                        <constraint firstItem="hJZ-uv-67Y" firstAttribute="top" secondItem="R7a-TT-qMd" secondAttribute="topMargin" constant="8" id="H9l-eE-3pP"/>
+                                        <constraint firstItem="JZF-bg-UW0" firstAttribute="leading" secondItem="R7a-TT-qMd" secondAttribute="leadingMargin" constant="8" id="Ihl-MV-65y"/>
+                                        <constraint firstItem="leS-D1-jRT" firstAttribute="top" secondItem="hJZ-uv-67Y" secondAttribute="bottom" constant="32" id="TPO-d7-c9Q"/>
+                                        <constraint firstItem="leS-D1-jRT" firstAttribute="leading" secondItem="R7a-TT-qMd" secondAttribute="leadingMargin" constant="8" id="VSS-jm-AXL"/>
+                                        <constraint firstAttribute="trailingMargin" secondItem="M8Q-Pv-srQ" secondAttribute="trailing" constant="8" id="c2d-mw-Cdk"/>
+                                        <constraint firstItem="JZF-bg-UW0" firstAttribute="top" secondItem="leS-D1-jRT" secondAttribute="bottom" constant="32" id="g56-tx-cnG"/>
+                                        <constraint firstItem="M8Q-Pv-srQ" firstAttribute="top" secondItem="R7a-TT-qMd" secondAttribute="topMargin" constant="8" id="oQv-72-Vgr"/>
+                                        <constraint firstItem="hJZ-uv-67Y" firstAttribute="leading" secondItem="R7a-TT-qMd" secondAttribute="leadingMargin" constant="8" id="pRq-Ra-2Ft"/>
                                     </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="beerAbvLabel" destination="FLo-pT-MJu" id="kfQ-pE-UfH"/>
+                                    <outlet property="beerDescriptionLabel" destination="JZF-bg-UW0" id="LgD-Ja-RCD"/>
+                                    <outlet property="beerIbuLabel" destination="ggI-Rx-SpF" id="mjT-q6-rG1"/>
+                                    <outlet property="beerNameLabl" destination="hJZ-uv-67Y" id="1Ln-Ig-Pw0"/>
+                                    <outlet property="favoriteBeerButton" destination="M8Q-Pv-srQ" id="fnM-2F-78d"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -674,7 +700,7 @@
     </scenes>
     <inferredMetricsTieBreakers>
         <segue reference="9Sm-Ow-VSQ"/>
-        <segue reference="SSm-Il-Gn1"/>
+        <segue reference="lHv-3q-8U6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
