@@ -9,12 +9,13 @@ import Foundation
 
 protocol FavoriteRecipesViewModelDelegate: AnyObject {
     func beersLoadedSuccessfully()
+    func beerRemovedSuccessfully()
 }
 
 class FavoriteRecipesViewModel {
     
     // MARK: - Properties
-    var beers: [BeerToSave] = []
+    var favoritedBeers: [BeerToSave] = []
     private var service: FirebaseServicable
     private weak var delegate: FavoriteRecipesViewModelDelegate?
     // dependency injection
@@ -24,5 +25,26 @@ class FavoriteRecipesViewModel {
     }
     
     // MARK: - Functions
-
+    
+    func loadFavorites () {
+        service.loadBeers { result in
+            switch result {
+            case .success(let beers):
+                self.favoritedBeers = beers
+            case .failure(_):
+                break
+            }
+        }
+    }
+    
+    func deleteSavedBeer(beer: BeerToSave) {
+        service.delete(beer: beer) { result in
+            switch result {
+            case .success(_):
+                self.delegate?.beerRemovedSuccessfully()
+            case .failure(_):
+                print("Beer wasn't removed successfully.")
+            }
+        }
+    }
 }
