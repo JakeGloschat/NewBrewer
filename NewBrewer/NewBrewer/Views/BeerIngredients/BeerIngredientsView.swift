@@ -13,6 +13,7 @@ class BeerIngredientsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        viewModel = BeerIngredientsViewModel(delegate: self)
     }
     
     // MARK: - Properties
@@ -20,6 +21,7 @@ class BeerIngredientsViewController: UIViewController {
     private let tableViewCellReuseIdentifier = "TableViewCell"
     private let collectionViewCellReuseIdentifier = "CollectionViewCell"
     var beer: Beer?
+    var viewModel: BeerIngredientsViewModel!
 
     // MARK: - Functions
     func setUpTableView() {

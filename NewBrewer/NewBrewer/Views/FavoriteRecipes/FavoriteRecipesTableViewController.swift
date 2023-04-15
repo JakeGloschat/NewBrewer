@@ -45,16 +45,16 @@ class FavoriteRecipesTableViewController: UITableViewController {
     
     // MARK: - Navigation
     
-//    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-//        if segue.identifier == "toIngredientsDetail" {
-//            guard let beerFetch = beerFetch else { return }
-//            viewModel.fetchBeer(with: beerFetch)
-//       guard let indexPath = tableView.indexPathForSelectedRow,
-//                  let destinationVC = segue.destination as? BeerIngredientsViewModel else { return }
-//            let beer = viewModel.favoritedBeers[indexPath.row]
-//            destinationVC.savedBeer = beer
-//        }
-//    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "toIngredientsDetail" {
+       guard let indexPath = tableView.indexPathForSelectedRow,
+             let destinationVC = segue.destination as? BeerIngredientsViewController else { return }
+            let beer = viewModel.favoritedBeers[indexPath.row]
+            let ingredientsViewModel = destinationVC.viewModel
+            guard let beerToFetch = viewModel.beer else { return }
+            ingredientsViewModel?.fetchBeer(with: beerToFetch)
+        }
+    }
 }
 
 extension FavoriteRecipesTableViewController: FavoriteRecipesViewModelDelegate {
