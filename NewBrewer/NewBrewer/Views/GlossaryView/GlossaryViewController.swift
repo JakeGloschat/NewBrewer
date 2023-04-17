@@ -13,8 +13,8 @@ class GlossaryViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-
+        viewModel = GlossaryViewModel(delegate: self)
+        viewModel.fetchGlossary()
     }
     
 
@@ -34,6 +34,24 @@ class GlossaryViewController: UIViewController {
         let viewModel = CreateAccountViewModel()
         viewModel.signOutAccount()
     }
+    
+}
+
+extension GlossaryViewController: UISearchBarDelegate {
+    func searchBarTextDidBeginEditing(_ searchBar: UISearchBar) {
+        <#code#>
+    }
+}
+
+extension GlossaryViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        <#code#>
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        <#code#>
+    }
+    
     
 }
 

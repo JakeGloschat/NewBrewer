@@ -20,6 +20,7 @@
 		23A2FECB29EDDF01008B6E36 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 23A2FECA29EDDF01008B6E36 /* SwiftSoup */; };
 		23A2FECE29EDDF59008B6E36 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 23A2FECD29EDDF59008B6E36 /* Collections */; };
 		23A2FED029EDDF59008B6E36 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 23A2FECF29EDDF59008B6E36 /* OrderedCollections */; };
+		23A2FED329EDE194008B6E36 /* GlossaryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2FED229EDE194008B6E36 /* GlossaryTableViewCell.swift */; };
 		23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */; };
 		23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */; };
 		23A95DF929D4913D00B6CEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DF729D4913D00B6CEF0 /* Main.storyboard */; };
@@ -58,6 +59,7 @@
 		23A1495029E5C43300532E00 /* BeerToSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerToSave.swift; sourceTree = "<group>"; };
 		23A1495429E5F66E00532E00 /* FavoriteRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesViewModel.swift; sourceTree = "<group>"; };
 		23A2FEC729EDDECA008B6E36 /* GlossaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewModel.swift; sourceTree = "<group>"; };
+		23A2FED229EDE194008B6E36 /* GlossaryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryTableViewCell.swift; sourceTree = "<group>"; };
 		23A95DEE29D4913D00B6CEF0 /* NewBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,6 +154,14 @@
 			path = "Helper&Extensions";
 			sourceTree = "<group>";
 		};
+		23A2FED129EDE17C008B6E36 /* CustomCell */ = {
+			isa = PBXGroup;
+			children = (
+				23A2FED229EDE194008B6E36 /* GlossaryTableViewCell.swift */,
+			);
+			path = CustomCell;
+			sourceTree = "<group>";
+		};
 		23A95DE529D4913D00B6CEF0 = {
 			isa = PBXGroup;
 			children = (
@@ -214,6 +224,7 @@
 			children = (
 				23BD865D29E499B400A14649 /* GlossaryViewController.swift */,
 				23A2FEC729EDDECA008B6E36 /* GlossaryViewModel.swift */,
+				23A2FED129EDE17C008B6E36 /* CustomCell */,
 			);
 			path = GlossaryView;
 			sourceTree = "<group>";
@@ -402,6 +413,7 @@
 				23FCBA0E29DC795D00043C74 /* API Service.swift in Sources */,
 				239803D129DB25D4001D1FF4 /* Beer.swift in Sources */,
 				23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */,
+				23A2FED329EDE194008B6E36 /* GlossaryTableViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
