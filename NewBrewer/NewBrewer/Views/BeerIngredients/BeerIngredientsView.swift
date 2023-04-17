@@ -12,7 +12,6 @@ class BeerIngredientsViewController: UIViewController {
     // MARK: - Lifecycle
     override func viewDidLoad() {
         super.viewDidLoad()
-        setUpTableView()
         viewModel = BeerIngredientsViewModel(delegate: self)
     }
     
@@ -20,7 +19,11 @@ class BeerIngredientsViewController: UIViewController {
     private let tableView = UITableView()
     private let tableViewCellReuseIdentifier = "TableViewCell"
     private let collectionViewCellReuseIdentifier = "CollectionViewCell"
-    var beer: Beer?
+    var beer: Beer? {
+        didSet {
+            setUpTableView()
+        }
+    }
     var viewModel: BeerIngredientsViewModel!
 
     // MARK: - Functions
@@ -49,7 +52,9 @@ extension BeerIngredientsViewController: UITableViewDelegate, UITableViewDataSou
     
     public func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: tableViewCellReuseIdentifier, for: indexPath) as! IngredientsTableViewCell
-        guard let beer = beer else { return UITableViewCell() }
+        guard let beer = beer else {
+            return UITableViewCell()
+        }
         cell.row = indexPath.row
         switch indexPath.row {
         case 0:
@@ -122,7 +127,6 @@ extension BeerIngredientsViewController: BeerIngredientsViewModelDelegate {
         DispatchQueue.main.async {
             self.beer = beer
             self.tableView.reloadData()
-            self.
         }
     }
 }

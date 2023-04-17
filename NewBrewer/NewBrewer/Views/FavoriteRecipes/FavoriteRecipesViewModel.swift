@@ -10,14 +10,14 @@ import Foundation
 protocol FavoriteRecipesViewModelDelegate: AnyObject {
     func beersLoadedSuccessfully()
     func beerRemovedSuccessfully()
-    func beerLoadedSuccessfully()
+//    func beerLoadedSuccessfully()
 }
 
 class FavoriteRecipesViewModel {
     
     // MARK: - Properties
     var favoritedBeers: [BeerToSave] = []
-//    var beers: [Beer] = []
+    var beers: [Beer] = []
     var beer: Beer?
     private var service: FirebaseServicable
     private var beerService: BeerServicable
@@ -58,15 +58,15 @@ class FavoriteRecipesViewModel {
         }
     }
     
-    func fetchBeer(with beer: Beer) {
-        beerService.fetchSingleBeer(for: beer) { result in
-            switch result {
-            case .success(let beer):
-                self.beer = beer
-                self.delegate?.beerLoadedSuccessfully()
-            case .failure(let failure):
-                print(failure.errorDescription ?? "Beer not found")
-            }
-        }
-    }
+//    func fetchBeer(with beer: Beer) {
+//        beerService.fetchSingleBeer(for: beer) { result in
+//            switch result {
+//            case .success(let beer):
+//                self.beer = beer
+//                self.delegate?.beerLoadedSuccessfully()
+//            case .failure(let failure):
+//                print(failure.errorDescription ?? "Beer not found")
+//            }
+//        }
+//    }
 }

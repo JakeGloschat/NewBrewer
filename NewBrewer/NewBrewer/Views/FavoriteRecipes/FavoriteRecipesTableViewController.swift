@@ -57,9 +57,11 @@ class FavoriteRecipesTableViewController: UITableViewController {
 }
 
 extension FavoriteRecipesTableViewController: FavoriteRecipesViewModelDelegate {
-    func beerLoadedSuccessfully() {
-        
-    }
+//    func beerLoadedSuccessfully() {
+//        DispatchQueue.main.async {
+//            self.tableView.reloadData()
+//        }
+//    }
     
     func beersLoadedSuccessfully() {
         DispatchQueue.main.async {

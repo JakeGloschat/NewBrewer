@@ -24,18 +24,6 @@ class BeerIngredientsViewModel {
         self.service = service
     }
     
-    func fetchBeer(with beer: Beer) {
-        service.fetchSingleBeer(for: beer) { result in
-            switch result {
-            case .success(let beer):
-                self.beer = beer
-                self.delegate?.beerLoadedSuccessfully(with: beer)
-            case .failure(let failure):
-                print(failure.errorDescription ?? "Beer not found")
-            }
-        }
-    }
-    
     func fetchBeerTosave(with beer: BeerToSave) {
         service.fetchSingleBeerIngredients(for: beer) { result in
             switch result {
