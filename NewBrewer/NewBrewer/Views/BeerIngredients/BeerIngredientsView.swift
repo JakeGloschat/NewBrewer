@@ -118,7 +118,11 @@ extension BeerIngredientsViewController: UICollectionViewDelegate, UICollectionV
 }
 
 extension BeerIngredientsViewController: BeerIngredientsViewModelDelegate {
-    func beerLoadedSuccessfully() {
-        
+    func beerLoadedSuccessfully(with beer: Beer) {
+        DispatchQueue.main.async {
+            self.beer = beer
+            self.tableView.reloadData()
+            self.
+        }
     }
 }

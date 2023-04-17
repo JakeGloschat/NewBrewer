@@ -8,7 +8,7 @@
 import Foundation
 
 protocol BeerIngredientsViewModelDelegate: AnyObject {
-    func beerLoadedSuccessfully()
+    func beerLoadedSuccessfully(with beer: Beer)
 }
 
 class BeerIngredientsViewModel {
@@ -29,9 +29,21 @@ class BeerIngredientsViewModel {
             switch result {
             case .success(let beer):
                 self.beer = beer
-                self.delegate?.beerLoadedSuccessfully()
+                self.delegate?.beerLoadedSuccessfully(with: beer)
             case .failure(let failure):
                 print(failure.errorDescription ?? "Beer not found")
+            }
+        }
+    }
+    
+    func fetchBeerTosave(with beer: BeerToSave) {
+        service.fetchSingleBeerIngredients(for: beer) { result in
+            switch result {
+            case .success(let beer):
+                self.beer = beer
+                self.delegate?.beerLoadedSuccessfully(with: beer)
+            case .failure(let failure):
+                print(failure.errorDescription ?? "Beer recipe not found")
             }
         }
     }

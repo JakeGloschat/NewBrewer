@@ -12,6 +12,7 @@ protocol BeerServicable {
     func fetchBeerBySearch(searchBeer: String, completion: @escaping (Result<[Beer], NetworkError>) -> Void)
     func fetchImage(for item: String?, completion: @escaping (Result<UIImage, NetworkError>) -> Void)
     func fetchSingleBeer(for beer: Beer, completion: @escaping (Result<Beer, NetworkError>) -> Void)
+    func fetchSingleBeerIngredients(for beer: BeerToSave, completion: @escaping (Result<Beer, NetworkError>) -> Void)
 }
 
 struct BeerService: BeerServicable { //This is a concrete type
@@ -114,7 +115,34 @@ struct BeerService: BeerServicable { //This is a concrete type
             switch result {
             case .success(let data):
                 do {
-                    let beer = try JSONDecoder().decode(Beer.self, from: data)
+                    let topLevelArray = try JSONDecoder().decode([Beer].self, from: data)
+                    let beer = topLevelArray[0]
+                    completion(.success(beer))
+                } catch {
+                    completion(.failure(.unableToDecode))
+                }
+            case .failure(let failure):
+                completion(.failure(.thrownError(failure)))
+            }
+        }
+    }
+    
+    func fetchSingleBeerIngredients(for beer: BeerToSave, completion: @escaping (Result<Beer, NetworkError>) -> Void) {
+        guard let baseURL = URL(string: Constants.BeerList.singleBeerPath) else { completion(.failure(.InvalidURL)) ; return }
+        
+        var urlComponents = URLComponents(url:baseURL, resolvingAgainstBaseURL: true)
+        urlComponents?.path.append("\(beer.beerId)")
+        
+        guard let finalURL = urlComponents?.url else { completion(.failure(.InvalidURL)) ; return }
+        print("Fetch Beer Final URL: \(finalURL)")
+        
+        let request = URLRequest(url: finalURL)
+        service.perform(request) { result in
+            switch result {
+            case .success(let data):
+                do {
+                    let topLevelArray = try JSONDecoder().decode([Beer].self, from: data)
+                    let beer = topLevelArray[0]
                     completion(.success(beer))
                 } catch {
                     completion(.failure(.unableToDecode))

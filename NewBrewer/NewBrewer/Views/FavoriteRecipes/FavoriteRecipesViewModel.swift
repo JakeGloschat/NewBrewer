@@ -17,7 +17,7 @@ class FavoriteRecipesViewModel {
     
     // MARK: - Properties
     var favoritedBeers: [BeerToSave] = []
-    var beers: [Beer] = []
+//    var beers: [Beer] = []
     var beer: Beer?
     private var service: FirebaseServicable
     private var beerService: BeerServicable

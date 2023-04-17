@@ -50,9 +50,8 @@ class FavoriteRecipesTableViewController: UITableViewController {
        guard let indexPath = tableView.indexPathForSelectedRow,
              let destinationVC = segue.destination as? BeerIngredientsViewController else { return }
             let beer = viewModel.favoritedBeers[indexPath.row]
-            let ingredientsViewModel = destinationVC.viewModel
-            guard let beerToFetch = viewModel.beer else { return }
-            ingredientsViewModel?.fetchBeer(with: beerToFetch)
+            destinationVC.viewModel = BeerIngredientsViewModel(delegate: destinationVC.self)
+            destinationVC.viewModel.fetchBeerTosave(with: beer)
         }
     }
 }
