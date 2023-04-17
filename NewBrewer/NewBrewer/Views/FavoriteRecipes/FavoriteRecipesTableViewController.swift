@@ -14,12 +14,7 @@ class FavoriteRecipesTableViewController: UITableViewController {
     var viewModel: FavoriteRecipesViewModel!
     var beer: BeerToSave?
     var beerFetch: Beer?
-    
-//    override func viewWillAppear(_ animated: Bool) {
-//        super.viewWillAppear(animated)
-//        
-//    }
-//    
+
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = FavoriteRecipesViewModel(delegate: self)
@@ -57,12 +52,6 @@ class FavoriteRecipesTableViewController: UITableViewController {
 }
 
 extension FavoriteRecipesTableViewController: FavoriteRecipesViewModelDelegate {
-//    func beerLoadedSuccessfully() {
-//        DispatchQueue.main.async {
-//            self.tableView.reloadData()
-//        }
-//    }
-    
     func beersLoadedSuccessfully() {
         DispatchQueue.main.async {
             self.tableView.reloadData()

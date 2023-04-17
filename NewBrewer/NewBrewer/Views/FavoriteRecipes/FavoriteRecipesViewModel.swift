@@ -10,7 +10,6 @@ import Foundation
 protocol FavoriteRecipesViewModelDelegate: AnyObject {
     func beersLoadedSuccessfully()
     func beerRemovedSuccessfully()
-//    func beerLoadedSuccessfully()
 }
 
 class FavoriteRecipesViewModel {
