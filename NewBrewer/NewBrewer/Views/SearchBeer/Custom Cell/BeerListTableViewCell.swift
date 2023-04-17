@@ -23,7 +23,7 @@ class BeerListTableViewCell: UITableViewCell {
     // MARK: - Properties
     weak var delegate: BeerListTableViewCellDelegate?
     var beer: Beer?
-    // MARK: - Helper Function
+    // MARK: - Helper Functions
     override func prepareForReuse() {
         super.prepareForReuse()
         beerFavoriteButton.setImage(UIImage(systemName: "heart"), for: .normal)
@@ -51,4 +51,4 @@ class BeerListTableViewCell: UITableViewCell {
         delegate?.didTapFavorite(for: beer)
     }
 }
-
+ 
