@@ -8,9 +8,12 @@
 import UIKit
 
 class GlossaryViewController: UIViewController {
+    
+    var viewModel: GlossaryViewModel!
 
     override func viewDidLoad() {
         super.viewDidLoad()
+        
 
     }
     
@@ -32,4 +35,10 @@ class GlossaryViewController: UIViewController {
         viewModel.signOutAccount()
     }
     
+}
+
+extension GlossaryViewController: GlossaryViewModelDelegate {
+    func glossaryLoadedSuccessfully() {
+        
+    }
 }
