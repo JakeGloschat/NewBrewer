@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>18th Amendment</key>
+	<string>The 18th amendment of the United States Constitution effectively established the prohibition of alcoholic beverages in the United States by declaring illegal the production, transport and sale of alcohol (though not the consumption or private possession).</string>
+	<key>21st Amendment</key>
+	<string>The 21st amendment to the United States Constitution repealed the 18th Amendment to the United States Constitution, which had mandated nationwide Prohibition on alcohol on January 17, 1920.</string>
+	<key>AHA</key>
+	<string>American Homebrewers Association (AHA) was founded in 1978 and advocates for hombrewers’ rights, publishes Zymurgy Magazine, is a division of the Brewers Association and hosts the world’s largest beer competition.</string>
+	<key>Acetaldehyde</key>
+	<string>A chemical and bi product of fermentation that is perceived as green apples in both aromas and flavor.</string>
+	<key>Acid Rest</key>
+	<string>A step done early in the mash around 95F by traditional brewers to lower the pH of the mash.</string>
+	<key>Acrospire</key>
+	<string>The shoot that grows as a barley grain is germinated.</string>
+	<key>Adjunct</key>
+	<string>Any unmalted grain or other fermentable ingredient used in the brewing process. Adjuncts used are typically either rice or corn, and can also include honey, syrups, and numerous other sources of fermentable carbohydrates. They are common in mass produced light American lager-style beers.</string>
+	<key>Aeration</key>
+	<string>The action of introducing air or oxygen to the wort (unfermented beer) at various stages of the brewing process. Proper aeration before primary fermentation is vital to yeast health and vigorous fermentation. Aeration after fermentation is complete can result in beer off-flavors, including cardboard or paper aromas due to oxidation.</string>
+	<key>Alcohol</key>
+	<string>A synonym for ethyl alcohol or ethanol, the colorless primary alcohol constituent of beer. Alcohol ranges for beer vary from less than 3.2% to greater than 14% ABV. However, the majority of craft beer styles average around 5.9% ABV.</string>
+	<key>Alcohol by Volume (ABV)</key>
+	<string>A measurement of the alcohol content of a solution in terms of the percentage volume of alcohol per volume of beer. This measurement is always higher than Alcohol by Weight. To calculate the approximate volumetric alcohol content, subtract the final gravity from the original gravity and divide by 0.0075. For example: 1.050 – 1.012 = 0.038/0.0075 = 5% ABV.</string>
+	<key>Alcohol by Weight (ABW)</key>
+	<string>A measurement of the alcohol content of a solution in terms of the percentage weight of alcohol per volume of beer. For example: 3.2 percent alcohol by weight equals 3.2 grams of alcohol per 100 centiliters of beer. This measure is always lower than Alcohol by Volume. To calculate the approximate alcohol content by weight, subtract the final gravity from the original gravity and divide by 0.0095. For example: 1.050 – 1.012 = 0.038/0.0095 = 4% ABW.</string>
+	<key>Alcoholic</key>
+	<string>Warming taste of ethanol and higher alcohols. Can be described as spicy and vinous in character. The higher the ABV of a beer, often the larger the mouthfeel it has. Alcohol can be perceived in aroma, flavor and as a sensation. A person with a disabling disorder characterized by compulsive uncontrolled consumption of alcoholic beverages.</string>
+	<key>Ale</key>
+	<string>Ales are beers fermented with top fermenting yeast. Ales typically are fermented at warmer temperatures than lagers, and are often served warmer. The term ale is sometimes incorrectly associated with alcoholic strength.</string>
+	<key>Ale Yeast</key>
+	<string>Saccharomyces cerevisiae is a top fermenting yeast that ferments at warm temperatures (60-70 F) and generally produces more flavor compounds.</string>
+	<key>All Extract Beer</key>
+	<string>A beer made with malt extract as opposed to one made from barley malt or from a combination of malt extract and barley malt.</string>
+	<key>All-Malt Beer</key>
+	<string>A beer made entirely from mashed barley malt and without the addition of adjuncts, sugars or additional fermentables.</string>
+	<key>Alpha Acid</key>
+	<string>One of two primary naturally occurring soft resins in hops (the other is Beta Acid). Alpha acids are converted during wort boiling to iso-alpha acids, which cause the majority of beer bitterness. During aging, alpha acids can oxidize (chemical change) and lessen in bitterness.</string>
+	<key>Alpha and Beta Amylase</key>
+	<string>Important enzymes in brewing beer and liquor made from sugars derived from starch. Different temperatures optimize the activity of alpha or beta amylase, resulting in different mixtures of fermentable and unfermentable sugars.</string>
+	<key>Apparent Attenuation</key>
+	<string>A simple measure of the extent of fermentation that wort has undergone in the process of becoming beer. Using gravity units (GU), Balling (B), or Plato (P) units to express gravity, apparent attenuation is equal to the original gravity minus the final gravity divided by the original gravity. The result is expressed as a percentage and equals 65% to 80% for most beers.</string>
+	<key>Aromatic hops</key>
+	<string>Refers to hop additions that take place later in the boiling process. Shorter amount of time spent in the boil kettle will provide more aromatic characteristics from the hops rather than bittering characteristics.</string>
+	<key>Astringency</key>
+	<string>A characteristic of beer taste mostly caused by tannins, oxidized (phenols), and various aldehydes (in stale beer). Astringency can cause the mouth to pucker and is often perceived as dryness.</string>
+	<key>Attenuation</key>
+	<string>The reduction in wort specific gravity caused by the yeast consuming wort sugars and converting them into alcohol and carbon dioxide gas through fermentation.</string>
+	<key>Autolysis</key>
+	<string>A process in which excess yeast cells feed on each other producing a rubbery or vegetal aroma.</string>
+	<key>BJCP</key>
+	<string>Beer Judge Certification Program (BJCP) is a non-profit organization formed in 1985 to promote beer literacy and the appreciation of real beer, and to recognize beer tasting and evaluation skills.</string>
+	<key>Barley</key>
+	<string>A cereal grain derived from the annual grass Hordeum vulgare. Barley is used as a base malt in the production of beer and certain distilled spirits, as well as a food supply for humans and animals.</string>
+	<key>Barrel</key>
+	<string>A standard measure in the U.S. that is 31 gallons. A wooden vessel that is used to age/condition/ferment beer. Some brewer’s barrels are brand new and others have been used previously to store wine or spirits.</string>
+	<key>Beta Acids</key>
+	<string>One of two primary naturally occurring soft resins in hops (the other is Alpha Acid). Beta acid contributes very little to the bitterness of beer and accounts for some of its preservative quality.</string>
+	<key>Bittering Hops</key>
+	<string>Refers to hop additions that take place early in the boiling stage of the brewing process. The longer hops are boiled, the more bittering characteristics will come from those hops.</string>
+	<key>Bitterness</key>
+	<string>In beer, the bitterness is caused by the tannins and iso-humulones of hops. Bitterness of hops is perceived in the taste. The amount of bitterness in a beer is one of the defining characteristics of a beer style.</string>
+	<key>Bitterness Units (BU)</key>
+	<string>Same as International Bitterness Units (IBU).</string>
+	<key>Blending</key>
+	<string>The mixing together of different batches of beer to create a final product.</string>
+	<key>Body</key>
+	<string>The consistency, thickness and mouth-filling property of a beer. The sensation of palate fullness in the mouth ranges from thin- to full-bodied.</string>
+	<key>Boiling</key>
+	<string>A critical step during the brewing process during which wort (unfermented beer) is boiled inside the brew kettle. During the boiling, one or more hop additions can occur to achieve bittering, hop flavor and hop aroma in the finished beer. Boiling also results in the removal of several volatile compounds from wort, especially dimethyl sulfide (see below) and the coagulation of excess or unwanted proteins in the wort (see “hot break“). Boiling also sterilizes a beer as well as ends enzymatic conversion of proteins to sugars.</string>
+	<key>Bomber</key>
+	<string>A 22-ounce bottle of beer.</string>
+	<key>Bottle Conditioning</key>
+	<string>A process by which beer is naturally carbonated in the bottle as a result of fermentation of additional wort or sugar intentionally added during packaging.</string>
+	<key>Bottom Fermentation</key>
+	<string>One of the two basic fermentation methods characterized by the tendency of yeast cells to sink to the bottom of the fermentation vessel. Lager yeast is considered to be bottom fermenting compared to ale yeast that is top fermenting. Beers brewed in this fashion are commonly called lagers or bottom-fermented beers.</string>
+	<key>Brettanomyces</key>
+	<string>A type of yeast and more specifically a genus of single-celled yeasts that ferment sugar and are important to the beer and wine industries due to the sensory flavors they produce. Brettanomyces, or “Brett” colloquially, can cause acidity and other sensory notes often perceived as leather, barnyard, horse blanket and just plain funk. These characteristics can be desirable or undesirable. It is common and desirable in styles such as Lambic, Oud Bruin, several similarly acidic American-derived styles, and many barrel-aged styles.</string>
+	<key>Brewers Association</key>
+	<string>The Brewers Association is an organization of brewers, for brewers and by brewers. More than 4,900 U.S. brewery members and 45,000 members of the American Homebrewers Association are joined by members of the allied trade, beer wholesalers, retailers, individuals, other associate members and the Brewers Association staff to make up the Brewers Association.</string>
+	<key>Brewpub</key>
+	<string>A restaurant-brewery that sells 25 percent or more of its beer on site. The beer is brewed primarily for sale in the restaurant and bar. The beer is often dispensed directly from the brewery’s storage tanks. Where allowed by law, brewpubs often sell beer “to-go” and /or distribute to off site accounts.</string>
+	<key>Brew Kettle</key>
+	<string>One of the vessels used in the brewing process in which the wort (unfermented beer) is boiled.</string>
+	<key>Bung</key>
+	<string>A sealing stopper, usually a cylindroconical shaped piece of wood or plastic, fitted into the mouth of a cask or older style kegs such as Hoff-Stevens or Golden Gate.</string>
+	<key>Bung Hole</key>
+	<string>The round hole in the side of a cask or older style keg, through which the vessel is filled with beer and then sealed with a bung.</string>
+	<key>Burton Snatch</key>
+	<string>The aroma of Sulphur indicating the presence of sulphate ions.</string>
+	<key>Byproducts</key>
+	<string>Desirable and undesirable compounds that are a result of fermentation, mashing, and boiling.</string>
+	<key>Calcium Carbonate (CaCO3)</key>
+	<string>A mineral common in water of different origins. Also known as chalk, sometimes added during brewing to increase calcium and carbonate content.</string>
+	<key>Calcium Sulfate (CaSO4)</key>
+	<string>A mineral common in water of different origins. Also known as gypsum, sometimes added during brewing to increase calcium and sulfate content.</string>
+	<key>Carbohydrates</key>
+	<string>A group of organic compounds including sugars and starches, many of which are suitable as food for yeast and bacteria.</string>
+	<key>Carbon Dioxide (CO2)</key>
+	<string>The gaseous by-product of yeast. Carbon dioxide is what gives beer its carbonation (bubbles).</string>
+	<key>Carbonation</key>
+	<string>pressurizing a fermentation vessel to capture naturally produced carbon dioxide; injecting the finished beer with carbon dioxide; adding young fermenting beer to finished beer for a renewed fermentation (kraeusening); priming (adding sugar to) fermented wort prior to packaging, creating a secondary fermentation in the bottle, also known as “bottle conditioning.</string>
+	<key>Carboy</key>
+	<string>A large glass, plastic or earthenware bottle.</string>
+	<key>Caryophyllene</key>
+	<string>One of the essential oils made in the flowering cone of the hops plant Humulus lupulus.</string>
+	<key>Cask</key>
+	<string>A barrel-shaped container for holding beer. Originally made of iron-hooped wooden staves, now most widely available in stainless steel and aluminum.</string>
+	<key>Cask Conditioning</key>
+	<string>Storing unpasteurized, unfiltered beer for several days in cool cellars of about 48-56°F (13°C) while conditioning is completed and carbonation builds.</string>
+	<key>Cellaring</key>
+	<string>Storing or aging beer at a controlled temperature to allow maturing.</string>
+	<key>Chill Haze</key>
+	<string>Hazy or cloudy appearance caused when the proteins and tannins naturally found in finished beer combine upon chilling into particles large enough to reflect light or become visible.</string>
+	<key>Closed Fermentation</key>
+	<string>Fermentation under closed, anaerobic conditions to minimize risk of contamination and oxidation.</string>
+	<key>Cold Break</key>
+	<string>The flocculation of proteins and tannins during wort cooling.</string>
+	<key>Color</key>
+	<string>The hue or shade of a beer, primarily derived from grains, sometimes derived from fruit or other ingredients in beer. Beer styles made with caramelized, toasted or roasted malts or grains will exhibit increasingly darker colors. The color of a beer may often, but not always, allow the consumer to anticipate how a beer might taste. It’s important to note that beer color does not equate to alcohol level, mouthfeel or calories in beer.</string>
+	<key>Conditioning</key>
+	<string>A step in the brewing process in which beer is matured or aged after initial fermentation to prevent the formation of unwanted flavors and compounds</string>
+	<key>Contract Brewing Company</key>
+	<string>A business that hires another brewery to produce some or all of its beer. The contract brewing company handles marketing, sales and distribution of its beer, while generally leaving the brewing and packaging to its producer-brewery.</string>
+	<key>Craft Brewery</key>
+	<string>According to the Brewers Association, an American craft brewer is small and independent. Small: Annual production of 6 million barrels of beer or less (approximately 3 percent of U.S. annual sales). Beer production is attributed to a brewer according to rules of alternating proprietorships. Independent: Less than 25 percent of the craft brewery is owned or controlled (or equivalent economic interest) by a beverage alcohol industry member that is not itself a craft brewer. Brewer: Has a TTB Brewer’s Notice and makes beer.</string>
+	<key>Decoction Mash</key>
+	<string>A method of mashing that raises the temperature of the mash by removing a portion, boiling it, and returning it to the mash tun. Often used multiple times in certain mash programs.</string>
+	<key>Degrees Plato</key>
+	<string>An empirically derived hydrometer scale to measure density of beer wort in terms of percentage of extract by weight.</string>
+	<key>Dextrin</key>
+	<string>A group of complex, unfermentable and tasteless carbohydrates produced by the partial hydrolysis of starch, that contributes to the gravity and body of beer. Some dextrins remain undissolved in the finished beer, giving it a malty sweetness.</string>
+	<key>Diacetyl</key>
+	<string>A volatile compound produced by some yeasts which imparts a caramel, nutty or butterscotch flavor to beer. This compound is acceptable at low levels in several traditional beer styles, including: English and Scottish Ales, Czech Pilsners and German Oktoberfest. However, it is often an unwanted or accidental off-flavor.</string>
+	<key>Diastatic</key>
+	<string>Refers to the diastatic enzymes that are created as the grain sprouts. These convert starches to sugars, which yeast eat.</string>
+	<key>Dimethyl Sulfide (DMS)</key>
+	<string>At low levels, DMS can impart a favorable sweet aroma in beer. At higher levels, DMS can impart a characteristic aroma and taste of cooked vegetables, such as cooked corn or celery. Low levels are acceptable in and characteristic of some Lager beer styles.</string>
+	<key>Draught Beer</key>
+	<string>Beer drawn from kegs, casks or serving tanks rather than from cans, bottles or other packages. Beer consumed from a growler relatively soon after filling is also sometimes considered draught beer. Learn more: Draught Quality Manual.</string>
+	<key>Dry Hopping</key>
+	<string>The addition of hops late in the brewing process to increase the hop aroma of a finished beer without significantly affecting its bitterness. Dry hops may be added to the wort in the kettle, whirlpool, hop back, or added to beer during primary or secondary fermentation or even later in the process.</string>
+	<key>Dual Purpose Hops</key>
+	<string>Hops that are added to provide both bittering and aromatic properties.</string>
+	<key>Endosperm</key>
+	<string>The starch-containing sac of the barley grain.</string>
+	<key>Essential Hop Oils</key>
+	<string>Essential hop oils are what is isomerized in wort and provide the aromatic and flavor compounds that are associated with hop additions.</string>
+	<key>Esters</key>
+	<string>Volatile flavor compounds that form through the interaction of organic acids with alcohols during fermentation and contribute to the fruity aroma and flavor of beer. Esters are very common in ales.</string>
+	<key>Ethanol</key>
+	<string>Ethyl alcohol, the colorless primary alcohol constituent of beer.</string>
+	<key>Export</key>
+	<string>Any beer produced for the express purpose of exportation. For example: export-style German lagers or export-style Irish stouts.</string>
+	<key>Farnesene</key>
+	<string>One of the essential oils made in the flowering cone of the hops plant Humulus lupulus.</string>
+	<key>Fermentable Sugars</key>
+	<string>Sugars that can be consumed by yeast cells which in turn will produce ethanol alcohol and c02.</string>
+	<key>Fermentation</key>
+	<string>The chemical conversion of fermentable sugars into approximately equal parts of ethyl alcohol and carbon dioxide gas, through the action of yeast. The two basic methods of fermentation in brewing are top fermentation, which produces ales, and bottom fermentation, which produces lagers.</string>
+	<key>Fermentation Lock</key>
+	<string>A one-way valve, often made of glass or plastic that is fitted onto a fermenter and allows carbon dioxide gas to escape from the fermenter while excluding ambient wild yeasts, bacteria and contaminants.</string>
+	<key>Filtration</key>
+	<string>The passage of a liquid through a permeable or porous substance to remove solid matter in suspension, often yeast.</string>
+	<key>Final Gravity</key>
+	<string>The specific gravity of a beer as measured when fermentation is complete (when all desired fermentable sugars have been converted to alcohol and carbon dioxide gas). Synonym: Final specific gravity; final SG; finishing gravity; terminal gravity.</string>
+	<key>Fining</key>
+	<string>The process of adding clarifying agents such as isinglass, gelatin, silica gel, or Polyvinyl Polypyrrolidone (PVPP) to beer during secondary fermentation to hasten the precipitation of suspended matter, such as yeast, proteins or tannins.</string>
+	<key>Flocculation</key>
+	<string>The behavior of suspended particles in wort or beer that tend to clump together in large masses and settle out. During brewing, protein and tannin particles will flocculate out of the kettle, coolship or fermenter during hot or cold break. During and at the end of fermentation, yeast cells will flocculate to varying degrees depending on the yeast strain, thereby affecting fermentation as well as filtration of the resulting beer.</string>
+	<key>Forced Carbonation</key>
+	<string>The beer is placed into a sealed (or soon to be sealed) container and carbonation is rapidly added. Under high pressure, the CO2 is absorbed into the beer.</string>
+	<key>Fresh Hopping</key>
+	<string>The addition of freshly harvested hops that have not yet been dried to different stages of the brewing process. Fresh hopping adds unique flavors and aromas to beer that are not normally found when using hops that have been dried and processed per usual. Synonymous with wet hopping.</string>
+	<key>Fusel Alcohol</key>
+	<string>A family of high molecular weight alcohols, which result from excessively high fermentation temperatures. Fusel alcohols can impart harsh or solvent-like characteristics commonly described as lacquer or paint thinner. It can contribute to hangovers.</string>
+	<key>Germination</key>
+	<string>Growth of a barley grain as it produces a rootlet and acrospire.</string>
+	<key>Grainy</key>
+	<string>Tasting or smelling like cereal or raw grains.</string>
+	<key>Grist</key>
+	<string>Ground malt and grains ready for mashing</string>
+	<key>Growler</key>
+	<string>A jug- or pail-like container once used to carry draught beer bought by the measure at the local tavern. Growlers are usually ½ gal (64 oz) or 2L (68 oz) in volume and made of glass. Brewpubs often serve growlers to sell beer to-go. Often a customer will pay a deposit on the growler but can bring it back again and again for a re-fill. Growlers to-go are not legal in all U.S. states.</string>
+	<key>Gruit</key>
+	<string>An old-fashioned herb mixture used for bittering and flavoring beer, popular before the extensive use of hops. Gruit or grut ale may also refer to the beverage produced using gruit.</string>
+	<key>Hand Pump</key>
+	<string>A device for dispensing cask conditioned draught beer using a pump operated by hand. The use of a hand pump allows the draught beer to be served without the use of pressurized carbon dioxide.</string>
+	<key>Head Retention</key>
+	<string>The foam stability of a beer as measured, in seconds, by time required for a 1-inch foam collar to collapse.</string>
+	<key>Heat Exchangers</key>
+	<string>Used to cool hot wort before fermentation.</string>
+	<key>Homebrewing</key>
+	<string>The art of making beer at home. In the U.S., homebrewing was legalized by President Carter on February 1, 1979, through a bill introduced by California Senator Alan Cranston. The Cranston Bill allows a single person to brew up to 100 gallons of beer annually for personal enjoyment and up to 200 gallons in a household of two persons or more of legal drinking age. Learn more from the American Homebrewers Association.</string>
+	<key>Hopping</key>
+	<string>The addition of hops to un-fermented wort or fermented beer.</string>
+	<key>Hops</key>
+	<string>A perennial climbing bine, also known by the Latin botanical name Humulus lupulus. The female plant yields flowers of soft-leaved pine-like cones (strobile) measuring about an inch in length. Only the female ripened flower is used for flavoring beer. Because hops reproduce through cuttings, the male plants are not cultivated and are even rooted out to prevent them from fertilizing the female plants, as the cones would become weighed-down with seeds. Seedless hops have a much higher bittering power than seeded. There are presently over one hundred varieties of hops cultivated around the world. Some of the best known are Brewer’s Gold, Bullion, Cascade, Centennial, Chinook, Cluster, Comet, Eroica, Fuggles, Galena, Goldings, Hallertau, Nugget, Northern Brewer, Perle, Saaz, Syrian Goldings, Tettnang and Willamettes. Apart from contributing bitterness, hops impart aroma and flavor, and inhibit the growth of bacteria in wort and beer. Hops are added at the beginning (bittering hops), middle (flavoring hops), and end (aroma hops) of the boiling stage, or even later in the brewing process (dry hops). The addition of hops to beer dates from 7000-1000 BC; however, hops were used to flavor beer in Pharaonic Egypt around 600 BC. They were cultivated in Germany as early as AD 300 and were used extensively in French and German monasteries in medieval times and gradually superseded other herbs and spices around the fourteenth and fifteenth centuries. Prior to the use of hops, beer was flavored with herbs and spices such as juniper, coriander, cumin, nutmeg, oak leaves, lime blossoms, cloves, rosemary, gentian, gaussia, chamomile, and other herbs or spices.</string>
+	<key>Hot Break</key>
+	<string>The flocculation of proteins and tannins during wort boiling.</string>
+	<key>Humulene</key>
+	<string>One of the essential oils made in the flowering cone of the hops plant Humulus lupulus.</string>
+	<key>Husk</key>
+	<string>The dry outer layer of certain cereal seeds.</string>
+	<key>Hydrometer</key>
+	<string>A glass instrument used to measure the specific gravity of liquids as compared to water, consisting of a graduated stem resting on a weighted float.</string>
+	<key>Immersion Chiller</key>
+	<string>A wort chiller most commonly made of copper that is used by submerging into hot wort before fermentation as a method of cooling.</string>
+	<key>Infusion Mash</key>
+	<string>A method of mashing which achieves target mashing temperatures by the addition of heated water at specific temperatures.</string>
+	<key>Inoculate</key>
+	<string>The introduction of a microbe such as yeast or microorganisms such as lactobacillus into surroundings capable of supporting its growth.</string>
+	<key>International Bitterness Units (IBU)</key>
+	<string>The measure of the bittering substances in beer (analytically assessed as milligrams of isomerized alpha acid per liter of beer, in ppm). This measurement depends on the style of beer. Light lagers typically have an IBU rating between 5-10 while big, bitter India Pale Ales can often have an IBU rating between 50 and 70.</string>
+	<key>Irish Moss</key>
+	<string>Used as a clairifier in beer. Modified particles or powder of the seaweed Chondrus crispus that help to precipitate proteins in the kettle by facilitating the hot break.</string>
+	<key>Isinglass</key>
+	<string>A gelatinous substance made from the swim bladder of certain fish that is sometimes added to beer to help clarify and stabilize the finished product.</string>
+	<key>Keg</key>
+	<string>A cylindrical container, usually constructed of steel or sometimes aluminum, commonly used to store, transport and serve beer under pressure. In the U.S., kegs are referred to by the portion of a barrel they represent, for example, a ½ barrel keg = 15.5 gal, a ¼ barrel keg = 7.75 gal, a 1/6 barrel keg = 5.23 gal. Other standard keg sizes will be found in other countries.</string>
+	<key>Kilning</key>
+	<string>The process of heat-drying malted barley in a kiln to stop germination and to produce a dry, easily milled malt from which the brittle rootlets are easily removed. Kilning also removes the raw flavor (or green-malt flavor) associated with germinating barley, and new aromas, flavors, and colors develop according to the intensity and duration of the kilning process.</string>
+	<key>Kraeusen</key>
+	<string>n – The rocky head of foam which appears on the surface of the wort during fermentation. v – A method of conditioning in which a small quantity of unfermented wort is added to a fully fermented beer to create a secondary fermentation and natural carbonation.</string>
+	<key>Lace</key>
+	<string>The lacelike pattern of foam sticking to the sides of a glass of beer once it has been partly or totally emptied. Synonym: Belgian lace</string>
+	<key>Lactobacillus</key>
+	<string>A microorganism/bacteria. Lactobacillus is most often considered to be a beer spoiler, in that it can convert unfermented sugars found in beer into lactic acid. Some brewers introduce Lactobacillus intentionally into finished beer in order to add desirable acidic sourness to the flavor profile of certain brands.</string>
+	<key>Lager</key>
+	<string>Lagers are any beer that is fermented with bottom-fermenting yeast at colder temperatures. Lagers are most often associated with crisp, clean flavors and are traditionally fermented and served at colder temperatures than ales.</string>
+	<key>Lager Yeast</key>
+	<string>Saccharomyces pastorianus is a bottom fermenting yeast that ferments in cooler temperatures (45-55 F) and often lends sulfuric compounds.</string>
+	<key>Lagering</key>
+	<string>Storing bottom-fermented beer in cold cellars at near-freezing temperatures for periods of time ranging from a few weeks to years, during which time the yeast cells and proteins settle out and the beer improves in taste.</string>
+	<key>Large Brewery</key>
+	<string>As defined by the Brewers Association: A brewery with an annual beer production of over 6,000,000 barrels.</string>
+	<key>Lauter Tun</key>
+	<string>A large vessel fitted with a false slotted bottom (like a colander) and a drain spigot in which the mash is allowed to settle and sweet wort is removed from the grains through a straining process. In some smaller breweries, the mash tun can be used for both mashing and lautering.</string>
+	<key>Lautering</key>
+	<string>The process of separating the sweet wort (pre-boil) from the spent grains in a lauter tun or with other straining apparatus.</string>
+	<key>Lightstruck (Skunked)</key>
+	<string>Appears in both the aroma and flavor in beer and is caused by exposure of beer in light colored bottles or beer in a glass to ultra-violet or fluorescent light.</string>
+	<key>Liquor</key>
+	<string>The name given, in the brewing industry, to water used for mashing and brewing, especially natural or treated water containing high amounts of calcium and magnesium salts.</string>
+	<key>Lovibond</key>
+	<string>A scale used to measure color in grains and sometimes in beer. See also Standard Reference Method.</string>
+	<key>MBAA</key>
+	<string>Master Brewers Association of the Americas (MBAA) was formed in 1887 with the purpose of promoting, advancing, and improving the professional interest of brew and malt house production and technical personnel.</string>
+	<key>Magnum Bottle</key>
+	<string>A 1.5L bottle</string>
+	<key>Malt</key>
+	<string>Processed barley that has been steeped in water, germinated on malting floors or in germination boxes or drums, and later dried in kilns for the purpose of stopping the germination and converting the insoluble starch in barley to the soluble substances and sugars in malt.</string>
+	<key>Malt Extract</key>
+	<string>A thick syrup or dry powder prepared from malt and sometimes used in brewing (often used by new homebrewers).</string>
+	<key>Maltose</key>
+	<string>The most abundant fermentable sugar in beer.</string>
+	<key>Mash</key>
+	<string>A mixture of ground malt (and possibly other grains or adjuncts) and hot water that forms the sweet wort after straining.</string>
+	<key>Mash Tun</key>
+	<string>The vessel in which grist is soaked in water and heated in order to convert the starch to sugar and to extract the sugars, colors, flavors and other solubles from the grist.</string>
+	<key>Mashing</key>
+	<string>The process of mixing crushed malt (and possibly other grains or adjuncts) with hot water to convert grain starches to fermentable sugars and non-fermentable carbohydrates that will add body, head retention and other characteristics to the beer. Mashing also extracts colors and flavors that will carry through to the finished beer, and also provides for the degradation of haze-forming proteins. Mashing requires several hours and produces a sugar-rich liquid called wort.</string>
+	<key>Mashing Out</key>
+	<string>The process of raising the mash temperature to 170F. The goal is to halt any enzymatic activity and prevent further conversion of starches to sugars.</string>
+	<key>Microbrewery</key>
+	<string>As defined by the Brewers Association: A brewery that produces less than 15,000 barrels of beer per year with 75 percent or more of its beer sold off-site.</string>
+	<key>Milling</key>
+	<string>The grinding of malt into grist (or meal) to facilitate the extraction of sugars and other soluble substances during the mash process. The endosperm must be crushed to medium-sized grits rather than to flour consistency. It is important that the husks remain intact when the grain is milled or cracked because they will later act as a filter aid during lautering.</string>
+	<key>Modification</key>
+	<string>The physical and chemical changes in barley that result from malting, especially the development of enzymes that are required to modify the grain’s starches into sugars during mashing, and also the physical changes that render the carbohydrate found in barley kernels more available to the brewing process. The degrees to which these changes have occurred, as determined by the growth of the acrospire.</string>
+	<key>Modified Malts</key>
+	<string>Modified Malts refers to the length of the germination process and how many of the internal malt structures and compounds have already been broken down.</string>
+	<key>Mouthfeel</key>
+	<string>The textures one perceives in a beer. Includes carbonation, fullness and aftertaste.</string>
+	<key>Musty</key>
+	<string>Moldy, mildewy character that can be the result of cork or bacterial infection in a beer. It can be perceived in both taste and aroma.</string>
+	<key>Myrcene</key>
+	<string>One of the essential oils made in the flowering cone of the hops plant Humulus lupulus.</string>
+	<key>Natural Carbonation</key>
+	<string>Sugar is added to beer in its container and then sealed. Fermentation kicks off again as the yeast eats the new sugar addition. When yeast ferments, it releases CO2 which is then absorbed into the liquid.</string>
+	<key>Ninkasi</key>
+	<string>The ancient Sumerian goddess of beer.</string>
+	<key>Nitrogen</key>
+	<string>When used for the carbonation of beer, Nitrogen contributes a thick creamy mouthfeel, different from the mouthfeel you get from CO2.</string>
+	<key>Noble Hops</key>
+	<string>Hallertau in Bavaria, Germany Saaz in Zatec, Czech Republic Spalt in Spalter, Germany Tettnang in the Lake Constance region, Germany</string>
+	<key>Oasthouse</key>
+	<string>A farm-based facility where hops are dried and baled after picking.</string>
+	<key>Original Gravity (OG)</key>
+	<string>The specific gravity of wort before fermentation. A measure of the total amount of solids that are dissolved in the wort as compared to the density of water, which is conventionally given as 1.000 and higher. Synonym: Starting gravity; starting specific gravity; original wort gravity.</string>
+	<key>Oxidation</key>
+	<string>A chemical reaction in which one of the reactants (beer, food) undergoes the addition of or reaction with oxygen or an oxidizing agent.</string>
+	<key>Oxidized</key>
+	<string>Stale, winy flavor or aroma of wet cardboard, paper, rotten pineapple sherry and many other variations.</string>
+	<key>Package</key>
+	<string>A general term for the containers used to market beverages. Packaged beer is generally sold in bottles and cans. Beer sold in kegs is usually called draught beer.</string>
+	<key>Palate</key>
+	<string>The top part of the inside of your mouth and is generally associated with how humans taste.</string>
+	<key>Phenols</key>
+	<string>A class of chemical compounds perceptible in both aroma and taste. Some phenolic flavors and aromas are desirable in certain beer styles, for example German-style wheat beers in which the phenolic components derived from the yeast used, or Smoke beers in which the phenolic components derived from smoked malt. Higher concentrations in beer are often due to the brewing water, infection of the wort by bacteria or wild yeasts, cleaning agents, or crown and can linings. Phenolic sensory attributes include clovey, herbal, medicinal or pharmaceutical (band-aid).</string>
+	<key>Pitching</key>
+	<string>The addition of yeast to the wort once it has cooled down to desirable temperatures.</string>
+	<key>Primary Fermentation</key>
+	<string>The first stage of fermentation carried out in open or closed containers and lasting from two to twenty days during which time the bulk of the fermentable sugars are converted to ethyl alcohol and carbon dioxide gas. Synonym: Principal fermentation; initial fermentation.</string>
+	<key>Priming</key>
+	<string>The addition of small amounts of fermentable sugars to fermented beer before racking or bottling to induce a renewed fermentation in the bottle or keg and thus carbonate the beer.</string>
+	<key>Prohibition</key>
+	<string>A law instituted by the Eighteenth Amendment to the U.S. Constitution (stemming from the Volstead Act) on January 18, 1920, forbidding the sale, production, importation, and transportation of alcoholic beverages in the U.S. It was repealed by the Twenty-first Amendment to the U.S. Constitution on December 5, 1933. The Prohibition Era is sometimes referred to as “The Noble Experiment.</string>
+	<key>Punt</key>
+	<string>The hollow at the bottom of some bottles.</string>
+	<key>Quaff</key>
+	<string>To drink deeply.</string>
+	<key>Racking</key>
+	<string>The process of transferring beer from one vessel to another, especially into the final package or keg.</string>
+	<key>Real Ale</key>
+	<string>A style of beer found primarily in England, where it has been championed by the consumer rights group called the Campaign for Real Ale (CAMRA). Generally defined as beers that have undergone a secondary fermentation in the container from which they are served and that are served without the application of carbon dioxide.</string>
+	<key>Regional Craft Brewery</key>
+	<string>As defined by the Brewers Association: An independent regional brewery having either an all malt flagship or has at least 50 percent of its volume in either all malt beers or in beers which use adjuncts to enhance rather than lighten flavor.</string>
+	<key>Reinheitsgebot</key>
+	<string>The German beer purity law passed in 1516, stating that beer may only contain water, barley and hops. Yeast was later added after its role in fermentation was discovered by Louis Pasteur.</string>
+	<key>Residual Alkalinity</key>
+	<string>A measurement of the mash’s ability to buffer, or resist, attempts to lower its pH.</string>
+	<key>Residual Sugar</key>
+	<string>Any leftover sugar that the yeast did not consume during fermentation.</string>
+	<key>Resin</key>
+	<string>The gummy organic substance produced by certain plants and trees. Humulone and lupulone, for example, are bitter resins that occur naturally in the hop flower.</string>
+	<key>Saccharification</key>
+	<string>The conversion of malt starch into fermentable sugars, primarily maltose.</string>
+	<key>Saccharomyces</key>
+	<string>The genus of single-celled yeasts that ferment sugar and are used in the making of alcoholic beverages and bread. Yeasts of the species Saccharomyces cerevisiae and Saccharomyces pastorianus are commonly used in brewing.</string>
+	<key>Secondary Fermentation</key>
+	<string>The second, slower stage of fermentation for top fermenting beers, and lasting from a few weeks to many months, depending on the type of beer. A renewed fermentation in bottles or casks and initiated by priming or by adding fresh yeast.</string>
+	<key>Sediment</key>
+	<string>The refuse of solid matter that settles and accumulates at the bottom of fermenters, conditioning vessels and bottles of bottle-conditioned beer.</string>
+	<key>Session Beer</key>
+	<string>A beer of lighter body and alcohol of which one might expect to drink more than one serving in a sitting.</string>
+	<key>Solvent-like</key>
+	<string>Flavor and aromatic character similar to acetone or lacquer thinner, often due to high fermentation temperatures.</string>
+	<key>Sorghum</key>
+	<string>A cereal grain from various grasses (Sorghum vulgare). Also a grain sought out by those who are gluten intolerant.</string>
+	<key>Sour</key>
+	<string>A taste perceived to be acidic and tart. Sometimes the result of a bacterial influence intended by the brewer, from either wild or inoculated bacteria such as lactobacillus and pediococcus.</string>
+	<key>Sparging</key>
+	<string>In lautering, an operation consisting of spraying the spent mash grains with hot water to retrieve the liquid malt sugar and extract remaining in the grain husks.</string>
+	<key>Specific Gravity</key>
+	<string>The ratio of the density of a substance to the density of water. This method is used to determine how much dissolved sugars are present in the wort or beer. Specific gravity has no units because it is expressed as a ratio. See also Original Gravity and Final Gravity.</string>
+	<key>Standard Reference Method (SRM)</key>
+	<string>An analytical method and scale that brewers use to measure and quantify the color of a beer. The higher the SRM is, the darker the beer. In beer, SRM ranges from as low as 2 (light lager) to as high as 45 (stout) and beyond.</string>
+	<key>Steeping</key>
+	<string>The soaking in liquid of a solid so as to extract flavors.</string>
+	<key>Step Infusion</key>
+	<string>A mashing method wherein the temperature of the mash is raised by adding very hot water, and then stirring and stabilizing the mash at the target step temperature.</string>
+	<key>Sulfur</key>
+	<string>Aroma reminiscent of rotten eggs or burnt matches; a by-product of some yeasts or a beer becoming light struck.</string>
+	<key>Tannins</key>
+	<string>A group of organic compounds contained in certain cereal grains and other plants. Tannins are present in the hop cone. Also called “hop tannin” to distinguish it from tannins originating from malted barley. The greater part of malt tannin content is derived from malt husks, but malt tannins differ chemically from hop tannins. In extreme examples, tannins from both can be perceived as a taste or sensation similar to sampling black tea that has steeped for a very long time.</string>
+	<key>Temperature Rests</key>
+	<string>Temperature Rests during the beer making process allows the brewer to adjust fermentable sugar profiles so as to influence characteristics of the resulting beer.</string>
+	<key>Top Fermentation</key>
+	<string>One of the two basic fermentation methods characterized by the tendency of yeast cells to rise to the surface of the fermentation vessel. Ale yeast is top fermenting compared to lager yeast, which is bottom fermenting. Beers brewed in this fashion are commonly called ale or top-fermented beers.</string>
+	<key>Trub</key>
+	<string>Wort particles resulting from the precipitation of proteins, hop oils and tannins during the boiling and cooling stages of brewing.</string>
+	<key>Turbidity</key>
+	<string>Sediment in suspension; hazy, murky.</string>
+	<key>Volatile Compounds</key>
+	<string>Chemicals that have a high vapor pressure at ordinary room temperature which causes large numbers of molecules to evaporate and enter the surrounding air.</string>
+	<key>Volstead Act</key>
+	<string>or the national prohibition act, was enacted to carry out the intent of the Eighteenth Amendment, which established prohibition in the United States.</string>
+	<key>Volumes of C02</key>
+	<string>The measurement of c02 dissolved in a beer and is an indication of the carbonation level.</string>
+	<key>Vorlauf</key>
+	<string>At the outset of lautering and immediately prior to collecting wort in the brew kettle, the recirculation of wort from the lauter tun outlet back onto the top of the grain bed in order to clarify the wort.</string>
+	<key>Water</key>
+	<string>One of the four ingredients in beer. Some beers are made up by as much as 90% water. Globally, some brewing centers became famous for their particular type of beer, and the individual flavors of their beer were strongly influenced by the brewing water’s pH and mineral content. Burton is renowned for its bitter beers because the water is hard (higher PH), Edinburgh for its pale ales, Dortmund for its pale lager, and Plzen for its Pilsner Urquell (soft water lower PH).</string>
+	<key>Wet Hopping</key>
+	<string>The addition of freshly harvested hops that have not yet been dried to different stages of the brewing process. Wet hopping adds unique flavors and aromas to beer that are not normally found when using hops that have been dried and processed per usual.</string>
+	<key>Whirlpool</key>
+	<string>A method of collecting hot break material in the center of the kettle by stirring the wort until a vortex is formed. A brewhouse vessel designed to separate hot break trub particles from boiled wort.</string>
+	<key>Wort</key>
+	<string>The bittersweet sugar solution obtained by mashing the malt and boiling in the hops, which becomes beer through fermentation.</string>
+	<key>Yeast</key>
+	<string>During the fermentation process, yeast converts the natural malt sugars into alcohol and carbon dioxide gas. Yeast was first viewed under a microscope in 1680 by the Dutch scientist Antonie van Leeuwenhoek; in 1867, Louis Pasteur discovered that yeast cells lack chlorophyll and that they could develop only in an environment containing both nitrogen and carbon.</string>
+	<key>Yeast Cake</key>
+	<string>Living yeast cells compressed with starch into a cake, for use in brewing.</string>
+	<key>Yeast Pitching</key>
+	<string>The point in the brewing process in which yeast is added to cool wort prior to fermentation.</string>
+	<key>Zymurgy</key>
+	<string>The branch of chemistry that deals with fermentation processes, as in brewing. Also the name of the American Homebrewers Association bi-monthly magazine.</string>
+	<key>pH</key>
+	<string>Abbreviation for potential Hydrogen, used to express the degree of acidity and alkalinity in an aqueous solution, usually on a logarithmic scale ranging from 1-14, with 7 being neutral, 1 being the most acidic, and 14 being the most alkaline</string>
+</dict>
+</plist>

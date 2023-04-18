@@ -16,6 +16,10 @@
 		23A1495129E5C43300532E00 /* BeerToSave.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1495029E5C43300532E00 /* BeerToSave.swift */; };
 		23A1495329E5C8A200532E00 /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 23A1495229E5C8A200532E00 /* FirebaseStorage */; };
 		23A1495529E5F66E00532E00 /* FavoriteRecipesViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A1495429E5F66E00532E00 /* FavoriteRecipesViewModel.swift */; };
+		23A2FEC829EDDECA008B6E36 /* GlossaryViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A2FEC729EDDECA008B6E36 /* GlossaryViewModel.swift */; };
+		23A2FECB29EDDF01008B6E36 /* SwiftSoup in Frameworks */ = {isa = PBXBuildFile; productRef = 23A2FECA29EDDF01008B6E36 /* SwiftSoup */; };
+		23A2FECE29EDDF59008B6E36 /* Collections in Frameworks */ = {isa = PBXBuildFile; productRef = 23A2FECD29EDDF59008B6E36 /* Collections */; };
+		23A2FED029EDDF59008B6E36 /* OrderedCollections in Frameworks */ = {isa = PBXBuildFile; productRef = 23A2FECF29EDDF59008B6E36 /* OrderedCollections */; };
 		23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */; };
 		23A95DF429D4913D00B6CEF0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */; };
 		23A95DF929D4913D00B6CEF0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 23A95DF729D4913D00B6CEF0 /* Main.storyboard */; };
@@ -32,6 +36,7 @@
 		23BD866429E4A37800A14649 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD866329E4A37800A14649 /* FirebaseService.swift */; };
 		23C84B3229DF5D6B00887146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23C84B3129DF5D6B00887146 /* GoogleService-Info.plist */; };
 		23C84B3629DF5F7A00887146 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 23C84B3529DF5F7A00887146 /* FirebaseAuth */; };
+		23F6A8F629EEFB6D0048C5EA /* BeerGlossary.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23F6A8F529EEFB6D0048C5EA /* BeerGlossary.plist */; };
 		23FCBA0E29DC795D00043C74 /* API Service.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA0D29DC795D00043C74 /* API Service.swift */; };
 		23FCBA1229DCBF1000043C74 /* BeerIngredientsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA1129DCBF1000043C74 /* BeerIngredientsView.swift */; };
 		23FCBA1429DCC4E200043C74 /* IngredientsTableViewCustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23FCBA1329DCC4E200043C74 /* IngredientsTableViewCustomCell.swift */; };
@@ -53,6 +58,7 @@
 		239803D829DB27B0001D1FF4 /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		23A1495029E5C43300532E00 /* BeerToSave.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerToSave.swift; sourceTree = "<group>"; };
 		23A1495429E5F66E00532E00 /* FavoriteRecipesViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesViewModel.swift; sourceTree = "<group>"; };
+		23A2FEC729EDDECA008B6E36 /* GlossaryViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewModel.swift; sourceTree = "<group>"; };
 		23A95DEE29D4913D00B6CEF0 /* NewBrewer.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewBrewer.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		23A95DF129D4913D00B6CEF0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		23A95DF329D4913D00B6CEF0 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -69,6 +75,7 @@
 		23BD866129E4A12900A14649 /* FavoriteRecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesTableViewController.swift; sourceTree = "<group>"; };
 		23BD866329E4A37800A14649 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		23C84B3129DF5D6B00887146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		23F6A8F529EEFB6D0048C5EA /* BeerGlossary.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = BeerGlossary.plist; sourceTree = "<group>"; };
 		23FCBA0D29DC795D00043C74 /* API Service.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "API Service.swift"; sourceTree = "<group>"; };
 		23FCBA1129DCBF1000043C74 /* BeerIngredientsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeerIngredientsView.swift; sourceTree = "<group>"; };
 		23FCBA1329DCC4E200043C74 /* IngredientsTableViewCustomCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IngredientsTableViewCustomCell.swift; sourceTree = "<group>"; };
@@ -87,6 +94,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				23C84B3629DF5F7A00887146 /* FirebaseAuth in Frameworks */,
+				23A2FECB29EDDF01008B6E36 /* SwiftSoup in Frameworks */,
+				23A2FED029EDDF59008B6E36 /* OrderedCollections in Frameworks */,
+				23A2FECE29EDDF59008B6E36 /* Collections in Frameworks */,
 				23BD865929E472A700A14649 /* FirebaseFirestore in Frameworks */,
 				23A1495329E5C8A200532E00 /* FirebaseStorage in Frameworks */,
 			);
@@ -172,6 +182,7 @@
 				23A95DF729D4913D00B6CEF0 /* Main.storyboard */,
 				23A95DFC29D4913E00B6CEF0 /* LaunchScreen.storyboard */,
 				23C84B3129DF5D6B00887146 /* GoogleService-Info.plist */,
+				23F6A8F529EEFB6D0048C5EA /* BeerGlossary.plist */,
 			);
 			path = NewBrewer;
 			sourceTree = "<group>";
@@ -205,6 +216,7 @@
 			isa = PBXGroup;
 			children = (
 				23BD865D29E499B400A14649 /* GlossaryViewController.swift */,
+				23A2FEC729EDDECA008B6E36 /* GlossaryViewModel.swift */,
 			);
 			path = GlossaryView;
 			sourceTree = "<group>";
@@ -299,6 +311,9 @@
 				23C84B3529DF5F7A00887146 /* FirebaseAuth */,
 				23BD865829E472A700A14649 /* FirebaseFirestore */,
 				23A1495229E5C8A200532E00 /* FirebaseStorage */,
+				23A2FECA29EDDF01008B6E36 /* SwiftSoup */,
+				23A2FECD29EDDF59008B6E36 /* Collections */,
+				23A2FECF29EDDF59008B6E36 /* OrderedCollections */,
 			);
 			productName = NewBrewer;
 			productReference = 23A95DEE29D4913D00B6CEF0 /* NewBrewer.app */;
@@ -330,6 +345,8 @@
 			mainGroup = 23A95DE529D4913D00B6CEF0;
 			packageReferences = (
 				23C84B3429DF5F7A00887146 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				23A2FEC929EDDF01008B6E36 /* XCRemoteSwiftPackageReference "SwiftSoup" */,
+				23A2FECC29EDDF59008B6E36 /* XCRemoteSwiftPackageReference "swift-collections" */,
 			);
 			productRefGroup = 23A95DEF29D4913D00B6CEF0 /* Products */;
 			projectDirPath = "";
@@ -349,6 +366,7 @@
 				23C84B3229DF5D6B00887146 /* GoogleService-Info.plist in Resources */,
 				23A95DFB29D4913E00B6CEF0 /* Assets.xcassets in Resources */,
 				23A95DF929D4913D00B6CEF0 /* Main.storyboard in Resources */,
+				23F6A8F629EEFB6D0048C5EA /* BeerGlossary.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -368,6 +386,7 @@
 				23BD864F29E464AE00A14649 /* SignInViewModel.swift in Sources */,
 				2346567A29E85B1300C14280 /* FavoriteRecipesTableViewCell.swift in Sources */,
 				239803D329DB2650001D1FF4 /* BeerSearchDataProvider.swift in Sources */,
+				23A2FEC829EDDECA008B6E36 /* GlossaryViewModel.swift in Sources */,
 				23FCBA2329DF1EAA00043C74 /* RandomBeerViewModel.swift in Sources */,
 				23BD866229E4A12900A14649 /* FavoriteRecipesTableViewController.swift in Sources */,
 				23A95DF229D4913D00B6CEF0 /* AppDelegate.swift in Sources */,
@@ -604,6 +623,22 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		23A2FEC929EDDF01008B6E36 /* XCRemoteSwiftPackageReference "SwiftSoup" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scinfu/SwiftSoup";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+		23A2FECC29EDDF59008B6E36 /* XCRemoteSwiftPackageReference "swift-collections" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apple/swift-collections.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
 		23C84B3429DF5F7A00887146 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
@@ -619,6 +654,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 23C84B3429DF5F7A00887146 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseStorage;
+		};
+		23A2FECA29EDDF01008B6E36 /* SwiftSoup */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23A2FEC929EDDF01008B6E36 /* XCRemoteSwiftPackageReference "SwiftSoup" */;
+			productName = SwiftSoup;
+		};
+		23A2FECD29EDDF59008B6E36 /* Collections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23A2FECC29EDDF59008B6E36 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = Collections;
+		};
+		23A2FECF29EDDF59008B6E36 /* OrderedCollections */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 23A2FECC29EDDF59008B6E36 /* XCRemoteSwiftPackageReference "swift-collections" */;
+			productName = OrderedCollections;
 		};
 		23BD865829E472A700A14649 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
