@@ -29,12 +29,6 @@ class GlossaryViewController: UIViewController {
     // MARK: - Properties
     var viewModel: GlossaryViewModel!
 
-    /*
-    // MARK: - Navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-    }
-    */
-    
     // MARK: - Action
     @IBAction func singOutButtonTapped(_ sender: Any) {
         let viewModel = CreateAccountViewModel()
