@@ -23,9 +23,9 @@ class GlossaryViewModel {
         self.delegate = delegate
     }
     
+   
+    
     // MARK: - Functions
-    
-    
     
     func fetchGlossary() {
         let url = URL(string: "https://www.craftbeer.com/beer/beer-glossary")!
@@ -33,6 +33,9 @@ class GlossaryViewModel {
             guard let data = data else { return }
             let glossary = self.parseBeerGlossary(data: data)
             print(OrderedDictionary(uniqueKeysWithValues: glossary.sorted(by: { $0.key < $1.key })))
+            for (key, value) in glossary {
+                print("\(key)", "\(value)")
+            }
         }
         task.resume()
     }
