@@ -23,13 +23,12 @@ class GlossaryViewController: UIViewController {
         glossaryTableView.delegate = self
         glossaryTableView.dataSource = self
         
-        viewModel.fetchGlossary()
+       
     }
     
     // MARK: - Properties
     var viewModel: GlossaryViewModel!
-    var filteredDataSource = [String : String]()
-    var dataArray: [(key: String, value: String)] = []
+
     /*
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
