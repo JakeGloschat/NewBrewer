@@ -32,7 +32,7 @@
 		23BD865429E469F000A14649 /* CreateAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865329E469F000A14649 /* CreateAccountViewController.swift */; };
 		23BD865629E469FD00A14649 /* CreateAccountViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865529E469FD00A14649 /* CreateAccountViewModel.swift */; };
 		23BD865929E472A700A14649 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 23BD865829E472A700A14649 /* FirebaseFirestore */; };
-		23BD865E29E499B400A14649 /* DictionaryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865D29E499B400A14649 /* DictionaryTableViewController.swift */; };
+		23BD865E29E499B400A14649 /* GlossaryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD865D29E499B400A14649 /* GlossaryViewController.swift */; };
 		23BD866229E4A12900A14649 /* FavoriteRecipesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD866129E4A12900A14649 /* FavoriteRecipesTableViewController.swift */; };
 		23BD866429E4A37800A14649 /* FirebaseService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BD866329E4A37800A14649 /* FirebaseService.swift */; };
 		23C84B3229DF5D6B00887146 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 23C84B3129DF5D6B00887146 /* GoogleService-Info.plist */; };
@@ -74,7 +74,7 @@
 		23BD865029E469AE00A14649 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		23BD865329E469F000A14649 /* CreateAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewController.swift; sourceTree = "<group>"; };
 		23BD865529E469FD00A14649 /* CreateAccountViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateAccountViewModel.swift; sourceTree = "<group>"; };
-		23BD865D29E499B400A14649 /* DictionaryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DictionaryTableViewController.swift; sourceTree = "<group>"; };
+		23BD865D29E499B400A14649 /* GlossaryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GlossaryViewController.swift; sourceTree = "<group>"; };
 		23BD866129E4A12900A14649 /* FavoriteRecipesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoriteRecipesTableViewController.swift; sourceTree = "<group>"; };
 		23BD866329E4A37800A14649 /* FirebaseService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseService.swift; sourceTree = "<group>"; };
 		23C84B3129DF5D6B00887146 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -227,7 +227,7 @@
 		23BD865C29E4996200A14649 /* GlossaryView */ = {
 			isa = PBXGroup;
 			children = (
-				23BD865D29E499B400A14649 /* DictionaryTableViewController.swift */,
+				23BD865D29E499B400A14649 /* GlossaryViewController.swift */,
 				23A2FEC729EDDECA008B6E36 /* GlossaryViewModel.swift */,
 				23F6A8F329EDED060048C5EA /* GlossaryTerms.swift */,
 				23A2FED129EDE17C008B6E36 /* CustomCell */,
@@ -407,7 +407,7 @@
 				23FCBA1429DCC4E200043C74 /* IngredientsTableViewCustomCell.swift in Sources */,
 				23BD866429E4A37800A14649 /* FirebaseService.swift in Sources */,
 				23B2D38C29E850E000C6E355 /* FIrebaseError.swift in Sources */,
-				23BD865E29E499B400A14649 /* DictionaryTableViewController.swift in Sources */,
+				23BD865E29E499B400A14649 /* GlossaryViewController.swift in Sources */,
 				239803D929DB27B0001D1FF4 /* NetworkError.swift in Sources */,
 				23FCBA1829DE095C00043C74 /* SearchBeerViewController.swift in Sources */,
 				23BD865429E469F000A14649 /* CreateAccountViewController.swift in Sources */,

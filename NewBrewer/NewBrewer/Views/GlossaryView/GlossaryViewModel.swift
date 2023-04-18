@@ -23,8 +23,6 @@ class GlossaryViewModel {
         self.delegate = delegate
     }
     
-    
-    
     // MARK: - Functions
     func loadPlistData() -> [(key: String, value: String)]? {
         if let plistURL = Bundle.main.url(forResource: "BeerGlossary", withExtension: "plist") {
@@ -32,7 +30,7 @@ class GlossaryViewModel {
                 let plistData = try Data(contentsOf: plistURL)
                 
                 if let plistDictionary = try PropertyListSerialization.propertyList(from: plistData, options: [], format: nil) as? [String : String] {
-                    return Array(plistDictionary)
+                    return Array(plistDictionary.sorted(by: { $0.key < $1.key }))
                 }
             } catch {
                 print(error)

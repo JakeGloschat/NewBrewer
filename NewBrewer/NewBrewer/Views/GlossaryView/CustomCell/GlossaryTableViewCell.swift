@@ -12,5 +12,7 @@ class GlossaryTableViewCell: UITableViewCell {
  // MARK: - Outlet
     @IBOutlet weak var glossaryTermLabel: UILabel!
     
+    // MARK: - Helper Functions
+    
     
 }
