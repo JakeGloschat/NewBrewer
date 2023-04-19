@@ -25,7 +25,7 @@ class SearchBeerViewController: UIViewController {
         beerListTableView.dataSource = self
         beerListTableView.delegate = self
         viewModel = SearchBeerViewModel(delegate: self)
-        
+        viewModel.searchBeers(with: "")
     }
     
     // MARK: - Navigation
