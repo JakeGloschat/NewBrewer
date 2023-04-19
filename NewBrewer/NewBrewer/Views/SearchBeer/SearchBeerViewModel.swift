@@ -45,7 +45,7 @@ class SearchBeerViewModel { // This is a concrete type
         }
     }
     
-    func fetchNextPage(wtih page: Int) {
+    func fetchNextPage(with page: Int) {
         let nextPage = page + 1
         guard !pagesFetched.contains(nextPage) else { return }
         pagesFetched.append(nextPage)

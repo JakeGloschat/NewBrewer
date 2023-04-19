@@ -56,7 +56,7 @@ extension SearchBeerViewController: UITableViewDataSource, UITableViewDelegate {
         let row = indexPath.row
         if row.isMultiple(of: 24) {
             let page = row / 24
-            viewModel.fetchNextPage(wtih: page)
+            viewModel.fetchNextPage(with: page)
         }
     }
     

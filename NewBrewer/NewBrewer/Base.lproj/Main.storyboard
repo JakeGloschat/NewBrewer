@@ -151,14 +151,8 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Iuc-gD-vEg">
-                                <rect key="frame" x="20" y="123" width="353" height="102.66666666666669"/>
+                                <rect key="frame" x="20" y="122.99999999999999" width="353" height="136.66666666666663"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oq-2Q-lhX">
-                                <rect key="frame" x="169.33333333333334" y="245.66666666666666" width="54.333333333333343" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="26" translatesAutoresizingMaskIntoConstraints="NO" id="gBh-Fo-TpV">
                                 <rect key="frame" x="8" y="326" width="377" height="159.33333333333337"/>
                                 <subviews>
@@ -205,24 +199,44 @@
                                     <segue destination="hK5-Bt-gkZ" kind="show" identifier="toBeerIngredientsVC" id="hod-iM-gro"/>
                                 </connections>
                             </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sbR-im-fkt">
+                                <rect key="frame" x="8" y="275.66666666666669" width="377" height="34.333333333333314"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(name)" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0oq-2Q-lhX">
+                                        <rect key="frame" x="0.0" y="0.0" width="318.33333333333331" height="34.333333333333336"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="500" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="b4z-uR-fk3">
+                                        <rect key="frame" x="326.33333333333331" y="0.0" width="50.666666666666686" height="34.333333333333336"/>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system"/>
+                                        <connections>
+                                            <action selector="favoriteBeerButtonTapped:" destination="kDp-br-HKh" eventType="touchUpInside" id="B5W-Nc-XcU"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="aBe-RW-vev"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="gBh-Fo-TpV" firstAttribute="top" secondItem="0oq-2Q-lhX" secondAttribute="bottom" constant="60" id="0QD-as-kLE"/>
-                            <constraint firstItem="0oq-2Q-lhX" firstAttribute="centerX" secondItem="aBe-RW-vev" secondAttribute="centerX" id="1l7-Th-n7X"/>
+                            <constraint firstItem="aBe-RW-vev" firstAttribute="trailing" secondItem="sbR-im-fkt" secondAttribute="trailing" constant="8" id="2qz-ew-wH8"/>
                             <constraint firstItem="gBh-Fo-TpV" firstAttribute="leading" secondItem="aBe-RW-vev" secondAttribute="leading" constant="8" id="6LI-8o-LUh"/>
                             <constraint firstItem="aBe-RW-vev" firstAttribute="bottom" secondItem="hLi-yE-MzQ" secondAttribute="bottom" constant="17" id="Gn1-VC-tIZ"/>
+                            <constraint firstItem="sbR-im-fkt" firstAttribute="top" secondItem="Iuc-gD-vEg" secondAttribute="bottom" constant="16" id="HDL-FB-yKc"/>
                             <constraint firstItem="Iuc-gD-vEg" firstAttribute="leading" secondItem="aBe-RW-vev" secondAttribute="leading" constant="20" id="JQe-ST-Tmb"/>
                             <constraint firstItem="vZL-aD-gkb" firstAttribute="leading" secondItem="aBe-RW-vev" secondAttribute="leading" constant="219" id="VlS-Fd-ZTn"/>
                             <constraint firstItem="aBe-RW-vev" firstAttribute="trailing" secondItem="gBh-Fo-TpV" secondAttribute="trailing" constant="8" id="aOG-lC-9kE"/>
+                            <constraint firstItem="sbR-im-fkt" firstAttribute="leading" secondItem="aBe-RW-vev" secondAttribute="leading" constant="8" id="bdP-b0-49p"/>
                             <constraint firstItem="aBe-RW-vev" firstAttribute="trailing" secondItem="Iuc-gD-vEg" secondAttribute="trailing" constant="20" id="dHb-o6-65N"/>
                             <constraint firstItem="vZL-aD-gkb" firstAttribute="top" secondItem="gBh-Fo-TpV" secondAttribute="bottom" constant="39.666666666666629" id="f0d-LN-ts0"/>
+                            <constraint firstItem="gBh-Fo-TpV" firstAttribute="top" secondItem="sbR-im-fkt" secondAttribute="bottom" constant="16" id="gNq-Cx-e1g"/>
                             <constraint firstItem="Iuc-gD-vEg" firstAttribute="top" secondItem="aBe-RW-vev" secondAttribute="top" constant="20" id="lLF-Ab-XkA"/>
                             <constraint firstItem="aBe-RW-vev" firstAttribute="trailing" secondItem="vZL-aD-gkb" secondAttribute="trailing" constant="20" id="sG4-tZ-wUa"/>
                             <constraint firstItem="gBh-Fo-TpV" firstAttribute="top" secondItem="nsv-7m-lYt" secondAttribute="top" constant="326" id="yXz-yR-qnw"/>
                             <constraint firstItem="hLi-yE-MzQ" firstAttribute="centerX" secondItem="aBe-RW-vev" secondAttribute="centerX" id="z6v-Xa-Ta6"/>
-                            <constraint firstItem="0oq-2Q-lhX" firstAttribute="top" secondItem="Iuc-gD-vEg" secondAttribute="bottom" constant="20" id="zYU-Ks-6JQ"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="1yA-qG-3CE">
@@ -239,6 +253,7 @@
                         <outlet property="beerImageView" destination="Iuc-gD-vEg" id="fuk-OR-Km2"/>
                         <outlet property="beerNameLabel" destination="0oq-2Q-lhX" id="4es-X2-2Ih"/>
                         <outlet property="beerTaglineLabel" destination="mRn-sH-noz" id="Jrd-to-ayN"/>
+                        <outlet property="favoriteBeerButton" destination="b4z-uR-fk3" id="Qw6-KA-bjd"/>
                         <outlet property="getRandomBeerButton" destination="hLi-yE-MzQ" id="kKR-WR-fVf"/>
                         <outlet property="toIngredientsButton" destination="vZL-aD-gkb" id="2r4-FN-Wqn"/>
                     </connections>
@@ -698,8 +713,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="i9I-s2-62E"/>
-        <segue reference="lHv-3q-8U6"/>
+        <segue reference="hod-iM-gro"/>
+        <segue reference="Tmc-ev-dno"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>

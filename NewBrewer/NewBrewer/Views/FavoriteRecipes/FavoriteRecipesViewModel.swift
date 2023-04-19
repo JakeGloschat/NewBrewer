@@ -56,16 +56,4 @@ class FavoriteRecipesViewModel {
             }
         }
     }
-    
-//    func fetchBeer(with beer: Beer) {
-//        beerService.fetchSingleBeer(for: beer) { result in
-//            switch result {
-//            case .success(let beer):
-//                self.beer = beer
-//                self.delegate?.beerLoadedSuccessfully()
-//            case .failure(let failure):
-//                print(failure.errorDescription ?? "Beer not found")
-//            }
-//        }
-//    }
 }

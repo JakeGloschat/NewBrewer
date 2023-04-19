@@ -8,6 +8,7 @@
 import Foundation
 import FirebaseFirestore
 import FirebaseStorage
+import FirebaseAuth
 
 protocol FirebaseServicable {
     func saveBeer(beer: BeerToSave, completion: @escaping (Result<Bool, FirebaseError>) -> Void)
@@ -22,8 +23,9 @@ struct FirebaseService: FirebaseServicable {
 
     // MARK: - Functions
     func saveBeer(beer: BeerToSave, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
+        guard let userId = Auth.auth().currentUser?.uid else { return }
         
-        ref.collection("beers").document("\(beer.beerId)").setData(beer.dictionaryRepresentation) { error in
+        ref.collection("users").document(userId).collection("beers").document("\(beer.beerId)").setData(beer.dictionaryRepresentation) { error in
             if let error = error {
                 print(error.localizedDescription)
                 completion(.failure(.firebaseError(error)))
@@ -33,7 +35,9 @@ struct FirebaseService: FirebaseServicable {
     }
     
     func delete(beer: BeerToSave, completion: @escaping (Result<Bool, FirebaseError>) -> Void) {
-        ref.collection("beers").document("\(beer.beerId)").delete { error in
+        guard let userId = Auth.auth().currentUser?.uid else { return }
+        
+        ref.collection("users").document(userId).collection("beers").document("\(beer.beerId)").delete { error in
             if let error = error {
                 print(error.localizedDescription)
                 completion(.failure(.firebaseError(error)))
@@ -43,7 +47,9 @@ struct FirebaseService: FirebaseServicable {
     }
     
     func loadBeers(completion: @escaping (Result<[BeerToSave], FirebaseError>) -> Void) {
-        ref.collection("beers").getDocuments { snapshot, error in
+            guard let userId = Auth.auth().currentUser?.uid else { return }
+        
+        ref.collection("users").document(userId).collection("beers").getDocuments { snapshot, error in
             if let error = error {
                 print(error.localizedDescription)
                 completion(.failure(.firebaseError(error)))
