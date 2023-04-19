@@ -23,7 +23,9 @@ class SearchBeerViewController: UIViewController {
         super.viewDidLoad()
         beerSearchBar.delegate = self
         beerListTableView.dataSource = self
+        beerListTableView.delegate = self
         viewModel = SearchBeerViewModel(delegate: self)
+        
     }
     
     // MARK: - Navigation
@@ -44,10 +46,18 @@ extension SearchBeerViewController: UISearchBarDelegate {
     }
 }
 
-extension SearchBeerViewController: UITableViewDataSource {
+extension SearchBeerViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // display number of beers
         return viewModel.beers.count
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        if row.isMultiple(of: 24) {
+            let page = row / 24
+            viewModel.fetchNextPage(wtih: page)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

@@ -275,23 +275,7 @@
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="Qbi-dZ-86a" id="5cm-ws-wiL">
                                             <rect key="frame" x="0.0" y="0.0" width="385" height="70"/>
                                             <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="(Glossary Term)" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MwL-jx-Efg">
-                                                    <rect key="frame" x="24" y="15" width="122" height="40"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                    <nil key="textColor"/>
-                                                    <nil key="highlightedColor"/>
-                                                </label>
-                                            </subviews>
-                                            <constraints>
-                                                <constraint firstItem="MwL-jx-Efg" firstAttribute="top" secondItem="5cm-ws-wiL" secondAttribute="topMargin" constant="4" id="a0c-MO-oHd"/>
-                                                <constraint firstAttribute="bottomMargin" secondItem="MwL-jx-Efg" secondAttribute="bottom" constant="4" id="cba-a5-8f1"/>
-                                                <constraint firstItem="MwL-jx-Efg" firstAttribute="leading" secondItem="5cm-ws-wiL" secondAttribute="leadingMargin" constant="4" id="iw6-3x-LcB"/>
-                                            </constraints>
                                         </tableViewCellContentView>
-                                        <connections>
-                                            <outlet property="glossaryTermLabel" destination="MwL-jx-Efg" id="I8C-1d-Hhl"/>
-                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
