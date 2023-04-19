@@ -65,6 +65,10 @@ struct BeerService: BeerServicable { //This is a concrete type
             urlComponents?.queryItems = [beerNameSearchQuery, nextPageQueary]
         }
         
+        else if searchBeer == "" {
+            urlComponents?.queryItems = [nextPageQueary]
+        }
+        
         guard let finalURL = urlComponents?.url else { completion(.failure(.InvalidURL)) ; return }
         print("Fetch Beers Final URL: \(finalURL)")
         
