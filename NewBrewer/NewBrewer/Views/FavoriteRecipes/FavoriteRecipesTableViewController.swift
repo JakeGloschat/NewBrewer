@@ -19,10 +19,15 @@ class FavoriteRecipesTableViewController: UITableViewController {
         super.viewDidLoad()
         viewModel = FavoriteRecipesViewModel(delegate: self)
         viewModel.loadFavorites()
+        tableView.refreshControl = UIRefreshControl()
+        tableView.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
     }
     
+    // MARK: - Function
+    @objc func callPullToRefresh() {
+        viewModel.loadFavorites()
+    }
     // MARK: - Table view data source
-    
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return viewModel.favoritedBeers.count
     }
@@ -39,7 +44,6 @@ class FavoriteRecipesTableViewController: UITableViewController {
     
     
     // MARK: - Navigation
-    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toIngredientsDetail" {
        guard let indexPath = tableView.indexPathForSelectedRow,
@@ -51,9 +55,11 @@ class FavoriteRecipesTableViewController: UITableViewController {
     }
 }
 
+// MARK: - Extensions
 extension FavoriteRecipesTableViewController: FavoriteRecipesViewModelDelegate {
     func beersLoadedSuccessfully() {
         DispatchQueue.main.async {
+            self.tableView.refreshControl?.endRefreshing()
             self.tableView.reloadData()
         }
     }

@@ -23,6 +23,11 @@ class RandomBeerViewController: UIViewController {
     // MARK: - Properties
     var viewModel: RandomBeerViewModel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.loadFavorites()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = RandomBeerViewModel(delegate: self)

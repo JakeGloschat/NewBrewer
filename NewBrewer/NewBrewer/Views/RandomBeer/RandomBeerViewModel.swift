@@ -82,4 +82,15 @@ class RandomBeerViewModel {
             }
         }
     }
+    
+    func loadFavorites() {
+        firebaseService.loadBeers { result in
+            switch result {
+            case .success(let beers):
+                self.saveBeer = beers
+            case .failure(_):
+                break
+            }
+        }
+    }
 }

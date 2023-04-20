@@ -85,6 +85,7 @@ class SearchBeerViewModel { // This is a concrete type
             switch result {
             case .success(let beers):
                 self.favoritedBeers = beers
+                self.delegate?.beersLoadedSuccessfully()
             case .failure(_):
                 break
             }

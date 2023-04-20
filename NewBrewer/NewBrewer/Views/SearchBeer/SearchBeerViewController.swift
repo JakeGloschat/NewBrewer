@@ -10,11 +10,8 @@ import UIKit
 class SearchBeerViewController: UIViewController {
 
     // MARK: - Outlets
-    
     @IBOutlet weak var beerSearchBar: UISearchBar!
     @IBOutlet weak var beerListTableView: UITableView!
-    
-    
     
     // MARK: - Properties
     var viewModel: SearchBeerViewModel!
@@ -26,6 +23,13 @@ class SearchBeerViewController: UIViewController {
         beerListTableView.delegate = self
         viewModel = SearchBeerViewModel(delegate: self)
         viewModel.searchBeers(with: "")
+        beerListTableView.refreshControl = UIRefreshControl()
+        beerListTableView.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
+    }
+    
+    // MARK: - Function
+    @objc func callPullToRefresh() {
+        viewModel.fetchFavoritedBeers()
     }
     
     // MARK: - Navigation
@@ -80,6 +84,7 @@ extension SearchBeerViewController: SearchBeerViewModelDelegate {
     
     func beersLoadedSuccessfully() {
         DispatchQueue.main.async {
+            self.beerListTableView.refreshControl?.endRefreshing()
             self.beerListTableView.reloadData()
         }
     }
