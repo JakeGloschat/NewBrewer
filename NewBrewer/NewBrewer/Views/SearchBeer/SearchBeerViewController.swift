@@ -27,9 +27,19 @@ class SearchBeerViewController: UIViewController {
         beerListTableView.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
     }
     
-    // MARK: - Function
+    // MARK: - Functions
     @objc func callPullToRefresh() {
         viewModel.fetchFavoritedBeers()
+    }
+    
+    func presentAlertController() {
+        let alertController = UIAlertController(title: "No Beers Found", message: "No beer found with search.", preferredStyle: .alert)
+        let dismassAction = UIAlertAction(title: "Dismiss", style: .cancel) { _ in
+            self.beerSearchBar.text?.removeAll()
+            self.viewModel.searchBeers(with: "")
+        }
+        alertController.addAction(dismassAction)
+        present(alertController, animated: true)
     }
     
     // MARK: - Navigation
@@ -53,7 +63,7 @@ extension SearchBeerViewController: UISearchBarDelegate {
 extension SearchBeerViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // display number of beers
-        return viewModel.beers.count
+            return viewModel.beers.count
     }
     
     func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
@@ -84,6 +94,9 @@ extension SearchBeerViewController: SearchBeerViewModelDelegate {
     
     func beersLoadedSuccessfully() {
         DispatchQueue.main.async {
+            if self.viewModel.beers.isEmpty {
+                self.presentAlertController()
+            }
             self.beerListTableView.refreshControl?.endRefreshing()
             self.beerListTableView.reloadData()
         }
