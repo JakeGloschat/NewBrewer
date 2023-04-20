@@ -47,7 +47,7 @@ class FavoriteRecipesTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toIngredientsDetail" {
        guard let indexPath = tableView.indexPathForSelectedRow,
-             let destinationVC = segue.destination as? BeerIngredientsViewController else { return }
+             let destinationVC = segue.destination as? BeerIngredientsTableViewController else { return }
             let beer = viewModel.favoritedBeers[indexPath.row]
             destinationVC.viewModel = BeerIngredientsViewModel(delegate: destinationVC.self)
             destinationVC.viewModel.fetchBeerTosave(with: beer)

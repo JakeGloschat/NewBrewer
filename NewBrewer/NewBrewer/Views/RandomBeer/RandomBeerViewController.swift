@@ -74,7 +74,7 @@ class RandomBeerViewController: UIViewController {
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toBeerIngredientsVC" {
-            guard let destinationVC = segue.destination as? BeerIngredientsViewController else { return }
+            guard let destinationVC = segue.destination as? BeerIngredientsTableViewController else { return }
             let beer = viewModel.beer
             destinationVC.beer = beer
         }

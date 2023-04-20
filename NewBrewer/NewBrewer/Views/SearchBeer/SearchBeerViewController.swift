@@ -46,7 +46,7 @@ class SearchBeerViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "toIngredientsVC" {
             guard let indexPath = beerListTableView.indexPathForSelectedRow,
-                  let destinationVC = segue.destination as? BeerIngredientsViewController else { return }
+                  let destinationVC = segue.destination as? BeerIngredientsTableViewController else { return }
             let beer = viewModel.beers[indexPath.row]
             destinationVC.beer = beer
         }

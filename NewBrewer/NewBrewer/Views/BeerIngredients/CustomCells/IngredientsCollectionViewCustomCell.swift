@@ -26,15 +26,15 @@ class IngredientsCollectionViewCell: UICollectionViewCell {
         
         nameLabel.translatesAutoresizingMaskIntoConstraints = false
         nameLabel.textColor = .white
-        nameLabel.font = UIFont.systemFont(ofSize: 14)
+        nameLabel.font = UIFont.systemFont(ofSize: 12)
         NSLayoutConstraint.activate([
-            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 8),
-            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8)
+            nameLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 4),
+            nameLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 4)
         ])
         
         amountLabel.translatesAutoresizingMaskIntoConstraints = false
         amountLabel.textColor = .white
-        amountLabel.font = UIFont.systemFont(ofSize: 14)
+        amountLabel.font = UIFont.systemFont(ofSize: 12)
         NSLayoutConstraint.activate([
             amountLabel.topAnchor.constraint(equalTo: contentView.topAnchor, constant: 16),
             amountLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8)
@@ -42,7 +42,7 @@ class IngredientsCollectionViewCell: UICollectionViewCell {
         
         addTimeLabel.translatesAutoresizingMaskIntoConstraints = false
         addTimeLabel.textColor = .white
-        addTimeLabel.font = UIFont.systemFont(ofSize: 14)
+        addTimeLabel.font = UIFont.systemFont(ofSize: 12)
         NSLayoutConstraint.activate([
             addTimeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
             addTimeLabel.leadingAnchor.constraint(equalTo: contentView.leadingAnchor, constant: 8)
@@ -51,7 +51,7 @@ class IngredientsCollectionViewCell: UICollectionViewCell {
         attributeLabel.translatesAutoresizingMaskIntoConstraints = false
         attributeLabel.textColor = .white
         NSLayoutConstraint.activate([
-            attributeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: -8),
+            attributeLabel.bottomAnchor.constraint(equalTo: contentView.bottomAnchor, constant: 8),
             attributeLabel.trailingAnchor.constraint(equalTo: contentView.trailingAnchor, constant: -8)
         ])
     }

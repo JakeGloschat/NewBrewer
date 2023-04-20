@@ -196,7 +196,7 @@
                                 <buttonConfiguration key="configuration" style="plain" title="To ingredients -&gt;"/>
                                 <connections>
                                     <action selector="toIngredientsButtonTapped:" destination="kDp-br-HKh" eventType="touchUpInside" id="2pG-Fq-kii"/>
-                                    <segue destination="hK5-Bt-gkZ" kind="show" identifier="toBeerIngredientsVC" id="hod-iM-gro"/>
+                                    <segue destination="MY0-hM-CYz" kind="show" identifier="toBeerIngredientsVC" id="bUU-9D-gio"/>
                                 </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="sbR-im-fkt">
@@ -440,7 +440,7 @@
                                     <outlet property="beerIbuLabel" destination="ggI-Rx-SpF" id="mjT-q6-rG1"/>
                                     <outlet property="beerNameLabl" destination="hJZ-uv-67Y" id="1Ln-Ig-Pw0"/>
                                     <outlet property="favoriteBeerButton" destination="M8Q-Pv-srQ" id="fnM-2F-78d"/>
-                                    <segue destination="hK5-Bt-gkZ" kind="show" identifier="toIngredientsDetail" id="i9I-s2-62E"/>
+                                    <segue destination="MY0-hM-CYz" kind="show" identifier="toIngredientsDetail" id="JE8-89-pRb"/>
                                 </connections>
                             </tableViewCell>
                         </prototypes>
@@ -548,7 +548,7 @@
                                             <outlet property="beerFavoriteButton" destination="fjc-mx-sYz" id="DmT-Gg-yjp"/>
                                             <outlet property="beerIbueLabel" destination="DYm-Yg-SHQ" id="ci0-BH-HTW"/>
                                             <outlet property="beerNameLabel" destination="CCp-ff-CRh" id="opb-0r-eH1"/>
-                                            <segue destination="hK5-Bt-gkZ" kind="show" identifier="toIngredientsVC" id="9Sm-Ow-VSQ"/>
+                                            <segue destination="MY0-hM-CYz" kind="show" identifier="toIngredientsVC" id="8K2-4D-vQN"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
@@ -582,21 +582,34 @@
             </objects>
             <point key="canvasLocation" x="1310.6870229007634" y="281.69014084507046"/>
         </scene>
-        <!--Beer Ingredients View Controller-->
-        <scene sceneID="BTM-rG-hKs">
+        <!--Beer Ingredients Table View Controller-->
+        <scene sceneID="MaZ-Db-jNU">
             <objects>
-                <viewController id="hK5-Bt-gkZ" customClass="BeerIngredientsViewController" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="uQs-k2-u93">
+                <tableViewController id="MY0-hM-CYz" customClass="BeerIngredientsTableViewController" customModule="NewBrewer" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" id="m4q-HN-ekA">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <viewLayoutGuide key="safeArea" id="cU0-1C-S44"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                    </view>
-                    <navigationItem key="navigationItem" id="Uwo-iv-RaV"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="L1t-Va-VIT" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="ingredientCell" rowHeight="104" id="c3D-Tb-DPo">
+                                <rect key="frame" x="0.0" y="50" width="393" height="104"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="c3D-Tb-DPo" id="aPj-cH-pgW">
+                                    <rect key="frame" x="0.0" y="0.0" width="393" height="104"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="MY0-hM-CYz" id="Mcq-To-odA"/>
+                            <outlet property="delegate" destination="MY0-hM-CYz" id="vd7-Qv-Eac"/>
+                        </connections>
+                    </tableView>
+                    <navigationItem key="navigationItem" id="nr4-Qs-53w"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="fZa-HP-5Bd" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2370" y="282"/>
+            <point key="canvasLocation" x="3116.7938931297708" y="281.69014084507046"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="5iu-QL-0W1">
@@ -713,8 +726,8 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="hod-iM-gro"/>
-        <segue reference="Tmc-ev-dno"/>
+        <segue reference="bUU-9D-gio"/>
+        <segue reference="lHv-3q-8U6"/>
     </inferredMetricsTieBreakers>
     <resources>
         <image name="heart" catalog="system" width="128" height="107"/>
