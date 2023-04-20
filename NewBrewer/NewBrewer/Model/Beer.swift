@@ -37,7 +37,6 @@ struct Beer: Codable {
     let ingredients: Ingredients?
     let foodPairing: [String]
     let brewersTips: String
-
 }
 
 struct Volume: Codable {
