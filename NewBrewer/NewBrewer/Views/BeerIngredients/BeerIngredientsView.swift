@@ -56,13 +56,14 @@ extension BeerIngredientsViewController: UITableViewDelegate, UITableViewDataSou
             return UITableViewCell()
         }
         cell.row = indexPath.row
+        guard let ingredients = beer.ingredients else { return UITableViewCell()}
         switch indexPath.row {
         case 0:
-            cell.configure(data: beer.ingredients.malt, collectionViewDelegate: self, collectionViewDataSource: self)
+            cell.configure(data: ingredients.malt, collectionViewDelegate: self, collectionViewDataSource: self)
         case 1:
-            cell.configure(data: beer.ingredients.hops, collectionViewDelegate: self, collectionViewDataSource: self)
+            cell.configure(data: ingredients.hops, collectionViewDelegate: self, collectionViewDataSource: self)
         case 2:
-            cell.configure(data: [beer.ingredients.yeast], collectionViewDelegate: self, collectionViewDataSource: self)
+            cell.configure(data: [ingredients.yeast ?? "one yeasty boi"], collectionViewDelegate: self, collectionViewDataSource: self)
         default:
             break
         }
@@ -77,14 +78,15 @@ extension BeerIngredientsViewController: UITableViewDelegate, UITableViewDataSou
 extension BeerIngredientsViewController: UICollectionViewDelegate, UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        guard let beer = beer else { return 0 }
+        guard let beer = beer?.ingredients else { return 0 }
+       
         switch collectionView.tag {
         case 0:
-            return beer.ingredients.malt.count
+            return beer.malt.count
         case 1:
-            return beer.ingredients.hops.count
+            return beer.hops.count
         case 2:
-            return beer.ingredients.yeast.count
+            return beer.yeast?.count ?? 0
         default:
             return 0
         }
@@ -92,16 +94,16 @@ extension BeerIngredientsViewController: UICollectionViewDelegate, UICollectionV
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: collectionViewCellReuseIdentifier, for: indexPath) as! IngredientsCollectionViewCell
-        guard let beer = beer else { return UICollectionViewCell() }
+        guard let beer = beer?.ingredients else { return UICollectionViewCell() }
         switch collectionView.tag {
         case 0:
-            let malt = beer.ingredients.malt[indexPath.row]
+            let malt = beer.malt[indexPath.row]
             cell.configure(with: malt)
         case 1:
-            let hops = beer.ingredients.hops[indexPath.row]
+            let hops = beer.hops[indexPath.row]
             cell.configure(with: hops)
         case 2:
-            let ingredients = beer.ingredients
+            let ingredients = beer
             cell.configure(with: ingredients )
         default:
             break

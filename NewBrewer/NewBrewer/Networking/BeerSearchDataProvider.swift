@@ -9,9 +9,8 @@ import UIKit
 
 protocol BeerServicable {
     func fetchRandomBeer(completion: @escaping (Result<Beer, NetworkError>) -> Void)
-    func fetchBeerBySearch(searchBeer: String, completion: @escaping (Result<[Beer], NetworkError>) -> Void)
+    func fetchBeerBySearch(searchBeer: String, page: String, completion: @escaping (Result<[Beer], NetworkError>) -> Void)
     func fetchImage(for item: String?, completion: @escaping (Result<UIImage, NetworkError>) -> Void)
-//    func fetchSingleBeer(for beer: Beer, completion: @escaping (Result<Beer, NetworkError>) -> Void)
     func fetchSingleBeerIngredients(for beer: BeerToSave, completion: @escaping (Result<Beer, NetworkError>) -> Void)
 }
 
@@ -46,7 +45,7 @@ struct BeerService: BeerServicable { //This is a concrete type
         }
     }
     
-    func fetchBeerBySearch(searchBeer: String, completion: @escaping (Result<[Beer], NetworkError>) -> Void) {
+    func fetchBeerBySearch(searchBeer: String, page: String, completion: @escaping (Result<[Beer], NetworkError>) -> Void) {
         guard let baseURL = URL(string: Constants.BeerList.beersBaseURL) else { completion(.failure(.InvalidURL)) ; return }
         
         var urlComponents = URLComponents(url: baseURL, resolvingAgainstBaseURL: true)
@@ -56,13 +55,18 @@ struct BeerService: BeerServicable { //This is a concrete type
         // by name
         // by ABV
         
+        let nextPageQueary = URLQueryItem(name: Constants.APIQueryKey.nextPageQuery, value: page)
         if let abv = Double(searchBeer) {
             let beerABVSearchQuery = URLQueryItem(name: Constants.APIQueryKey.abvGreaterQuery, value: "\(abv)")
-            urlComponents?.queryItems = [beerABVSearchQuery]
+            urlComponents?.queryItems = [beerABVSearchQuery, nextPageQueary]
             
         } else if searchBeer != "" {
             let beerNameSearchQuery = URLQueryItem(name: Constants.APIQueryKey.beerNameQuery, value: searchBeer)
-            urlComponents?.queryItems = [beerNameSearchQuery]
+            urlComponents?.queryItems = [beerNameSearchQuery, nextPageQueary]
+        }
+        
+        else if searchBeer == "" {
+            urlComponents?.queryItems = [nextPageQueary]
         }
         
         guard let finalURL = urlComponents?.url else { completion(.failure(.InvalidURL)) ; return }

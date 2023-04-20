@@ -33,8 +33,8 @@ struct Beer: Codable {
     let ibu: Double?
     let volume: Volume
     let boilVolume: BoilVolume
-    let method: Method
-    let ingredients: Ingredients
+    let method: Method?
+    let ingredients: Ingredients?
     let foodPairing: [String]
     let brewersTips: String
 
@@ -58,29 +58,29 @@ struct Method: Codable {
     }
     
     let mashTemp: [MashTemp]
-    let fermentation: Fermentation
+    let fermentation: Fermentation?
     let twist: String?
 }
 
 struct MashTemp: Codable {
-    let temp: Temp
+    let temp: Temp?
     let duration: Double?
 }
 
 struct Temp: Codable {
-    let value: Double
+    let value: Double?
     let unit: String
 }
 
 struct Fermentation: Codable {
-    let temp: Temp
+    let temp: Temp?
     
 }
 
 struct Ingredients: Codable {
     let malt: [Malt]
     let hops: [Hops]
-    let yeast: String
+    let yeast: String?
 }
 
 struct Malt: Codable {
@@ -99,4 +99,3 @@ struct Hops: Codable {
     let add: String
     let attribute: String
 }
-

@@ -18,14 +18,20 @@ class RandomBeerViewController: UIViewController {
     @IBOutlet weak var beerDescriptionLabel: UILabel!
     @IBOutlet weak var toIngredientsButton: UIButton!
     @IBOutlet weak var getRandomBeerButton: UIButton!
+    @IBOutlet weak var favoriteBeerButton: UIButton!
     
     // MARK: - Properties
     var viewModel: RandomBeerViewModel!
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        viewModel.loadFavorites()
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         viewModel = RandomBeerViewModel(delegate: self)
-        
+        viewModel.getRandomBeer()
     }
     
     private func updateUI() {
@@ -36,7 +42,7 @@ class RandomBeerViewController: UIViewController {
         beerAbvLabel.text = "ABV: \(beer.abv)"
         beerIbuLabel.text = "IBU: \(beer.ibu ?? 0)"
         beerDescriptionLabel.text = beer.description
-        
+        favorited()
         viewModel.getBeerImage { image in
             DispatchQueue.main.async {
                 self.beerImageView.image = image
@@ -44,6 +50,26 @@ class RandomBeerViewController: UIViewController {
             }
         }
     }
+    
+    // MARK: - Helper Function
+    
+    func favorited() {
+        let beer = viewModel.beer
+        let isFavorite = viewModel.saveBeer.first(where: { $0.beerId == beer?.beerId })
+        if isFavorite != nil {
+            favoriteBeerButton.setImage(UIImage(systemName: "heart.fill"), for: .normal)
+        } else {
+            favoriteBeerButton.setImage(UIImage(systemName: "heart"), for: .normal)
+        }
+    }
+    
+    func didTapFavorite(for beer: Beer) {
+        viewModel.isFavorite.toggle()
+        favorited()
+        let beerToSave = BeerToSave(name: beer.name, description: beer.description, beerId: beer.beerId, abv: beer.abv, ibu: beer.ibu)
+        viewModel.saveFavoriteBeer(beerToSave: beerToSave)
+    }
+    
     
     // MARK: - Navigation
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -62,9 +88,20 @@ class RandomBeerViewController: UIViewController {
     @IBAction func getRandomBeerButtonTapped(_ sender: Any) {
         viewModel.getRandomBeer()
     }
+    
+    @IBAction func favoriteBeerButtonTapped(_ sender: Any) {
+        guard let beer = viewModel.beer else { return }
+        didTapFavorite(for: beer)
+    }
 }
 
 extension RandomBeerViewController: RandomBeerViewModelDelegate {
+    func beerSavedSuccesfully() {
+        DispatchQueue.main.async {
+            self.updateUI()
+        }
+    }
+    
     func randomBeerLoadedSuccesfully() {
         DispatchQueue.main.async {
             self.updateUI()

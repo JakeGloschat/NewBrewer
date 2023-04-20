@@ -10,11 +10,8 @@ import UIKit
 class SearchBeerViewController: UIViewController {
 
     // MARK: - Outlets
-    
     @IBOutlet weak var beerSearchBar: UISearchBar!
     @IBOutlet weak var beerListTableView: UITableView!
-    
-    
     
     // MARK: - Properties
     var viewModel: SearchBeerViewModel!
@@ -23,7 +20,26 @@ class SearchBeerViewController: UIViewController {
         super.viewDidLoad()
         beerSearchBar.delegate = self
         beerListTableView.dataSource = self
+        beerListTableView.delegate = self
         viewModel = SearchBeerViewModel(delegate: self)
+        viewModel.searchBeers(with: "")
+        beerListTableView.refreshControl = UIRefreshControl()
+        beerListTableView.refreshControl?.addTarget(self, action: #selector(callPullToRefresh), for: .valueChanged)
+    }
+    
+    // MARK: - Functions
+    @objc func callPullToRefresh() {
+        viewModel.fetchFavoritedBeers()
+    }
+    
+    func presentAlertController() {
+        let alertController = UIAlertController(title: "No Beers Found", message: "No beer found with search.", preferredStyle: .alert)
+        let dismassAction = UIAlertAction(title: "Dismiss", style: .cancel) { _ in
+            self.beerSearchBar.text?.removeAll()
+            self.viewModel.searchBeers(with: "")
+        }
+        alertController.addAction(dismassAction)
+        present(alertController, animated: true)
     }
     
     // MARK: - Navigation
@@ -44,10 +60,18 @@ extension SearchBeerViewController: UISearchBarDelegate {
     }
 }
 
-extension SearchBeerViewController: UITableViewDataSource {
+extension SearchBeerViewController: UITableViewDataSource, UITableViewDelegate {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // display number of beers
-        return viewModel.beers.count
+            return viewModel.beers.count
+    }
+    
+    func tableView(_ tableView: UITableView, willDisplay cell: UITableViewCell, forRowAt indexPath: IndexPath) {
+        let row = indexPath.row
+        if row.isMultiple(of: 24) {
+            let page = row / 24
+            viewModel.fetchNextPage(with: page)
+        }
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -70,6 +94,10 @@ extension SearchBeerViewController: SearchBeerViewModelDelegate {
     
     func beersLoadedSuccessfully() {
         DispatchQueue.main.async {
+            if self.viewModel.beers.isEmpty {
+                self.presentAlertController()
+            }
+            self.beerListTableView.refreshControl?.endRefreshing()
             self.beerListTableView.reloadData()
         }
     }
